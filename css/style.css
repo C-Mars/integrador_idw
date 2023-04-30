@@ -44,12 +44,13 @@ header{
 	font-weight: bold;
 	font-style: normal; 
 	align-items: center;
-	
 	height: 64px;
+	box-shadow: 10px, 0px,10px,black;
 }
 div.logoNav{
-	margin: 125px;
+	margin-left: 125px;
 	display: flex;
+	
 	
 }
 div.logoNav img{
@@ -64,13 +65,13 @@ nav a{
 	padding-right: 50px;
 }
 div.log{
-	margin: 125px;
+	margin-right: 125px;
 	display: flex;
 }
 
 body{
 	padding: 0px;
-	margin: 0px;
+	margin: 0px auto;   
 	
         /*padding-top: 70px;*/
 
@@ -83,6 +84,17 @@ body{
 	background: linear-gradient(to bottom,  #6ca4c4 0%,#e5e5e5 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
 
+}
+h1.contacto{
+	font-family: 'Fira Sans Condensed';
+	font-size: normal;
+	font-weight: bold;
+	font-size: 55px;
+	-webkit-text-fill-color: transparent;
+	-webkit-text-stroke: 3px #027496;
+	display: flex;
+	align-items: center;
+	letter-spacing: 3.25px;
 }
 .logos_GnuLinux{
 	display: block;
