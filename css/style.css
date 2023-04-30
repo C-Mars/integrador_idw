@@ -36,24 +36,37 @@
 		 url('../fonts/FiraSansCondensed-SemiBoldItalic.ttf') format('truetype')
 		 */
 header{
-	font-family: 'Fira Sans Condensed';
-	font-weight: normal;
-	font-style: bold;
-	font-size: 16px;
-	color: #BAD6DA;
 	display: flex;
-	height: 64px;
+	font-size: 16px;
 	background-color: #052035;
+	justify-content: space-between;
+	font-family: 'Fira Sans Condensed';
+	font-weight: bold;
+	font-style: normal; 
+	align-items: center;
+	
+	height: 64px;
 }
-.logoNav{
+div.logoNav{
+	margin: 10px;
 	display: flex;
 	
 }
-.logoNav img{
+div.logoNav img{
 	width: 45px;
 	height: 49px;
 }
-
+a{
+	text-decoration: none;
+}
+nav a{
+	color: #BAD6DA;
+	padding-right: 50px;
+}
+div.log{
+	margin: 10px;
+	display: flex;
+}
 
 body{
 	padding: 0px;
