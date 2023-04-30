@@ -48,7 +48,7 @@ header{
 	height: 64px;
 }
 div.logoNav{
-	margin: 10px;
+	margin: 125px;
 	display: flex;
 	
 }
@@ -64,7 +64,7 @@ nav a{
 	padding-right: 50px;
 }
 div.log{
-	margin: 10px;
+	margin: 125px;
 	display: flex;
 }
 
