@@ -113,7 +113,6 @@ body{
 div.main{
 	font-family: 'Fira Sans Condensed';
 	font-style: normal;
-	background-color:transparent;
 	margin-left: 100px;
 	margin-right: 100px;
 	
@@ -137,26 +136,31 @@ div.contacto h1{
 	padding: 130px 0px;
 }
 section{
-	display: flex;
-	background-color: rgb(71, 34, 171);
-	width: 50%;
+	display: grid;
+	background-color: rgb(17, 8, 186);
 	height: 300px;
-	flex-direction: column;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr 1fr ;
+	
+	
 
 
 	
 }
 section ul{
 	list-style: none;
+	
 }
 section li.form{
-	background-color: white;
+	border: pink;
+	background-color: rgb(128, 26, 26);
+	
 	
 }
 section div.asunto {
 	position: relative;
   	display: inline-block;
-  }
+}
   section div.asunto-boton{
 	background-color: #4CAF50;
 	color: white;
@@ -164,7 +168,7 @@ section div.asunto {
 	font-size: 16px;
 	border: none;
 	cursor: pointer;
-  }
+}
   
 section div.asunto-content {
 	display: none;
@@ -173,27 +177,27 @@ section div.asunto-content {
 	min-width: 160px;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	z-index: 1;
-  }
+}
   section div.asunto-content a{
 	color: black;
   	padding: 12px 16px;
   	text-decoration: none;
   	display: block;
-  }
+}
   section div.asunto-content a:hover{
 	background-color: #f1f1f1
-  }
+}
 
   div.asunto:hover .asunto-content {
 	display: block;
-  }
+}
   div.asunto:hover .asunto-boton{
 	background-color: #3e8e41;
-  }
+}
 aside{
 	background-color: rgb(41, 171, 34);
-	display: flex;
-	flex-direction:column;
+	display: grid;
+	
 	width: 85%;
 	height: 300px;
 }
