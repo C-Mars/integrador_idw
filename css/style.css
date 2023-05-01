@@ -46,6 +46,7 @@ header{
 	font-style: normal; 
 	height: 64px;
 	
+	
 }
 div.logoNav{
 	margin-left: 125px;
@@ -93,7 +94,7 @@ div.log{
 body{
 	padding: 0px;
 	margin: 0px auto;   
-	background-color:rgba(108, 164, 196, 40%) !important;
+	background-color:rgba(108, 164, 196, 40%);
 	
         /*padding-top: 70px;*/
 
@@ -108,7 +109,17 @@ body{
 	
 
 }
-h1.contacto{
+
+div.main{
+	font-family: 'Fira Sans Condensed';
+	font-style: normal;
+	display: flex;
+	background-color: rgb(152, 151, 155);
+	margin-left: 100px;
+	margin-right: 100px;
+
+}
+div.contacto{
 	font-family: 'Fira Sans Condensed';
 	font-size: normal;
 	font-weight: bold;
@@ -116,8 +127,58 @@ h1.contacto{
 	-webkit-text-fill-color: transparent;
 	-webkit-text-stroke: 3px #027496;
 	display: flex;
-	align-items: center;
 	letter-spacing: 3.25px;
+	width: 100%;
+	height: 300px;
+	padding: 150px;
+	flex-direction: row;
+}
+section{
+	background-color: rgb(71, 34, 171);
+	width: 50%;
+	height: 300px;
+}
+section div.asunto {
+	position: relative;
+  	display: inline-block;
+  }
+  section div.asunto-boton{
+	background-color: #4CAF50;
+	color: white;
+	padding: 16px;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+  }
+  
+section div.asunto-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+  }
+  section div.asunto-content a{
+	color: black;
+  	padding: 12px 16px;
+  	text-decoration: none;
+  	display: block;
+  }
+  section div.asunto-content a:hover{
+	background-color: #f1f1f1
+  }
+
+  div.asunto:hover .asunto-content {
+	display: block;
+  }
+  div.asunto:hover .asunto-boton{
+	background-color: #3e8e41;
+  }
+aside{
+	background-color: rgb(41, 171, 34);
+	width: 50%;
+	height: 300px;
 }
 .logos_GnuLinux{
 	display: block;
