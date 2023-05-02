@@ -119,7 +119,6 @@ body{
 
 div.main{
 	font-family: 'Fira Sans Condensed';
-	font-style: normal;
 	
 	margin-left: 100px;
 	margin-right: 100px;
@@ -130,16 +129,19 @@ div.contacto{
 	font-family: 'Fira Sans Condensed';
 	-webkit-text-fill-color: transparent;
 	-webkit-text-stroke: 3px #027496;
-	display: flex;
+	display: block;
 	letter-spacing: 3.25px;
 	width: 100%;
-	margin: 20px;
-	font-size: 55px;
+	height: 200px;
+	
+	
+	
 }
 div.contacto h1{
+	padding: 50px 50px;
+	text-align: center;
+	font-size: 55px;
 	
-	margin: 0 auto;
-	padding: 130px 0px;
 	
 }
 section.contacto-info{
