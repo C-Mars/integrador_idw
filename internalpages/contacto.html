@@ -35,19 +35,24 @@
     <div class="contacto"><h1>CONTACTO</h1></div>
     <section class="contacto-info">
       <h2>PARA MÁS INFORMACIÓN</h2>
-      <ul>
-        <li class="form">Nombre y Apellido:</li>
-        <li class="form">Email:</li>
-        <div class="asunto">
-          <button class="asunto-boton">Asunto</button>
-          <div class="asunto-content">
-            <a>Jugador</a>
-            <a>Cuerpo Técnico</a>
-            <a>Directivo</a>
-            <a>Sponsor</a>
-        </div>
-        <li class="form">Comentario:</li>
-      </ul>
+      <br>
+      <form>
+        <input type="text" placeholder="Nombre y Apellido" required>
+        <input type="email" placeholder="Email" required>
+          <div class="asunto"> 
+            <p class="asunto-boton">Asunto</p>
+            <div class="asunto-content" >
+              <label><input type="radio" name="asunto"value="jugador">Jugador</label>
+              <label><input type="radio" name="asunto" value="cuerpotecnico">Cuerpo Técnico</label>
+              <label><input type="radio" name="asunto" value="directivo">Directivo</label>
+              <label><input type="radio" name="asunto" value="spondor">Sponsor</label> 
+          </div>
+        <input type="text" placeholder="Comentario:" required>
+        <button>ENVIAR</button>
+        
+
+      </form>
+      
     </section>
     <aside class="contacto">
       <h2>REDES</h2>

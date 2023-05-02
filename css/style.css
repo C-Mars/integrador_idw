@@ -196,6 +196,12 @@ section.contacto-info div.asunto-content {
   div.asunto:hover .asunto-boton{
 	background-color: #025377;
 }
-
+form input{
+	background-color: #F6F9FB;	
+}
+button{
+	background-color: #025377;
+	border-bottom: white;
+}
 
 
