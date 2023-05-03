@@ -137,9 +137,9 @@ section.contacto-info{
 	flex: 100%;
 	margin: 0 311px;
 	padding: 0;
-	width: 867px;
+	width: 100%;
 	background-color: transparent;
-	height:100%;	
+		
 	align-items: center;
 }
 
@@ -151,15 +151,15 @@ section.contacto-info h2{
 }
   
 form.cont-form{
-	margin-top: 20px;
+	margin: 20px;
 	color: #027496;
+
 }
 input.control{
 	font-family: 'Fira Sans Condensed';
-	font-weight: 100;
 	font-size: 22px;
 	border:0;
-	width: 100%;
+	width: 868px;
 	height: 90px;
 	background-color: #F6F9FB;
 	margin-bottom: 16px;
@@ -225,9 +225,36 @@ div.comentario{
 	width: 100%;
 	height: 577px;
 	margin-top: 16px;
+	margin-bottom: 16px;
 	padding: 0;
+	
 }
-input.control-com{
+textarea.comentario-tex{
+	font-family:'Fira Sans Condensed';
+	font-size: 22px;
+	display: flex;
+	background-color: #F6F9FB;
+	opacity: 1;
+	width: 100%;
+	height: 577px;
+	margin-top: 16px;
+	padding: 0;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	appearance: none;
+	outline: 0;
+	box-shadow: none;
+	border:0 !important;
+	background: #F6F9FB;
+	opacity: 1;
+	background-image: none;
+	position: relative;
+	padding-left: 20px;
+	
+	
+}
+/* input.control-com{
 	font-family: 'Fira Sans Condensed';
 	font-size: 22px;
 	border:0;
@@ -239,7 +266,7 @@ input.control-com{
     overflow: hidden;
 	outline: 0;
 	padding-left: 20px;
-}
+} */
 form.cont-form button{
 	width: 214px;
 	height: 72px;
