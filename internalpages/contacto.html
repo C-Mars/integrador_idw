@@ -42,22 +42,22 @@
         <input class="control"  type="text" placeholder="Nombre y Apellido" required>
         <input class="control" type="email" placeholder="Email" required>
           <div class="asunto"> 
-            <p class="asunto-text">Asunto</p>
-            <div class="asunto-content" >
-              <label><input  type="radio" name="asunto"value="jugador">Jugador</label>
-              <label><input  type="radio" name="asunto" value="cuerpotecnico">Cuerpo Técnico</label>
-              <label><input  type="radio" name="asunto" value="directivo">Directivo</label>
-              <label><input  type="radio" name="asunto" value="spondor">Sponsor</label> 
-            </div>
+            <select class="asunt-cont" name="asunto" id="asunto">
+              <option selected class="asunto-elegir">ASUNTO</option>
+              <option value="jugador">Jugador</option>
+              <option value="cuerpotecnico">Cuerpo Técnico</option>
+              <option value="directivo">Directivo</option>
+              <option value="spondor">Sponsor</label> 
+            </select>
           </div>
-        <input class="control" type="text" placeholder="Comentario:" required>
+          <div class="comentario">
+            <input class="control-com" type="text" placeholder="Comentario:" required >
+          </div>
         <button>ENVIAR</button>
-        
-
       </form>
       
     </section>
-    <aside class="contacto">
+    <aside class="redes">
       <h2>REDES</h2>
       <div class = "logoRedes">
         <a href="#"><img src="#" alt = "Facebook AFA">
