@@ -190,23 +190,28 @@ img.img-noti{
 	object-fit: cover;
 	object-position: center;
 	height: 305px;
+	opacity: 1;
 }
-/* img.img-noti::selection{
+
+div.noti:hover > img.img-noti{
 	opacity: 0.4;
-	background-color: #BAD6DA;
-} */
+}
 div.noti h3{
 	max-width: 616px;
 	margin: 1%;
 }
 
-div.noti p{
+div.noti p.noti-p{
 	max-width: 616px;
 	margin: 1%;
+	visibility: hidden;
+	opacity: 0;
 	
 }
-div.noti p :hover{
+
+div.noti:hover > p.noti-p{
 	opacity: 1;
+	visibility: visible;
 }
 div.vermas{
 	position: absolute;
@@ -217,24 +222,28 @@ div.vermas{
 	width: 88px;
 	height: 20px;
 	padding: 7px 3px;
-	left: 80% ; 
+	left: 80%; 
 	top: 90%;
+	margin-right: 10%;
+	flex: 0;
+	transition: .3s flex;
+}
+div.vermas:hover{
+	background-color:#BAD6DA;
+	border: 2px solid #027496;
+	margin-right: 10%;
+	color:#027496;
 	
 }
 div.vermas a{
 	margin: 0 15px ;
 	color: #BAD6DA;
 }
-div.vermas a:hover {
+div.vermas a:hover{
 	color:#027496;
 }
 
-div.vermas:hover{
-	
-	background-color:#BAD6DA;
-	border: 2px solid #027496;
-	
-}
+
 /*******************************Página de Contacto**********************************************************************/
 div.contacto{
 	font-family: 'Fira Sans Condensed';
