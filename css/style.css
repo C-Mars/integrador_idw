@@ -156,34 +156,43 @@ div.contenedor-noticias{
 	height: 468;
 	margin-left: 16px;
 	background: transparent;
+	gap: 8px;
 }
+
 div.contenedor-noticias h3{
 	padding-left: 20px;
 	font-style: bold;
 	font-weight:bold;
 	font-size: 20px;
+	margin: 1%;
 }
 div.contenedor-noticias p{
 	padding-left: 20px;
 	font-style: normal;
 	font-weight:normal;
+	margin: 1%;
 }
 div.noti{
+	
 	position: relative;
 	background-color: #027496;
-	margin-left: 20px;	
+	/* margin-left: 20px;	 */
 	flex: 1;
 	transition: .3s flex;
 	color: #BAD6DA;
 	width: 424px;
 	height: 468px;
+	
 }
+
 div.noti:hover{
 	flex:2;
 	background-color: #BAD6DA;
 	color: #027496;
 	width: 424px;
 	height: 468px;
+	
+
 	
 }
 img.img-noti{
@@ -198,12 +207,10 @@ div.noti:hover > img.img-noti{
 }
 div.noti h3{
 	max-width: 616px;
-	margin: 1%;
 }
 
 div.noti p.noti-p{
 	max-width: 616px;
-	margin: 1%;
 	visibility: hidden;
 	opacity: 0;
 	
@@ -212,21 +219,21 @@ div.noti p.noti-p{
 div.noti:hover > p.noti-p{
 	opacity: 1;
 	visibility: visible;
+	max-width: 616px;
 }
 div.vermas{
+
 	position: absolute;
-	justify-content: center;
 	background-color: #027496;
 	border: 2px solid #BAD6DA;
 	font-size: 16;
 	width: 88px;
 	height: 20px;
 	padding: 7px 3px;
-	left: 80%; 
+	left: 76%; 
 	top: 90%;
-	margin-right: 10%;
-	flex: 0;
-	transition: .3s flex;
+	margin-right: 20%;
+	
 }
 div.vermas:hover{
 	background-color:#BAD6DA;
