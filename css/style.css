@@ -108,7 +108,7 @@ body{
 	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
 }
 
-div.main{
+main{
 	font-family: 'Fira Sans Condensed';
 	display: flex;
 	flex-wrap: wrap;
