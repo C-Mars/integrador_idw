@@ -1,3 +1,4 @@
+
 @font-face{
     font-family: 'Fira Sans Condensed';
     src: 
@@ -27,13 +28,23 @@
 	font-weight:bold;
 }
 
-/*
-------------------AGREGAR O NO DEPENDIENDO DEL USO-----------------------------
-         ,
-         url('../fonts/FiraSansCondensed-MediumItalic.ttf') format('truetype'),
-		 ,
-		 url('../fonts/FiraSansCondensed-SemiBoldItalic.ttf') format('truetype')
-		 */
+
+/****************Propiedades Comúnes***************************/
+body{
+	padding: 0px;
+	margin: 0px auto;   
+	background-color:rgba(108, 164, 196, 40%);
+	 /*padding-top: 70px;*/
+	/*background: #6ca4c4; /* Old browsers */
+	/*background: -moz-linear-gradient(top,  #6ca4c4 0%, #e5e5e5 100%); /* FF3.6+ */
+	/*background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6ca4c4), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
+	/*background: -webkit-linear-gradient(top,  #6ca4c4 0%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
+	/*background: -o-linear-gradient(top,  #6ca4c4 0%,#e5e5e5 100%); /* Opera 11.10+ */
+	/*background: -ms-linear-gradient(top,  #6ca4c4 0%,#e5e5e5 100%); /* IE10+ */
+	/*background: linear-gradient(to bottom,  #6ca4c4 0%,#e5e5e5 100%); /* W3C */
+	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+}
+/***************************Barra de Navegación*******************************/
 header{
 	margin: 0;
 	padding: 0;
@@ -93,21 +104,8 @@ div.log{
 
 }
 
-body{
-	padding: 0px;
-	margin: 0px auto;   
-	background-color:rgba(108, 164, 196, 40%);
-	 /*padding-top: 70px;*/
-	/*background: #6ca4c4; /* Old browsers */
-	/*background: -moz-linear-gradient(top,  #6ca4c4 0%, #e5e5e5 100%); /* FF3.6+ */
-	/*background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6ca4c4), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
-	/*background: -webkit-linear-gradient(top,  #6ca4c4 0%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
-	/*background: -o-linear-gradient(top,  #6ca4c4 0%,#e5e5e5 100%); /* Opera 11.10+ */
-	/*background: -ms-linear-gradient(top,  #6ca4c4 0%,#e5e5e5 100%); /* IE10+ */
-	/*background: linear-gradient(to bottom,  #6ca4c4 0%,#e5e5e5 100%); /* W3C */
-	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
-}
 
+/********************Main*******************************/
 main{
 	font-family: 'Fira Sans Condensed';
 	display: flex;
@@ -116,6 +114,14 @@ main{
 	margin-right: 100px;	
 }
 
+
+/****************footer***********************************/
+footer{
+	background-color:#035378 ;
+}
+
+
+/*******************************Página de Contacto**********************************************************************/
 div.contacto{
 	font-family: 'Fira Sans Condensed';
 	-webkit-text-fill-color: transparent;
@@ -285,6 +291,4 @@ form.cont-form button:hover{
 }
 
 
-footer{
-	background-color:#035378 ;
-}
+
