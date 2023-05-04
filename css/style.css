@@ -31,9 +31,11 @@
 
 /****************Propiedades Comúnes***************************/
 body{
+
 	padding: 0px;
 	margin: 0px auto;   
 	background-color:rgba(108, 164, 196, 40%);
+	
 	 /*padding-top: 70px;*/
 	/*background: #6ca4c4; /* Old browsers */
 	/*background: -moz-linear-gradient(top,  #6ca4c4 0%, #e5e5e5 100%); /* FF3.6+ */
@@ -49,7 +51,6 @@ header{
 	margin: 0;
 	padding: 0;
 	display: flex;
-	flex-direction: row;
 	font-size: 16px;
 	background-color: #052035;
 	justify-content: space-between;
@@ -75,11 +76,11 @@ a{
 }
 nav ul{
 	display: flex;
+	flex-wrap: wrap;
 	margin: 0;
 	align-items: center;
 	list-style: none;
 	height: 64px;
-	flex-direction: row;
 }
 nav a{
 	color: #BAD6DA;
@@ -88,20 +89,31 @@ nav a{
 	
 	
 }
-a:hover{
-	color: #052035;
 
-	
-}
+
 nav a:hover{
+	color: #052035;
 	background-color: #BAD6DA;
 	
 }
 div.log{
 	margin-right: 125px;
-	display: flex;
-	flex-direction: row;
+	margin-top: 8px ;
+	margin-bottom: 8px;
+	padding: 13px 15px;
+	background-color:rgba(2, 116, 150, 55%);
+	color:#BAD6DA;
+	border: 1px solid  rgba(186, 214, 218,45%);
+	
 
+	
+
+}
+
+div.log:hover{
+	border: 1px solid#BAD6DA;
+	color:#BAD6DA;
+	background-color: #052035;
 }
 
 
@@ -119,8 +131,73 @@ main{
 footer{
 	background-color:#035378 ;
 }
+/******************Página Index***********************/
+div.contenedor-noticias{
+	display: flex;
+	margin: 0 auto;
+	width: 1312px;
+	height: 468;
+	margin-left: 16px;
+	background: transparent;
+}
+div.contenedor-noticias h3{
+	padding-left: 20px;
+	font-style: bold;
+	font-weight:bold;
+	font-size: 20px;
+}
+div.contenedor-noticias p{
+	padding-left: 20px;
+	font-style: normal;
+	font-weight:normal;
+}
+div.noti1{
+	background-color: #027496;
+	object-fit: cover;
+	flex: 1;
+	transition: .3s flex;
+	color: #BAD6DA;
+	border: 5px pink;
+	width: 424px;
+	height: 468px;
+}
+div.noti1:hover{
+	flex:3;
+	background-color: #BAD6DA;
+	color: #027496;
+	width: 424px;
+	height: 468px;
+}
+div.noti2{
+	background-color: #027496;
+	object-fit: cover;
+	flex: 1;
+	transition: .3s flex;
+	color: #BAD6DA;
+	width: 424px;
+	height: 468px;
+}
+div.noti2:hover{
+	flex:3;
+	background-color: #BAD6DA;
+	color: #027496;
+	
+}
 
-
+div.noti3{
+	background-color: #027496;
+	color: #BAD6DA;
+	object-fit: cover;
+	flex: 1;
+	transition: .3s flex;
+	width: 424px;
+	height: 468px;
+}
+div.noti3:hover{
+	flex:3;
+	background-color: #BAD6DA;
+	color: #027496;
+}
 /*******************************Página de Contacto**********************************************************************/
 div.contacto{
 	font-family: 'Fira Sans Condensed';
