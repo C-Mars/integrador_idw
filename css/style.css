@@ -516,5 +516,66 @@ form.cont-form button:hover{
 }
 
 /*****************Historia*********************/
+div.hisroria{
+	text-align: center;
+	display: block;
+	width: 100%;
+	height:500px;
+	align-items: center;
+	flex-wrap: wrap;
+}
+div.historia h1 {
+	
+	font-family: Fire Sans Condensed;
+	font-size: 30;
+	text-align:center;
+	color: #6ca4c4;
+	letter-spacing: 4;
+	text-shadow: -1px -1px 1px #043753 , 1px -1px 1px #043753, -1px 1px 1px #043753, 1px 1px 1px #043753;  
+	}
+	
+div.historia p {
+	font-family: Fire Sans Condensed;
+	font-size: 20;
+	color: black;
+	text-align:justify;
+	}
+	
+div.historia img {
+	position: absolute;
+	/*left: 400;*/
+	/*top: 500;*/
+	border: 5px solid #6ca4c4;
+	}
 
+	/*******Autoridades******/
 
+div.autoridades{
+	display: block;
+	width: 100%;
+	height:500px;
+	align-items: center;
+	flex-wrap: wrap;
+	text-align: center;
+}
+div.autoridades h1 {
+	font-family: Fire Sans Condensed;
+	font-size: 30;
+	text-align:center;
+	color: #6ca4c4;
+	letter-spacing: 4;
+	text-shadow: -1px -1px 1px #043753 , 1px -1px 1px #043753, -1px 1px 1px #043753, 1px 1px 1px #043753;  
+	}
+	 
+	div.autoridades dd{
+	text-align:center;
+	font-family: Fire Sans Condensed;
+	font-size: 22;
+	}
+	
+	div.autoridades Dt {
+	font-family: Fire Sans Condensed;
+	font-size: 25;
+	color: #04547c;
+	text-align:center;
+	}
