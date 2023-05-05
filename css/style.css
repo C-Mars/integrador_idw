@@ -35,16 +35,6 @@ body{
 	padding: 0px;
 	margin: 0px auto;   
 	background-color:rgba(108, 164, 196, 40%);
-	
-	 /*padding-top: 70px;*/
-	/*background: #6ca4c4; /* Old browsers */
-	/*background: -moz-linear-gradient(top,  #6ca4c4 0%, #e5e5e5 100%); /* FF3.6+ */
-	/*background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6ca4c4), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
-	/*background: -webkit-linear-gradient(top,  #6ca4c4 0%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
-	/*background: -o-linear-gradient(top,  #6ca4c4 0%,#e5e5e5 100%); /* Opera 11.10+ */
-	/*background: -ms-linear-gradient(top,  #6ca4c4 0%,#e5e5e5 100%); /* IE10+ */
-	/*background: linear-gradient(to bottom,  #6ca4c4 0%,#e5e5e5 100%); /* W3C */
-	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
 }
 /***************************Barra de Navegación*******************************/
 header{
@@ -58,6 +48,7 @@ header{
 	font-weight: bolder;
 	height: 64px;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	z-index: 1000px;
 	
 	
 }
@@ -154,9 +145,87 @@ main{
 footer{
 	background-color:#035378 ;
 }
+#pie {
+	height:150px;
+	line-height:150px;
+	background:black;
+	color:white;
+	text-align:center;
+	bottom:0;
+	left:0;
+	width:100%;
+  }
 
 
 /****************************Página Index**********************************************/
+/**Seción principal****/
+div.main-container{
+	width: 100%;
+	max-width: 100%;
+	margin: 5 auto;
+	overflow: hidden;
+	background-color:#052035
+}
+article {
+	float: left;
+	width: 65%;
+	margin-left: 5%;
+	background-color: #052035;
+}
+.contenedor{
+	position: relative;
+	display: inline-block;
+	text-align: center;
+}
+.texto-debajo{
+	position: absolute;
+	top: 70%;
+	left: 37%;
+	transform: translate(-50%, -50%);
+	
+	font-family: Arial, sans-serif;
+	font-size: 12pt;
+	color: #F2DED0;
+	font-style:oblique;
+	opacity: .6;
+	
+}
+
+p.Proximo{
+	
+	
+	color: white;
+	
+	
+}
+
+aside{
+	float: left;
+	width: 30%;
+	background-color: #052035;
+
+
+}
+h1.partido{
+  
+  color: red;
+  font-family: "Fira sans Condensed";	
+  
+  }
+
+
+.fcc-btn {
+  background-color: #199319;
+  color: white;
+}
+
+section.Principal{
+	
+	background-color: #052035;
+  
+	
+	
+}
 
 
 /***************sección Noticias*********************/
