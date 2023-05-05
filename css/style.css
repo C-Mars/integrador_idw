@@ -74,7 +74,7 @@ div.logoNav img{
 a{
 	text-decoration: none;	
 }
-nav ul{
+nav ul.menu{
 	display: flex;
 	flex-wrap: wrap;
 	margin: 0;
@@ -89,13 +89,40 @@ nav a{
 	
 	
 }
-
-
 nav a:hover{
 	color: #052035;
 	background-color: #BAD6DA;
 	
 }
+/**********************Submenu******************************/
+ul.submenu{
+	margin-top: 15px;;
+    position: absolute;
+    background: #333333;
+    max-width:50%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.5s;
+	list-style: none;
+	padding: 0;
+}
+
+ul.submenu li a{
+    display: block;
+	width: 198px;
+	height: 54px;
+    padding: 7px 3px;
+    color: #BAD6DA;
+    font-weight: normal !important ;
+	text-align: center;
+}
+
+ul.menu li:hover > ul.submenu{
+    visibility: visible;
+    opacity: 1;
+}
+
+
 div.log{
 	margin-right: 125px;
 	margin-top: 8px ;
@@ -111,7 +138,6 @@ div.log:hover{
 	color:#BAD6DA;
 	background-color: #052035;
 }
-
 
 /********************Main*******************************/
 main{
