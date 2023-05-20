@@ -150,6 +150,7 @@ footer{
 	background-color:#035378 ;
 }
 #pie {
+	font-family: 'Fira Sans Condensed';
 	height:150px;
 	line-height:150px;
 	background:black;
@@ -530,7 +531,7 @@ div.hisroria{
 }
 div.historia h1 {
 	
-	font-family: Fire Sans Condensed;
+	font-family: 'Fira Sans Condensed';
 	font-size: 30;
 	text-align:center;
 	color: #6ca4c4;
@@ -539,7 +540,7 @@ div.historia h1 {
 	}
 	
 div.historia p {
-	font-family: Fire Sans Condensed;
+	font-family: 'Fira Sans Condensed';
 	font-size: 20;
 	color: black;
 	text-align:justify;
@@ -563,7 +564,7 @@ div.autoridades{
 	text-align: center;
 }
 div.autoridades h1 {
-	font-family: Fire Sans Condensed;
+	font-family: 'Fira Sans Condensed';
 	font-size: 30;
 	text-align:center;
 	color: #6ca4c4;
@@ -573,12 +574,12 @@ div.autoridades h1 {
 	 
 	div.autoridades dd{
 	text-align:center;
-	font-family: Fire Sans Condensed;
+	font-family: 'Fira Sans Condensed';
 	font-size: 22;
 	}
 	
 	div.autoridades Dt {
-	font-family: Fire Sans Condensed;
+	font-family: 'Fira Sans Condensed';
 	font-size: 25;
 	color: #04547c;
 	text-align:center;
