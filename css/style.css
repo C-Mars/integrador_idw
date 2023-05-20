@@ -188,7 +188,7 @@ article {
 	left: 37%;
 	transform: translate(-50%, -50%);
 	
-	font-family: Arial, sans-serif;
+	font-family: 'Fira Sans Condensed', sans-serif;
 	font-size: 12pt;
 	color: #F2DED0;
 	font-style:oblique;
@@ -230,6 +230,11 @@ section.Principal{
   
 	
 	
+}
+div.noticia-t h2{
+	font-size: 50px;
+	text-align: center;
+	-webkit-text-stroke: 2px #027496 !important;
 }
 
 
