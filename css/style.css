@@ -80,6 +80,10 @@ nav a{
 	
 	
 }
+div.log a{
+	text-decoration: none;
+	color: #BAD6DA;
+}
 nav a:hover{
 	color: #052035;
 	background-color: #BAD6DA;
