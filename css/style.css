@@ -356,41 +356,95 @@ div.vermas a:hover{
 }
 
 /************************Página de Inicio de Sesión**********************************************************************/
-div.cont-inisesion{
-	flex: 100%;
+section.cont-inisesion{
+	width: 100%;
+	display: flex;
+	flex-direction: left;
 	margin: 0;
 	padding: 0;
+	
 }
 div.img-sesion{
-	margin-top: 10px;
+	display: flex;
+	flex-direction: left;
+	
+	margin: 10px;
+	width: 100%;
+	
+}
+div.img-sesion img{
+	display: flex;
+	flex-direction: left;
+
+	width: 100%;
+	padding: 50px;
+	
 }
 div.ses-intermedio{
-	width: 134px;
+	display: flex;
+	flex-direction: left;
+	
+	width: 10%;
+	margin: 20px;
+	
+}
+div.cont-form{
+	width: 100%;
+	margin: 50px;
+	/* width: 380px; */
+	display: flex;
+	flex-direction: left;
+	align-items: center;
+	text-align: center;
+	/* background-color: #6ca4c4; */
+}
+/* p.sugerencia{
+	align-items: center;
+} */
+div.cont-form form{
+	width: 100%;
+	flex-direction: column;
+}
+div.cont-form fieldset{
+	border: 0px;
+	margin: 50px;
 }
 div.cont-form legend{
 	font-weight: bold;
     font-style: bold;
-	font-size: 25px;
+	font-size: 35px;
+	padding: 20px;
+}
+div.fila-ses{
+	width: 100%;
 }
 div.fila-ses label{
+	width: 100%;
+	margin: 0px 50px;
 	font-weight:normal;
     font-style:normal;
-	font-size: 20px;
+	font-size: 25px;
+	
 }
 
 div.fila-ses input{
+	margin: 20px;
 	font-weight:normal;
     font-style:normal;
 	font-size: 20px;
 	border:0;
-	width: 98.3%;
+	width:80%;
 	height: 53px;
 	background-color: #F6F9FB;
 	margin-bottom: 16px;
     opacity: 1;
     overflow: hidden;
 	outline: 0;
-	padding-left: 20px;
+	padding: 5px;
+}
+div.boton2{
+	margin: 0;
+	padding: 0;
 }
 div.cont-form button{
 	width: 300px;
