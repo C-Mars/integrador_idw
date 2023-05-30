@@ -26,7 +26,7 @@
         </ul>
       </li>
       <li><a href="./jugadores.html">JUGADORES</a></li>
-      <li><a href="./convocatorias.html">CONVOCARORIAS</a></li>
+      <li><a href="./convocatorias.html">CONVOCATORIAS</a></li>
       <li><a href="./equipotitular.html">EQUIPO TITULAR</a></li>
       <li><a href="./contacto.html" class="nav">CONTACTO</a></li>
     </ul>
@@ -41,7 +41,7 @@
     <section class="contacto-info">
       <h2>PARA MÁS INFORMACIÓN</h2>
       <br>
-      <form class="cont-form" action="#" method="POST" autocomplete="off">
+      <form class="cont-form" action="./contacto.html" method="POST" autocomplete="off" onsubmit="return enviar()">
         <input class="control" id ="nombreyapellido" type="text"  placeholder="Nombre y Apellido:" required>
         <input class="control" id ="email" type="email" placeholder="Email:" required>
           <div class="asunto"> 
@@ -57,7 +57,7 @@
             <textarea  class="comentario-tex" id="comentario" rows="10" cols="20" placeholder="Comentario:"></textarea>
           </div>
         <div class="boton">
-          <button onclick="enviar()">ENVIAR</button>
+          <button type="submit" id="enviar">ENVIAR</button>
         </div>
       </form>
     </main>

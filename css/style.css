@@ -407,7 +407,8 @@ div.cont-form form{
 }
 div.cont-form fieldset{
 	border: 0px;
-	margin: 50px;
+	margin: 20px;
+	
 }
 div.cont-form legend{
 	font-weight: bold;
@@ -417,26 +418,28 @@ div.cont-form legend{
 }
 div.fila-ses{
 	width: 100%;
+	text-align: left !important;
+
 }
 div.fila-ses label{
 	width: 100%;
-	margin: 0px 50px;
+	margin: 0px;
 	font-weight:normal;
     font-style:normal;
 	font-size: 25px;
-	
+	padding: 0px;
 }
 
 div.fila-ses input{
-	margin: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 	font-weight:normal;
     font-style:normal;
 	font-size: 20px;
 	border:0;
-	width:80%;
+	width:98%;
 	height: 53px;
 	background-color: #F6F9FB;
-	margin-bottom: 16px;
     opacity: 1;
     overflow: hidden;
 	outline: 0;
@@ -697,3 +700,50 @@ div.autoridades h1 {
 	color: #04547c;
 	text-align:center;
 	}
+
+/***************** Página de Convocatorias***********************************/
+section.cont-convocatorias{
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	width: 100%;
+}
+div.convo-t{
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	font-family: 'Fira Sans Condensed';
+	-webkit-text-fill-color: transparent;
+	-webkit-text-stroke: 3px #027496;
+	flex: 100%;
+	letter-spacing: 3.25px;
+	width: 100%;
+	height: 200px;
+	padding: 30px;
+	margin: 0px;
+	
+	
+}
+div.convo-t h1{
+	flex-wrap: wrap;
+	display: block;
+	text-align: center;
+	font-size: 65px !important;
+}
+div.nav-convocatoria{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding: 10px;
+
+}
+div.item{
+	border: solid black;
+	background-color: #025377;
+	margin: 20px;
+	width: 205PX;
+	height: 171px;
+	text-align:unset;
+}
+
+
