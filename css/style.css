@@ -738,12 +738,24 @@ div.nav-convocatoria{
 
 }
 div.item{
-	border: solid black;
+	flex-direction: column;
 	background-color: #025377;
+	justify-content: center;
 	margin: 20px;
-	width: 205PX;
-	height: 171px;
-	text-align:unset;
+	width: 202PX;
+	height: 179px;
+	
+
+}
+div.item img{
+	width: 96px;
+	height: 102;
+	align-items: center;
 }
 
+div.item p{
+	text-align: center;
+	font-size: 24px;
+	color: #F6F9FB;
+}
 
