@@ -40,6 +40,7 @@ header{
 	margin: 0;
 	padding: 0;
 	display: flex;
+	width: 100%;
 	font-size: 16px;
 	background-color: #052035;
 	justify-content: space-between;
@@ -54,6 +55,8 @@ header{
 div.logoNav{
 	margin-left: 125px;
 	display: flex;
+	flex-flow: wrap; 
+	align-content: flex-start;
 	
 	
 }
@@ -66,7 +69,8 @@ a{
 }
 nav ul.menu{
 	display: flex;
-	flex-wrap: wrap;
+	flex-flow: wrap; 
+	
 	margin: 0;
 	align-items: center;
 	list-style: none;
@@ -76,6 +80,7 @@ nav a{
 	color: #BAD6DA;
 	height: 64px;
 	padding: 22.45px 50px;
+	
 	
 	
 }
@@ -102,8 +107,15 @@ ul.submenu{
 	
 }
 
-ul.submenu li a{
-    display: block;
+ul.submenu li{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+ul.submenu a{
+    display: flex;
+	justify-content: center;
 	width: 197px;
 	height: 54px;
     padding: 7px 3px;
@@ -367,141 +379,13 @@ div.vermas a:hover{
 	color:#027496;
 }
 
-/************************Página de Inicio de Sesión**********************************************************************/
-section.cont-inisesion{
-	width: 100%;
-	display: flex;
-	flex-direction: left;
-	
-	margin: 0;
-	padding: 0;
-	
-}
-div.img-sesion{
-	flex-direction: left;
-	
-	max-width: 100%;
-	margin: 10px;
-	width: 100%;
-	
-}
-div.img-sesion img{
-	display: flex;
-	flex-direction: left;
-
-	width: 100%;
-	padding: 50px;
-	
-}
-div.ses-intermedio{
-	display: flex;
-	flex-direction: left;
-	
-	width: 10%;
-	margin: 20px;
-	
-}
-div.cont-form{
-	width: 100%;
-	margin: 50px;
-	/* width: 380px; */
-	display: flex;
-	flex-direction: left;
-	align-items: center;
-	text-align: center;
-	/* background-color: #6ca4c4; */
-}
-/* p.sugerencia{
-	align-items: center;
-} */
-div.cont-form form{
-	width: 100%;
-	flex-direction: column;
-}
-div.cont-form fieldset{
-	border: 0px;
-	margin: 20px;
-	
-}
-div.cont-form legend{
-	font-weight: bold;
-    font-style: bold;
-	font-size: 35px;
-	padding: 20px;
-}
-div.fila-ses{
-	width: 100%;
-	text-align: left !important;
-
-}
-div.fila-ses label{
-	width: 100%;
-	margin: 0px;
-	font-weight:normal;
-    font-style:normal;
-	font-size: 25px;
-	padding: 0px;
-}
-
-div.fila-ses input{
-	margin-top: 20px;
-	margin-bottom: 20px;
-	font-weight:normal;
-    font-style:normal;
-	font-size: 20px;
-	border:0;
-	width:98%;
-	height: 53px;
-	background-color: #F6F9FB;
-    opacity: 1;
-    overflow: hidden;
-	outline: 0;
-	padding: 5px;
-}
-div.boton2{
-	margin: 0;
-	padding: 0;
-}
-div.cont-form button{
-	width: 300px;
-	height: 72px;
-	background-color: #025377;
-	border: 3px solid #F6F9FB ;
-	padding: 12px;
-	color: #F6F9FB;
-	font-size: 20px;
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-div.cont-form button:hover{
-	color:#BAD6DA;
-	background-color: rgb(2, 85, 121);
-	border: 0;
-	
-}
-section.res-convocaroria{
-	display: flex;
-	justify-content: center;
-	width: 100%;
-}
-div.contenedorTabla{
-	
-	background-color: #a7b0b6;
-
-}
-table.tabla-con{
-	justify-content: space-between;
-	background-color: #199319;
-	font-size: 24px;
-	color: #F6F9FB;
-}
-table.tabla-con th{
-	
-	background-color: #04547c;
-}
 
 /*******************************Página de Contacto**********************************************************************/
 div.contacto{
+	display: flex;
+	flex-flow: wrap;
+	align-content: flex-start;
+	justify-content: center;
 	font-family: 'Fira Sans Condensed';
 	-webkit-text-fill-color: transparent;
 	-webkit-text-stroke: 3px #027496;
@@ -509,6 +393,8 @@ div.contacto{
 	letter-spacing: 3.25px;
 	width: 100%;
 	height: 200px;
+	padding: 30px;
+	margin: 0px;
 	
 }
 
@@ -669,6 +555,145 @@ form.cont-form button:hover{
 	
 }
 
+/************************Página de Inicio de Sesión**********************************************************************/
+section.cont-inisesion{
+	width: 100%;
+	display: flex;
+	flex-direction: left;
+	
+	margin: 0;
+	padding: 0;
+	
+}
+div.img-sesion{
+	flex-direction: left;
+	
+	max-width: 100%;
+	margin: 10px;
+	width: 100%;
+	
+}
+div.img-sesion img{
+	display: flex;
+	flex-flow: wrap;
+	align-content: flex-start;
+
+	width: 100%;
+	padding: 50px;
+	min-width: 476px;
+	
+}
+div.ses-intermedio{
+	display: flex;
+	flex-flow: wrap;
+	align-content
+	width: 10%;
+	margin: 20px;
+	
+}
+div.cont-form{
+	width: 100%;
+	margin: 80px;
+	display: flex;
+	flex-flow: wrap;
+	align-content: flex-start;
+	max-width: 700px;
+	align-items: center;
+	text-align: center;
+
+	/* background-color:#027496; */
+}
+
+div.cont-form form{
+	width: 100%;
+	display: block;
+	flex-flow: wrap;
+}
+div.cont-form fieldset{
+	color: #027496;
+	border: solid 2px #027496 ;
+	margin: 20px;
+	
+}
+div.cont-form legend{
+	font-weight: bold;
+    font-style: bold;
+	font-size: 35px;
+	padding: 20px;
+}
+div.fila-ses{
+	width: 100%;
+	text-align: left !important;
+
+}
+div.fila-ses label{
+	width: 100%;
+	margin: 0px;
+	font-weight:normal;
+    font-style:normal;
+	font-size: 25px;
+	padding: 0px;
+}
+
+div.fila-ses input{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-weight:normal;
+    font-style:normal;
+	font-size: 20px;
+	border:0;
+	width:98%;
+	height: 53px;
+	background-color: #F6F9FB;
+    opacity: 1;
+    overflow: hidden;
+	outline: 0;
+	padding: 5px;
+}
+div.boton2{
+	margin: 0;
+	padding: 0;
+	
+}
+div.cont-form button{
+	width: 250px;
+	height: 72px;
+	background-color: #025377;
+	border: 3px solid #F6F9FB ;
+	padding: 12px;
+	color: #F6F9FB;
+	font-size: 20px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+div.cont-form button:hover{
+	color:#BAD6DA;
+	background-color: rgb(2, 85, 121);
+	border: 0;
+	
+}
+section.res-convocaroria{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+div.contenedorTabla{
+	
+	background-color: #a7b0b6;
+
+}
+table.tabla-con{
+	justify-content: space-between;
+	background-color: #199319;
+	font-size: 24px;
+	color: #F6F9FB;
+}
+table.tabla-con th{
+	
+	background-color: #04547c;
+}
+
+
 /*****************Historia*********************/
 div.hisroria{
 	text-align: center;
@@ -737,16 +762,16 @@ div.autoridades h1 {
 /***************** Página de Convocatorias***********************************/
 section.cont-convocatorias{
 	display: flex;
-	flex-flow: column;
+	flex-flow: wrap;
+	align-items: flex-start;
 	justify-content: center;
 	width: 100%;
 }
 div.convo-t{
 	display: flex;
-	flex-wrap: wrap;
+	flex-flow: wrap;
 	align-content: flex-start;
 	justify-content: center;
-	/* flex-direction: row; */
 	font-family: 'Fira Sans Condensed';
 	-webkit-text-fill-color: transparent;
 	-webkit-text-stroke: 3px #027496;
@@ -806,3 +831,50 @@ div.item p{
 	color: #F6F9FB;
 }
 
+/***************** Página de Convocatorias: NUEVA CONVOCATORIA***********************************/
+section.cont-nuconv{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding: 10px;
+	
+	flex-wrap: wrap;
+	align-content: center;
+	width: 100%;
+	
+	/* margin: 0 calc(5em + 1vw);  */
+}
+div.cont-form-conv{
+	
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+div.cont-boton{
+	display: flex;
+	justify-content: center;
+	flex-flow: row;
+}
+
+div.cont-boton button{
+	width: 170px !important;
+	margin: 10px !important;
+}
+button.boton2b {
+	width: 250px;
+	height: 72px;
+	background-color: #025377;
+	border: 3px solid #F6F9FB ;
+	padding: 12px;
+	color: #F6F9FB;
+	font-size: 20px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+button.boton2b:hover{
+	color:#BAD6DA;
+	background-color: rgb(2, 85, 121);
+	border: 0;
+	
+}
