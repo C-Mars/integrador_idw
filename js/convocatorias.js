@@ -1,9 +1,3 @@
-
-
-// *************** Contacto ********************* //
-// const formCintacto = document.querySelector('form-contacto')
-
-
 /*********************************CONVOCATORIAS**************************************************/
 
 
@@ -27,11 +21,11 @@ function busquedaConvocatoria() {
 }
 
 
-document.getElementById('nueva-conv').addEventListener('click', editarConvocatoria);
+// document.getElementById('nueva-conv').addEventListener('click', editarConvocatoria);
 
-function editarConvocatoria() {
-  window.location.href = 'crearconvocatoria.html'
-}
+// function editarConvocatoria() {
+//   window.location.href = 'crearconvocatoria.html'
+// }
 
 
 
@@ -143,7 +137,7 @@ function buscarInfo() {
   }
 
 }
-// Elimina la convocatoria en la tabla boton eliminar
+
 function eliminarConvocatoria(param) {
   let idEliminar = parseInt(param.getAttribute("id"));
 
@@ -159,7 +153,6 @@ function eliminarConvocatoria(param) {
   this.buscarInfo();
 }
 
-// funcion para borrar datos de la tabla 
 function borrarBodyTabla() {
   const elemento = document.getElementById('tconv-body');
   while (elemento.firstChild) {
@@ -173,10 +166,10 @@ window.addEventListener("load", function () {
   leerDatos();
 });
 
-const guardarEd = document.getElementById('g-nuev-conv');
+const guardarEd = document.getElementById('g-ed-conv');
 guardarEd.addEventListener('click', guardarConvocatoriaEd);
 
-const cancelarEd = document.getElementById('c-nuev-conv');
+const cancelarEd = document.getElementById('c-ed-conv');
 cancelarEd.addEventListener('click', cancelarEdicion);
 
 function leerDatos(){
@@ -229,10 +222,3 @@ function guardarConvocatoriaEd(){
   window.location.href = 'convocatorias.html';
 }
 
-
-// guarda en el localStorage los datos predifinidos de convocatorias
-
-
-
-
- 
