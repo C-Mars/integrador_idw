@@ -27,11 +27,11 @@ function busquedaConvocatoria() {
 }
 
 
-document.getElementById('nueva-conv').addEventListener('click', editarConvocatoria);
+// document.getElementById('nueva-conv').addEventListener('click', editarConvocatoria);
 
-function editarConvocatoria() {
-  window.location.href = 'crearconvocatoria.html'
-}
+// function editarConvocatoria() {
+//   window.location.href = 'crearconvocatoria.html'
+// }
 
 
 

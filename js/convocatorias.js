@@ -21,13 +21,6 @@ function busquedaConvocatoria() {
 }
 
 
-// document.getElementById('nueva-conv').addEventListener('click', editarConvocatoria);
-
-// function editarConvocatoria() {
-//   window.location.href = 'crearconvocatoria.html'
-// }
-
-
 
 
 /*************************LISTA DE CONVOCATORIAS ***********************************/
@@ -35,8 +28,8 @@ window.addEventListener("load", function () {
   buscarInfo();
 });
 
-const guardar = document.getElementById('g-nuev-conv');
-guardar.addEventListener('click', crearConvocatoria);
+
+
 // Buscar informacion en el localStorange
 function buscarInfo() {
   const body = document.getElementById('tbody');
@@ -135,7 +128,6 @@ function buscarInfo() {
       body.appendChild(tr);
     });
   }
-
 }
 
 function eliminarConvocatoria(param) {
@@ -161,64 +153,46 @@ function borrarBodyTabla() {
 }
 
 
-// EDITAR CONVOCATORIA************************************************************************
+
+
+/*********************NUEVA CONVOCATORIA***********************************************/
 window.addEventListener("load", function () {
-  leerDatos();
-});
-
-const guardarEd = document.getElementById('g-ed-conv');
-guardarEd.addEventListener('click', guardarConvocatoriaEd);
-
-const cancelarEd = document.getElementById('c-ed-conv');
-cancelarEd.addEventListener('click', cancelarEdicion);
-
-function leerDatos(){
-  const idEditar = parseInt(localStorage.getItem('editame'));
-
-  const convocatorias = JSON.parse(localStorage.getItem('convocatorias'));
-
-  const convocatoria = convocatorias.find(item => item.id === idEditar );
-  document.getElementById('texfechaconv').value = convocatoria.fecha;
-  document.getElementById('texeqrival').value = convocatoria.rival;
-  document.getElementById('texcapitan').value = convocatoria.capitan;
-}
-
-function editarConvocatoria(param){
-  let idEditar = parseInt(param.getAttribute('id'));
-  localStorage.setItem('editame',JSON.stringify(idEditar));
-  window.location.href = 'editarconvocatoria.html'
-}
-
-function cancelarEdicion(){
-  window.location.href = 'convocatoria.html';
-}
-
-function guardarConvocatoriaEd(){
-  const convocatorias = JSON.parse(localStorage.getItem('convocatorias'));
-  
-  const idEditar = parseInt(localStorage.getItem('editame'));
-
-  // me quedo con los items menos el que quiero modificar
-  const convocatoriasNuevo = convocatorias.filter( function(item){
-    return item.id !== idEditar;
+    buscarInfo();
   });
+
+  const cancelar = document.getElementById('c-nuev-conv');
+  cancelar.addEventListener('click', cancelarConvocatoria);
   
-  const aux = {
-    'id' : idEditar,
-    'fecha' : document.getElementById('fechaconv').value,
-    'rival' : document.getElementById('texeqrival').value,
-    'capitan' : document.getElementById('texcapitan').value
+  function cancelarConvocatoria() {
+    window.location.href = 'convocatorias.html';
   }
-
-  convocatoriasNuevo.push(aux);
-  const aux2 = convocatoriasNuevo.sort( function(a,b){
-    if(a.id < b.id){
-      return -1
-    }
-    return 0;
-  })
-
-  localStorage.setItem('convocatorias', JSON.stringify(aux2));
-  window.location.href = 'convocatorias.html';
-}
-
+  
+  const guardar = document.getElementById('g-nuev-conv');
+  guardar.addEventListener('click', crearConvocatoria);
+  
+  function crearConvocatoria() {
+    const jsonCovocatorias = localStorage.getItem('convocatorias');
+    if(jsonCovocatorias !== null){
+        const convocatorias = JSON.parse(localStorage.getItem('convocatorias'));
+  
+        maxId = convocatorias.reduce((max, obj) => obj.id > max ? obj.id : max, -Infinity);
+        let i = 0;
+  
+        if (maxId !== -Infinity) {
+          i = maxId + 1;
+        }
+  
+        const convocatoria = {
+          'id': i,
+          'fecha': document.getElementById('texfechaconv').value,
+          'rival': document.getElementById('texeqrival').value,
+          'capitan': document.getElementById('texcapitan').value
+        }
+        convocatorias.push(convocatoria);
+        localStorage.setItem('convocatorias', JSON.stringify(convocatorias));
+  
+        event.preventDefault();
+        event.stopPropagation();
+        window.location.href = 'convocatorias.html';
+      }
+  }
