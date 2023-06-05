@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
     <link rel="stylesheet" href="../css/style.css">  
-    <link rel="stylesheet" href="./css/font-awesome.min.css">
+  
     
     <title>CONTACTO</title>
 </head>
@@ -20,15 +20,15 @@
     <ul class="menu">
       <li><a href="#">INSTITUCIONAL</a>      
         <ul class="submenu"> 
-            <li><a href="./historia.html">Historia</a></li>
-            <li><a href="./autoridades.html">Autoridades</a></li>
-            <li><a href="https://www.afa.com.ar/upload/demo/6230%20_%20Reglamento%20F%C3%BAtbol%20Femenino%20Primera%20A%202023.pdf" target="_blank"> Reglamento</a></li> 
+          <li><a href="./historia.html"><p>Historia</p></a></li>
+          <li><a href="./autoridades.html"><p>Autoridades</p></a></li>
+          <li><a href="https://www.afa.com.ar/upload/demo/6230%20_%20Reglamento%20F%C3%BAtbol%20Femenino%20Primera%20A%202023.pdf" target="_blank"><p>Reglamento</p></a></li>
         </ul>
       </li>
       <li><a href="./jugadores.html">JUGADORES</a></li>
       <li><a href="./convocatorias.html">CONVOCATORIAS</a></li>
       <li><a href="./equipotitular.html">EQUIPO TITULAR</a></li>
-      <li><a href="./contacto.html" class="nav">CONTACTO</a></li>
+      <li><a href="./contacto.html">CONTACTO</a></li>
     </ul>
   </nav>
   <div class = "log">
@@ -41,8 +41,10 @@
     <section class="contacto-info">
       <h2>PARA MÁS INFORMACIÓN</h2>
       <br>
-      <form class="cont-form" method="POST" autocomplete="off" onsubmit="return enviar()">
+      <form class="cont-form" id="form-contacto">
+        <label for="nombreyapellido"></label>
         <input class="control" id ="nombreyapellido" type="text"  placeholder="Nombre y Apellido:" required>
+        <label for="email"></label>
         <input class="control" id ="email" type="email" placeholder="Email:" required>
           <div class="asunto"> 
             <select class="asunt-cont" name="asunto" id="asunto">
@@ -57,7 +59,7 @@
             <textarea  class="comentario-tex" id="comentario" rows="10" cols="20" placeholder="Comentario:"></textarea>
           </div>
         <div class="boton">
-          <button type="submit" id="enviar">ENVIAR</button>
+          <button type="submit" id="enviar-cont">ENVIAR</button>
         </div>
       </form>
     </main>
