@@ -678,19 +678,25 @@ section.res-convocaroria{
 	width: 100%;
 }
 div.contenedorTabla{
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
 	
-	background-color: #a7b0b6;
-
 }
 table.tabla-con{
 	justify-content: space-between;
-	background-color: #199319;
+	/* background-color:#027496; */
 	font-size: 24px;
-	color: #F6F9FB;
+	
+	
+	
 }
 table.tabla-con th{
-	
+	margin: 5px 10px;
+	padding: 5px 10px;
 	background-color: #04547c;
+	color: #F6F9FB;
 }
 
 
@@ -862,14 +868,15 @@ div.cont-boton button{
 	margin: 10px !important;
 }
 button.boton2b {
-	width: 250px;
-	height: 72px;
+	width: 105px;
+	height: 53px;
 	background-color: #025377;
-	border: 3px solid #F6F9FB ;
+	border: 2px solid #F6F9FB ;
 	padding: 12px;
 	color: #F6F9FB;
 	font-size: 20px;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	margin: 5px 10px;
 }
 
 button.boton2b:hover{

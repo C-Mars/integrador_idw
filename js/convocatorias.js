@@ -144,13 +144,13 @@ function buscarInfo() {
       const editar = document.createElement('button');
       editar.setAttribute('id', element.id);
       editar.setAttribute('onclick', 'editarConvocatoria(this)');
-      editar.setAttribute('class', 'boton2');
+      editar.setAttribute('class', 'boton2b');
       editar.appendChild(document.createTextNode('Editar'));
 
       const eliminar = document.createElement('button');
       eliminar.setAttribute('id', element.id);
       eliminar.setAttribute('onclick', 'eliminarConvocatoria(this)');
-      eliminar.setAttribute('class', 'boton2');
+      eliminar.setAttribute('class', 'boton2b');
       eliminar.appendChild(document.createTextNode('Eliminar'));
 
       convocar.appendChild(eliminar);
@@ -245,7 +245,7 @@ function guardarEdConvocatoria(){
   })
 
   localStorage.setItem('convocatorias', JSON.stringify(aux2));
-  
+
   window.location.href = 'convocatorias.html';
 }
 
