@@ -27,22 +27,13 @@ function busquedaConvocatoria() {
 }
 
 
-// document.getElementById('nueva-conv').addEventListener('click', editarConvocatoria);
-
-// function editarConvocatoria() {
-//   window.location.href = 'crearconvocatoria.html'
-// }
-
-
-
 
 /*************************LISTA DE CONVOCATORIAS ***********************************/
 window.addEventListener("load", function () {
   buscarInfo();
 });
 
-const guardar = document.getElementById('g-nuev-conv');
-guardar.addEventListener('click', crearConvocatoria);
+
 // Buscar informacion en el localStorange
 function buscarInfo() {
   const body = document.getElementById('tbody');
@@ -143,6 +134,13 @@ function buscarInfo() {
   }
 
 }
+
+const guardar = document.getElementById('g-nuev-conv');
+guardar.addEventListener('click', crearConvocatoria);
+
+const cancelar = document.getElementById('c-nuev-conv');
+cancelar.addEventListener('click', cancelarConvocatoria);
+
 // Elimina la convocatoria en la tabla boton eliminar
 function eliminarConvocatoria(param) {
   let idEliminar = parseInt(param.getAttribute("id"));

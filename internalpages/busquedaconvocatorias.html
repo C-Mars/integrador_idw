@@ -43,7 +43,7 @@
             <a href="./iniciosesion.html">Iniciar sesión</a>
         </div>
     </header>
-    <!------------------- Página de Contacto ----------->
+    <!------------------- Página de Convocatorias ----------->
     <main>
         <section class="cont-convocatorias">
             <div class="convo-t">
@@ -85,14 +85,14 @@
             <div class="esp-conv">
             </div>
             <div class="cont-form">
-                <form action="#" method="POST">
+                <form action="#" id="form-conv">
                     <fieldset>
                         <legend>Buscar Convocatoria</legend>
                         <div class="fila-ses">
                             <label for="fechaconv">Fecha</label>
                             <input id="fechaconv" type="date" name="date" placeholder="Escriba aquí su usuario">
                         </div>
-                        <div class="fila-ses">
+                        <!-- <div class="fila-ses">
                             <label for="texeqrival">Equipo Rival</label>
                             <input type="text" name="equiporival" id="texeqrival"
                                 placeholder="Escriba aquí el Equipo Rival">
@@ -100,13 +100,13 @@
                         <div class="fila-ses">
                             <label for="texcapitan">Capitan</label>
                             <input type="text" name="capitan" id="texcapitan" placeholder="Escriba aquí el Capitan">
-                        </div>
+                        </div> -->
                     </fieldset>
                     <!-- <div class="sugerencia">
                     <p class="su-tex">¿Ha olvidado su nombre de usuario o contraseña?</p>
                   </div> -->
                     <div class="boton2">
-                        <button id="g-nuev-conv">BUSCAR</button>
+                        <button id="buscar-conv" type="submit">BUSCAR</button>
                     </div>
                     <!-- <div class="sugerencia-2">
                     <p class="su-tex">Al iniciar sesión, acepta nuestros Términos de uso.</p>
@@ -129,7 +129,7 @@
                         <th>CAPITAN</th>
                         <th class="acciones">ACCIONES</th>
                     </thead>
-                    <tbody id="miBody">
+                    <tbody id="tbody">
                     </tbody>
                 </table>
             </div>
@@ -142,7 +142,7 @@
         </div>
     </footer><!-- Fin del pie de Página -->
 
-    <script src="../js/convocatorias.js" type=""></script>
+    <script src="../js/buscarConvocatoria.js" type=""></script>
 
 
 </body>
