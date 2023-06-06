@@ -191,7 +191,7 @@ function leerDatos(){
 function editarConvocatoria(param){
   let idEditar = parseInt(param.getAttribute('id'));
   localStorage.setItem('editame',JSON.stringify(idEditar));
-  window.location.href = 'editarconvocatoria.html'
+  window.location.href = 'editarconvocatoria.html';
 }
 
 function cancelarEdicion(){

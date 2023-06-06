@@ -196,11 +196,12 @@ function guardarConvocatoria() {
 
   const aux = {
     'id': idEditar,
-    'fecha': document.getElementById('fechaconv').value,
+    'fecha': document.getElementById('texfechaconv').value,
     'rival': document.getElementById('texeqrival').value,
     'capitan': document.getElementById('texcapitan').value
   }
   convocatoriasNuevo.push(aux);
+
   const aux2 = convocatoriasNuevo.sort(function (a, b) {
     if (a.id < b.id) {
       return -1
