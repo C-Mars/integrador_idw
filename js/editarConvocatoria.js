@@ -44,12 +44,6 @@ window.addEventListener("load", function () {
   cancelar.addEventListener('click', cancelarEdicion);
   
   
-  function editarConvocatoria(param) {
-    let idEditar = parseInt(param.getAttribute('id'));
-    localStorage.setItem('editame', JSON.stringify(idEditar));
-    window.location.href = 'editarconvocatoria.html';
-  }
-  
   function cancelarEdicion() {
     window.location.href = 'convocatorias.html';
   }

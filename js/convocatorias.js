@@ -59,7 +59,12 @@ function buscarInfo() {
           rival.appendChild(document.createTextNode(element.rival));
           capitan.appendChild(document.createTextNode(element.capitan));
 
-
+          const boton = document.createElement('button');
+          boton.setAttribute('id', element.id);
+          boton.setAttribute('onclick', 'convocarJugadores(this)');
+          boton.setAttribute('class', 'boton2bc');
+          boton.appendChild(document.createTextNode('Convocar'));
+          
           const editar = document.createElement('button');
           editar.setAttribute('id', element.id);
           editar.setAttribute('onclick', 'editarConvocatoria(this)');
@@ -72,6 +77,9 @@ function buscarInfo() {
           eliminar.setAttribute('class', 'boton2b');
           eliminar.appendChild(document.createTextNode('Eliminar'));
 
+          convocar.appendChild(eliminar);
+          convocar.appendChild(editar);
+          convocar.appendChild(boton);
 
 
           tr.appendChild(id);
@@ -99,6 +107,12 @@ function buscarInfo() {
       rival.appendChild(document.createTextNode(element.rival));
       capitan.appendChild(document.createTextNode(element.capitan));
 
+      const boton = document.createElement('button');
+              
+      boton.setAttribute('id', element.id);
+      boton.setAttribute('onclick', 'convocarJugadores(this)');
+      boton.setAttribute('class', 'boton2bc');
+      boton.appendChild(document.createTextNode('Convocar'));
 
       const editar = document.createElement('button');
       editar.setAttribute('id', element.id);
@@ -114,6 +128,7 @@ function buscarInfo() {
 
       convocar.appendChild(eliminar);
       convocar.appendChild(editar);
+      convocar.appendChild(boton);
 
 
       tr.appendChild(id);
@@ -140,11 +155,11 @@ function eliminarConvocatoria(param) {
 
   this.borrarBodyTabla();
   this.buscarInfo();
-  window.location.href = 'listaconvocatorias.html';
+  
 }
 
 function borrarBodyTabla() {
-  const elemento = document.getElementById('tconv-body');
+  const elemento = document.getElementById('tbody');
   while (elemento.firstChild) {
     elemento.firstChild.remove();
   }
@@ -154,67 +169,8 @@ function editarConvocatoria(param){
   localStorage.setItem('editame',JSON.stringify(idEditar));
   window.location.href = 'editarconvocatoria.html'
 }
-// /**EDITAR CONVOCATORIA************************************************/
-
-// window.addEventListener("load", function () {
-//   leerDatos();
-// });
-
-// function leerDatos() {
-//   const idEditar = parseInt(localStorage.getItem('editame'));
-
-//   const convocatorias = JSON.parse(localStorage.getItem('convocatorias'));
-
-//   const convocatoria = convocatorias.find(item => item.id === idEditar);
-//   document.getElementById('texfechaconv').value = convocatoria.fecha;
-//   document.getElementById('texeqrival').value = convocatoria.rival;
-//   document.getElementById('texcapitan').value = convocatoria.capitan;
-// }
-
-// const guardar = document.getElementById('g-ed-conv');
-// guardar.addEventListener('click', guardarConvocatoria);
-
-// const cancelar = document.getElementById('c-ed-conv');
-// cancelar.addEventListener('click', cancelarEdicion);
-
-
-// function editarConvocatoria(param) {
-//   let idEditar = parseInt(param.getAttribute('id'));
-//   localStorage.setItem('editame', JSON.stringify(idEditar));
-//   window.location.href = 'editarconvocatoria.html';
-// }
-
-// function cancelarEdicion() {
-//   window.location.href = 'convocatorias.html';
-// }
-
-// function guardarConvocatoria() {
-//   const convocatorias = JSON.parse(localStorage.getItem('convocatorias'));
-
-//   const idEditar = parseInt(localStorage.getItem('editame'));
-
-//   // me quedo con los items menos el que quiero modificar
-//   const convocatoriasNuevo = convocatorias.filter(function (item) {
-//     return item.id !== idEditar;
-//   });
-
-//   const aux = {
-//     'id': idEditar,
-//     'fecha': document.getElementById('texfechaconv').value,
-//     'rival': document.getElementById('texeqrival').value,
-//     'capitan': document.getElementById('texcapitan').value
-//   }
-//   convocatoriasNuevo.push(aux);
-
-//   const aux2 = convocatoriasNuevo.sort(function (a, b) {
-//     if (a.id < b.id) {
-//       return -1
-//     }
-//     return 0;
-//   });
-
-//   localStorage.setItem('convocatorias', JSON.stringify(aux2));
-//   window.location.href = 'convocatorias.html';
-// }
-
-
+function convocarJugadores(param){
+  let idConvocatoria = parseInt(param.getAttribute("id"));
+  localStorage.setItem('convocatoria',JSON.stringify(idConvocatoria));
+  window.location.href = 'listajugadoresconvocados.html'
+}

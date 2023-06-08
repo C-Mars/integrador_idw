@@ -37,7 +37,7 @@ window.addEventListener("load", function () {
 // Buscar informacion en el localStorange
 function buscarInfo() {
   const body = document.getElementById('tbody');
-  console.log(body)
+  // console.log(body)
   const convocatorias = JSON.parse(localStorage.getItem('convocatorias'));
 
   // sino encuentro nada en el localstorage
