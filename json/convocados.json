@@ -1,0 +1,123 @@
+[
+    {
+        "id": 0,
+        "dni": "30000001",
+        "apellido": "Correa",
+        "nombre": "Vanina Noemí",
+        "posicion": "Arquera",
+        "apodo": "-",
+        "dorsal": "1",
+        "pieHabil": "Derecho"
+        
+    },
+    {
+        "id": 1,
+        "dni": "30000002",
+        "apellido": "Sachs",
+        "nombre": "Adriana Maria",
+        "posicion": "Defensora",
+        "apodo": "-",
+        "dorsal": "2",
+        "pieHabil": "Derecho"
+    },
+    {
+        "id": 2,
+        "dni": "30000003",
+        "apellido": "Rulli",
+        "nombre": "Gerónimo",
+        "posicion": "Arquero",
+        "apodo": "-",
+        "dorsal": "3",
+        "pieHabil": "Derecho"
+    },
+    {
+        "id": 3,
+        "dni": "30000003",
+        "apellido": "Stabile",
+        "nombre": "Eliana Nemí",
+        "posicion": "Defensora",
+        "apodo": "-",
+        "dorsal": "3",
+        "pieHabil": "Derecho"
+    },
+    {
+        "id": 4,
+        "dni": "30000004",
+        "apellido": "Vallejos",
+        "nombre": "Fabiana Gisela",
+        "posicion": "Mediocampista",
+        "apodo": "-",
+        "dorsal": "5",
+        "pieHabil": "Derecho"
+    },
+    {
+        "id": 5,
+        "dni": "30000005",
+        "apellido": "Cometti",
+        "nombre": "Aldana",
+        "posicion": "Defensora",
+        "apodo": "-",
+        "dorsal": "6",
+        "pieHabil": "Derecho"
+    },
+    {
+        "id": 6,
+        "dni": "30000006",
+        "apellido": "Núñez",
+        "nombre": "Romina Stefanía",
+        "posicion": "Mediocampista",
+        "apodo": "-",
+        "dorsal": "7",
+        "pieHabil": "Derecho"
+    },
+    {
+        "id": 7,
+        "dni": "30000007",
+        "apellido": "Falfán",
+        "nombre": "Daiana Micaela",
+        "posicion": "Mediocampista",
+        "apodo": "-",
+        "dorsal": "8",
+        "pieHabil": "Izquierdo"
+    },
+    {
+        "id": 8,
+        "dni": "30000008",
+        "apellido": "Gramaglia",
+        "nombre": "Paulina",
+        "posicion": "Delantera",
+        "apodo": "-",
+        "dorsal": "9",
+        "pieHabil": "Izquierdo",
+    },
+    {
+        "id": 9,
+        "dni": "30000009",
+        "apellido": "Rodríguez",
+        "nombre": "Yamila Tamara",
+        "posicion": "Delantera",
+        "apodo": "-",
+        "dorsal": "11",
+        "pieHabil": "Derecho",
+    },
+    {
+        "id": 10,
+        "dni": "30000010",
+        "apellido": "Esponda",
+        "nombre": "Lara",
+        "posicion": "Arquera",
+        "apodo": "-",
+        "dorsal": "12",
+        "pieHabil": "Derecho",
+    },
+    {
+        "id": 11,
+        "dni": "30000011",
+        "apellido": "Braun",
+        "nombre": "Lisandro",
+        "posicion": "Defensora/Mediocampista",
+        "apodo": "-",
+        "dorsal": "13",
+        "pieHabil": "Derecho"
+    }
+]

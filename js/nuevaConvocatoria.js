@@ -1,6 +1,4 @@
 
-
-
 // MENÚ DE NAVEGACIÓN******************************************************************************
 document.getElementById('nueva-conv').addEventListener('click', crearConvocatoria);
 
@@ -21,9 +19,6 @@ function busquedaConvocatoria() {
 }
 /*********************NUEVA CONVOCATORIA***********************************************/
 
-// window.addEventListener("load", function () {
-//     buscarInfo();
-//   });
   
   const guardar = document.getElementById('g-nuev-conv');
   guardar.addEventListener("click", crearConvocatoria);
