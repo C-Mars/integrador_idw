@@ -88,7 +88,7 @@
         "posicion": "Delantera",
         "apodo": "-",
         "dorsal": "9",
-        "pieHabil": "Izquierdo",
+        "pieHabil": "Izquierdo"
     },
     {
         "id": 9,
@@ -98,7 +98,7 @@
         "posicion": "Delantera",
         "apodo": "-",
         "dorsal": "11",
-        "pieHabil": "Derecho",
+        "pieHabil": "Derecho"
     },
     {
         "id": 10,
@@ -108,13 +108,13 @@
         "posicion": "Arquera",
         "apodo": "-",
         "dorsal": "12",
-        "pieHabil": "Derecho",
+        "pieHabil": "Derecho"
     },
     {
         "id": 11,
         "dni": "30000011",
         "apellido": "Braun",
-        "nombre": "Lisandro",
+        "nombre": "Shopia",
         "posicion": "Defensora/Mediocampista",
         "apodo": "-",
         "dorsal": "13",
