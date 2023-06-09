@@ -19,6 +19,7 @@
         "apodo": "-",
         "dorsal": "2",
         "pieHabil": "Derecho"
+        
     },
     {
         "id": 2,
@@ -114,10 +115,141 @@
         "id": 11,
         "dni": "30000011",
         "apellido": "Braun",
-        "nombre": "Lisandro",
+        "nombre": "Sophia",
         "posicion": "Defensora/Mediocampista",
         "apodo": "-",
         "dorsal": "13",
         "pieHabil": "Derecho"
+    },
+    {
+        "id": 12,
+        "dni": "30000012",
+        "apellido": "Mayorga",
+        "nombre": "Miriam Anahí",
+        "posicion": "Defensora",
+        "apodo": "-",
+        "dorsal": "14",
+        "pieHabil": "Izquierdo"
+    },
+    {
+        "id": 13,
+        "dni": "30000013",
+        "apellido": "Bonsegundo",
+        "nombre": "Florencia",
+        "posicion": "Delantera",
+        "apodo": "-",
+        "dorsal": "15",
+        "pieHabil": "Derecho"
+    },
+    {
+        "id": 14,
+        "dni": "30000014",
+        "apellido": "Benítez",
+        "nombre": "Lorena",
+        "posicion": "Mediocampista",
+        "apodo": "-",
+        "dorsal": "16",
+        "pieHabil": "Derecho"
+    },
+    {
+        "id": 15,
+        "dni": "30000015",
+        "apellido": "Pereyra",
+        "nombre": "Maricel",
+        "posicion": "Mediocampista",
+        "apodo": "-",
+        "dorsal": "17",
+        "pieHabil": "Derecho"
+    },
+    {
+        "id": 16,
+        "dni": "30000016",
+        "apellido": "Chávez",
+        "nombre": "Gabriela Patricia",
+        "posicion": "Defensora",
+        "apodo": "-",
+        "dorsal": "18",
+        "pieHabil": "Derecho"
+    },
+    {
+        "id": 17,
+        "dni": "30000017",
+        "apellido": "Larroquette",
+        "nombre": "Mariana",
+        "posicion": "Delantera",
+        "apodo": "-",
+        "dorsal": "19",
+        "pieHabil": "Derecho"
+    },
+    {
+        "id": 18,
+        "dni": "30000018",
+        "apellido": "Dos Santos",
+        "nombre": "Celeste",
+        "posicion": "Defensora",
+        "apodo": "-",
+        "dorsal": "20",
+        "pieHabil": "Derecho"
+    },
+    {
+        "id": 19,
+        "dni": "30000019",
+        "apellido": "Lonigro",
+        "nombre": "Érica Noelia",
+        "posicion": "Delantera",
+        "apodo": "-",
+        "dorsal": "21",
+        "pieHabil": "Derecho"
+    },
+    {
+        "id": 20,
+        "dni": "30000020",
+        "apellido": "Banini",
+        "nombre": "Estefanía Romina",
+        "posicion": "Mediocampista",
+        "apodo": "-",
+        "dorsal": "22",
+        "pieHabil": "Izquierdo"
+    },
+    {
+        "id": 21,
+        "dni": "30000021",
+        "apellido": "Oliveros",
+        "nombre": "Laurina",
+        "posicion": "Arquera",
+        "apodo": "-",
+        "dorsal": "23",
+        "pieHabil": "Derecho"
+    },
+    {
+        "id": 22,
+        "dni": "30000022",
+        "apellido": "Troncoso",
+        "nombre": "Carolina",
+        "posicion": "Delantera",
+        "apodo": "-",
+        "dorsal": "24",
+        "pieHabil": "Izquierdo"
+    },
+    {
+        "id": 23,
+        "dni": "30000023",
+        "apellido": "Palomar",
+        "nombre": "Estefanía",
+        "posicion": "Delantera",
+        "apodo": "-",
+        "dorsal": "25",
+        "pieHabil": "Derecho"
+    },
+    {
+        "id": 24,
+        "dni": "30000024",
+        "apellido": "Martín",
+        "nombre": "Milagros Iara",
+        "posicion": "Defensora/Mediocampista",
+        "apodo": "-",
+        "dorsal": "26",
+        "pieHabil": "Izquierdo",
+        "imagen":""
     }
 ]
