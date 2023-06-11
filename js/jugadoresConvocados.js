@@ -1,4 +1,3 @@
-
 // MENÚ DE NAVEGACIÓN******************************************************************************
 document.getElementById('nueva-conv').addEventListener('click', crearConvocatoria);
 
@@ -18,8 +17,17 @@ function busquedaConvocatoria() {
   window.location.href = 'busquedaconvocatorias.html'
 }
 
-// CONVOCAR JUGADORES******************************************************************************
-window.addEventListener("load", function () {
+// JUGADORES CONVOCADOS**********************************************************************************************
+document.getElementById('convocar-ed').addEventListener('click', convocarJugadores);
+
+
+function convocarJugadores(param){
+    let idConvocatoria = parseInt(param.getAttribute("id"));
+    localStorage.setItem('convocatoria',JSON.stringify(idConvocatoria));
+    window.location.href = 'listajugadoresconvocados.html'
+  }
+
+  window.addEventListener("load", function () {
     buscarInfoJugadores();
   });
   
@@ -67,14 +75,14 @@ window.addEventListener("load", function () {
       // elimino (filtro) los datos del localstorage del idconvocatoria 
       const filtro = datosLocalStorage.filter(item => item.idConvocarotia !== idConvocatoria);
       // agrego los nuevos convocados al localstorage
-      // console.log(filtro);
+      console.log(filtro);
 
       if(filtro.length > 0){
         // a los nuevos jugadoresConvocatoria les agrego los que filtre (lo que tenia en el localstorage)
         convocados.push(...filtro);
       }
 
-      // console.log(convocados);
+      console.log(convocados);
 
       
       localStorage.setItem('convocatoriasJugadores',JSON.stringify(convocados));  
@@ -90,9 +98,9 @@ window.addEventListener("load", function () {
 
     const convocatorias = JSON.parse(localStorage.getItem('convocatorias'));
     const convocatoria = convocatorias.find(item => item.id === idConvocatoria);
-
+    // const idJugador =
     document.getElementById('titulo').
-      appendChild(document.createTextNode(`Argentina vs ${convocatoria.rival} (${convocatoria.fecha})`))
+    appendChild(document.createTextNode(`Argentina vs ${convocatoria.rival} (${convocatoria.fecha})`))
 
 
     const body = document.getElementById('body');
@@ -102,7 +110,7 @@ window.addEventListener("load", function () {
         return res.json()
     })
     .then((data) => {
-      data.forEach(element => {
+      data.forEach(element => {if (element.id === idConvocatoria ){
         const tr = document.createElement('tr');
 
         const id = document.createElement('td');
@@ -127,7 +135,7 @@ window.addEventListener("load", function () {
         check.id = element.id;
         
         // si hay datos de jugadores para la convocatoria
-        if(datosLocalStorage !== null){                
+        if(datosLocalStorage !== null && element.id === idConvocatoria){                
           // verifico si el jugador ya esta en la covocatoria 
           const yaEstaConvocado = datosLocalStorage.find
             (item => item.idJugador === element.id 
@@ -151,10 +159,7 @@ window.addEventListener("load", function () {
         tr.appendChild(convocar);
         body.appendChild(tr);
         
-      });
+      }});
     })
-    console.log(body)
+    // console.log(body)
   }
-
-
-  

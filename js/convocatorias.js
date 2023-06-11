@@ -126,9 +126,18 @@ function buscarInfo() {
       eliminar.setAttribute('class', 'boton2b');
       eliminar.appendChild(document.createTextNode('Eliminar'));
 
+      const botonConvocados = document.createElement('button');
+              
+      botonConvocados.setAttribute('id', element.id);
+      botonConvocados.setAttribute('onclick', 'jugadoresConvocados(this)');
+      botonConvocados.setAttribute('class', 'boton2bc');
+      botonConvocados.appendChild(document.createTextNode('Convocados'));
+
       convocar.appendChild(eliminar);
       convocar.appendChild(editar);
       convocar.appendChild(boton);
+      convocar.appendChild(botonConvocados);
+
 
 
       tr.appendChild(id);
@@ -173,4 +182,10 @@ function convocarJugadores(param){
   let idConvocatoria = parseInt(param.getAttribute("id"));
   localStorage.setItem('convocatoria',JSON.stringify(idConvocatoria));
   window.location.href = 'listajugadoresconvocados.html'
+}
+
+function jugadoresConvocados(param) {
+  const idConvocatoria = parseInt(param.getAttribute("id"));
+  localStorage.setItem('convocatoria',JSON.stringify(idConvocatoria));
+  window.location.href = 'jugadoresConvocados.html'
 }

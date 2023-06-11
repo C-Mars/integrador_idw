@@ -30,25 +30,30 @@ function busquedaConvocatoria() {
     const jsonCovocatorias = localStorage.getItem('convocatorias');
     if (jsonCovocatorias !== null) {
       const convocatorias = JSON.parse(localStorage.getItem('convocatorias'));
-  
+      
       maxId = convocatorias.reduce((max, obj) => obj.id > max ? obj.id : max, -Infinity);
       let i = 0;
   
       if (maxId !== -Infinity) {
         i = maxId + 1;
       }
-  
+      
+      const valorFecha =document.getElementById('texfechaconv').value;
+      const valorDate = new Date(valorFecha);
+      const fechaString = valorDate.toLocaleDateString();
+      // alert(fechaString)
+
       const convocatoria = {
         'id': i,
-        'fecha': document.getElementById('texfechaconv').value,
+        'fecha': fechaString,
         'rival': document.getElementById('texeqrival').value,
         'capitan': document.getElementById('texcapitan').value
       }
       convocatorias.push(convocatoria);
       localStorage.setItem('convocatorias', JSON.stringify(convocatorias));
   
-      event.preventDefault();
-      event.stopPropagation();
+      // event.preventDefault();
+      // event.stopPropagation();
       window.location.href = 'convocatorias.html';
     }
   }
