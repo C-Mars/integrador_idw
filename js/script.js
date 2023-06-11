@@ -34,9 +34,12 @@ function validarUsuario(){
   const contrasenia = document.getElementById('texcontrasenia').value;
 
   if (nomusuario.legth == 0 || contrasenia.legth == 0){
-    alert('El nombre de Usuario y o su contraseña es vacia')
+    alert('El nombre de usuario o clave está vacío')
   } else{
     alert('Hola ' + nomusuario +'! Bienvenido/a')
   }
   
+}
+function crearCuenta(){
+  alert('Para crear una cuenta debe tener la autorizacion de la AFA. Para más información ingrese a la página de contacto del sitio')
 }
