@@ -46,7 +46,7 @@
     <div class="ses-intermedio" width="134px">
     </div>
     <div class="cont-form">
-      <form action="#" method="POST">
+      <form action="../index.html">
         <fieldset>
           <legend>Inicio de Sesión</legend>
           <div class="fila-ses">
@@ -55,14 +55,14 @@
           </div>
           <div class="fila-ses">
             <label for="texcontrasenia">Contraseña</label>
-            <input type="text" name="contrasenia" id="texcontrasenia" placeholder="Escriba aquí su contraseña">
+            <input type="password" name="contrasenia" id="texcontrasenia" placeholder="Escriba aquí su contraseña">
           </div>
         </fieldset>
         <div class="sugerencia">
           <p class="su-tex">¿Ha olvidado su nombre de usuario o contraseña?</p>
         </div>
         <div class="boton2">
-          <button>INICIAR SESIÓN</button>
+          <button onclick="validarUsuario()">INICIAR SESIÓN</button>
         </div>
         <div class="sugerencia-2">
           <p class="su-tex">Al iniciar sesión, acepta nuestros Términos de uso.</p>
