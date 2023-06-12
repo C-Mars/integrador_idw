@@ -1,19 +1,19 @@
 [
     {
         "id": 0,
-        "fecha": "24/07/2023",
+        "fecha": "24/7/2023",
         "rival": "Italia",
         "capitan": "Orellano"
     },
     {
         "id": 1,
-        "fecha": "27/07/2023",
+        "fecha": "27/7/2023",
         "rival": "Sudáfrica",
         "capitan": "Stabile"
     },
     {
         "id": 2,
-        "fecha": "02/08/2023",
+        "fecha": "02/8/2023",
         "rival": "Suecia",
         "capitan": "Vallejos" 
     }

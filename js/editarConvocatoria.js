@@ -57,10 +57,12 @@ window.addEventListener("load", function () {
     const convocatoriasNuevo = convocatorias.filter(function (item) {
       return item.id !== idEditar;
     });
-  
+    const valorFecha =document.getElementById('texfechaconv').value;
+    const valorDate = new Date(valorFecha);
+    const fechaString = valorDate.toLocaleDateString();
     const aux = {
       'id': idEditar,
-      'fecha': document.getElementById('texfechaconv').value,
+      'fecha': fechaString,
       'rival': document.getElementById('texeqrival').value,
       'capitan': document.getElementById('texcapitan').value
     }
@@ -74,5 +76,6 @@ window.addEventListener("load", function () {
     });
   
     localStorage.setItem('convocatorias', JSON.stringify(aux2));
-    window.location.href = 'convocatorias.html';
+   
+     return window.location.href = 'convocatorias.html';
   }
