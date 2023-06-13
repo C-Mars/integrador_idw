@@ -189,13 +189,30 @@ tr:nth-child(odd) {
   font-size: 18px;
 }
 
-.selectordeformaciones { /*agregado el 11-jun*/
+.selectordeformaciones { 
     position: absolute;
     bottom: 52%;    /*alineacion de abajo hacia arriba*/
-    right: 19%;    /*alineacion de derecha a izquierda*/
+    right: 16%;    /*alineacion de derecha a izquierda*/
 }
 
-.ImagenesdeFormacion { /*agregado el 11-jun*/
+.selectordeformaciones button {
+    margin: 0px 4px;
+    background: #6ca4c4; ; /*alternativas #F6F9FB - #6ca4c4*/
+    color:  black;/*alternativas #025377 */
+    font-family: 'Fira Sans Condensed semibold';
+    font-weight: 600; /* Grosor del texto */
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.5s; /* Transición de color */
+    border: 2px solid white;
+  }
+  
+  .selectordeformaciones button:hover {
+    color: #025377;
+  }
+  /* FIN CSS BOTNES DE CAMBIO DE FORMACION */
+
+.ImagenesdeFormacion {
     position: absolute;
     bottom:14%;
     right: 4%;
@@ -207,20 +224,28 @@ tr:nth-child(odd) {
     right: 4%;
 }
 
-.tresbotones {
-    width: 32%;
+   .tres_botones_ET {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .tres_botones_ET button {
+    flex: 0 0 28%; /* Ancho ajustable */
     background: white;
-    border:none;
-    padding: 10px; 
+    border: none;
+    padding: 10px;
     color: black;
-    margin: 16px 0;   
+    margin: 16px 10px; /* Espacio entre botones */
     font-family: 'Fira Sans Condensed semibol';
     font-weight: 80;
-    font-size: 20px;
+    font-size: 15px;
     cursor: pointer;
-    transition: .5s;
-}
-
-.tresbotones:hover {
-    color: #2d7399;
-}
+    transition: color 0.5s; /* Transición de color */
+    border: 2px solid black;
+  }
+  
+  .tres_botones_ET button:hover {
+    color: #2d7399; /* Cambio de color al colocar el mouse sobre el botón */
+  }
+  

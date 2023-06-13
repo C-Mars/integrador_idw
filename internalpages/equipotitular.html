@@ -353,16 +353,28 @@
       <div class="ImagenesdeFormacion">
         <img src=" ../img/formacion_inicial_3-4-3.png" id="imgchangeform" alt="foto_de_formacion_3_4_3" style="width: 250px">
       </div>
+
+         <!--////////////BOTONES ////////// -->
+      <div class="tres_botones_ET"> 
+        <button id="armarBtnGuardar"   onclick="armaEquipo.grabar();"                    type="submit">GUARDAR</button>
+        <button id="armarBtnConfirmar" onclick="armaEquipo.preconfirmar();"              type="submit">CONFIRMAR EQUIPO Y CONTINUAR</button>
+        <button id="cerrar"            onclick="armaEquipo.TablaJugadoresconfirmados();" type="submit">CERRAR</button>
+      </div>
+
     </div> <!--fin maquetacion 3era parte-->
 
+    
 </div> <!--fin contenedor cajitas-->
 
-    <!--////////////BOTONES ////////// 
-    <div class=".tresbotones"> 
-        <button id="armarBtnGuardar"   onclick="armaEquipo.grabarBorrador();" type="submit">Guardar</button>
-        <button id="armarBtnConfirmar" onclick="armaEquipo.preconfirmar();" type="submit">Confirmar equipo y continuar</button>
-        <button id="cerrar"            onclick="ArmaEquipo.TablaJugadoresconfirmados()"type="submit">Cerrar</button>
-    </div>
-    -->
-    <script src="../js/cambiar_formacion.js"></script>              
+    
+    
+               
  </body>
+ <!-- Aquí empieza el pie de Página de la web -->
+ <footer>
+  <div id="pie">
+      <p>2023 &copy; Desarrollo Web - UNER</p>
+  </div>
+</footer><!-- Fin del pie de Página -->
+
+<script src="../js/cambiar_formacion.js"></script>   
