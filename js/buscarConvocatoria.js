@@ -104,12 +104,7 @@ function rangoBusquedaConvocatoria() {
             'capitan' :conv.capitan
           }
           listaBusqueda.push(aux);
-          // const aux2 = listaBusqueda.sort( function(a,b){
-          //   if(a.id < b.id){
-          //     return -1
-          //   } 
-          //     return 0
-          // });
+   
           localStorage.setItem('convocabus', JSON.stringify(listaBusqueda));     
       } 
       // localStorage.setItem('convocabus', JSON.stringify(listaBusqueda)); 
