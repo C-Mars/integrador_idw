@@ -88,11 +88,11 @@ function rangoBusquedaConvocatoria() {
  
 
   
-  /**anda mal */
+  /**FUNCIONA EL FILTRO PERO SUBE AL LOCALSTORAGE SUBE EL ÚLTIMO DATO*/
   idRango.forEach((item) => {
       // const listaBusqueda = []
     
-    convocatorias.forEach((conv  ) => {
+    convocatorias.forEach((conv) => {
       // const listaBusqueda = []
       if(item === conv.fecha){
         const listaBusqueda = []
