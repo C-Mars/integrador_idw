@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>EQUIPO TITULAR-COPY - GRAN DT</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="stylo_posicion_inicial.css">
+ </head>
+<!-----------------------------------Navegador------------------>
+<body>
+  <header>
+    <div class="logoNav">
+      <a href="../index.html"><img src="../img/Logo_AFA-02.png" alt="Logo de la AFA">
+      </a>
+    </div>
+    <nav>
+      <ul class="menu">
+        <li><a href="#">INSTITUCIONAL</a>
+          <ul class="submenu">
+            <li><a href="./historia.html"><p>Historia</p></a></li>
+            <li><a href="./autoridades.html"><p>Autoridades</p></a></li>
+            <li><a href="https://www.afa.com.ar/upload/demo/6230%20_%20Reglamento%20F%C3%BAtbol%20Femenino%20Primera%20A%202023.pdf" target="_blank"><p>Reglamento</p></a></li>
+          </ul>
+        </li>
+        <li><a href="./jugadores.html">JUGADORES</a></li>
+        <li><a href="./convocatorias.html">CONVOCATORIAS</a></li>
+        <li><a href="./equipotitular.html">EQUIPO TITULAR</a></li>
+        <li><a href="./contacto.html">CONTACTO</a></li>
+      </ul>
+    </nav>
+    <div class="log">
+      <a href="./iniciosesion.html">Iniciar sesión</a>
+    </div>
+  </header>
+
+<!------------------- EQUIPO TITULAR ----------->
+
+<!--<div class="flex contentMainArmaEquipo">-->
+
+        <div class="eqini_uno" id="cont3ndor1"> <!--maquetacion 1era parte-->
+                <h2>
+                    <div class="title_nameequipotit"></div>
+                    <span>LISTA DE FUTBOLISTAS</span>
+                </h2>
+
+                <p class="msnTitle">Usa los filtros para seleccionar a los jugadores.</p>
+        
+        <div class="buscadores_lista_de_fulbo"> <!--buscadores-->
+             <!--buscadores  
+                <form name="frmBusqueda" id="frmBusqueda" class="marginTopMenos10">
+                    <div class="flex"> --> 
+                        <div class="tabla-con">
+                            <label>PAIS</label> <!--buscador de paises-->
+                            <select name="idClub" id="idClub" onchange="javascript:armaEquipo.buscarJugadores(1)">
+                            <option value="">Todos</option>
+                            <option value="1">Argentina</option>
+                            <option value="2">Brasil</option>
+                            <option value="3">Uruguay</option>
+                            <option value="4">Chile</option></select>
+                        </div><!--end content form-->
+             
+                        <div class="content_listadoequipotitular"><!--buscador por puestos-->    
+                            <label>PUESTO</label> 
+                            <select name="idPosicion" onchange="javascript:armaEquipo.buscarJugadores(1 )">
+                                <option value="">Todos</option>
+                                <option value="1">Arquero</option>
+                                <option value="2">Defensor</option>
+                                <option value="3">Volante</option>
+                                <option value="4">Delantero</option>
+                            </select>
+                       </div>
+                
+                        <!--<div class="contentBuscarApellidoJugador"> buscador por apellidos
+                            <label for="buscarApellidoJugador"> 
+                              <p>Buscar por apellido</p>
+                              <input type="text" name="apellido" id="buscarApellidoJugador" class="buscarApellidoJugador" placeholder="">
+                            </label>		
+                        </div>-->
+
+                        <div class="contentBuscador"> 
+                          <label for="site-search">BUSCAR POR NOMBRE:</label>
+                          <input type="search" id="site-search" name="q">
+                          <button>BUSCAR</button>
+                        </div>
+                        
+                      </div>
+
+        </div>
+
+    <div class="contenedor_de_cajitas"> <!--////////////CONTENEDOR DE LA DE ABAJO///////////-->
+      <div class="eqini_dos" id="contenedor_verde"> <!--maquetacion 2da parte-->
+      <table class="tablajugadores">
+        <tr>
+          <th>N°</th>
+          <th>JUGADOR</th>
+          <th>DORSAL</th>
+          <th>POS</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Vanina Noemi Correa</td>
+          <td>1</td>
+          <td>Arq</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Adriana Maria Sachs</td>
+          <td>2</td>
+          <td>Def</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Eliana Noemi Stabile</td>
+          <td>3</td>
+          <td>Def</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Fabiana Gisela Vallejos</td>
+          <td>5</td>
+          <td>Med</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Aldana Cometti</td>
+          <td>6</td>
+          <td>Def</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Romina Stefania Nuñez</td>
+          <td>7</td>
+          <td>Med</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Daiana Micaela Falfan</td>
+          <td>8</td>
+          <td>Med</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Paulina Gramaglia</td>
+          <td>9</td>
+          <td>Def</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>Yamila Tamara Rodriguez</td>
+          <td>11</td>
+          <td>Del</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Lara Esponda</td>
+          <td>12</td>
+          <td>Arq</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>Sophia Braun</td>
+          <td>13</td>
+          <td>Def</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>Miriam Anahi Mayorga</td>
+          <td>14</td>
+          <td>Def</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>Florencia Bonsegundo</td>
+          <td>15</td>
+          <td>Del</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>Lorena Benitez</td>
+          <td>16</td>
+          <td>Med</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>Maricel Pereyra</td>
+          <td>17</td>
+          <td>Med</td>
+        </tr>
+        <tr>
+          <td>16</td>
+          <td>Gabriela Patricia Chavez</td>
+          <td>18</td>
+          <td>Def</td>
+        </tr>
+        <tr>
+          <td>17</td>
+          <td>Mariana Larroquette</td>
+          <td>19</td>
+          <td>Del</td>
+        </tr>
+        <tr>
+          <td>18</td>
+          <td>Celeste Dos Santos</td>
+          <td>20</td>
+          <td>Def</td>
+        </tr>
+        <tr>
+          <td>19</td>
+          <td>Erica Noelia Lonigro</td>
+          <td>21</td>
+          <td>Del</td>
+        </tr>
+        <tr>
+          <td>20</td>
+          <td>Estefania Romina Banini</td>
+          <td>22</td>
+          <td>Med</td>
+        </tr>
+        <tr>
+          <td>21</td>
+          <td>Laurina Oliveros</td>
+          <td>23</td>
+          <td>Arq</td>
+        </tr>
+        <tr>
+          <td>22</td>
+          <td>Carolina Troncoso</td>
+          <td>24</td>
+          <td>Del</td>
+        </tr>
+        <tr>
+          <td>23</td>
+          <td>Estefania Palomar</td>
+          <td>25</td>
+          <td>Del</td>
+        </tr>
+      </table>
+      </div> 
+
+      
+      <div class="eqini_tres" id="contenedor_rosa"> <!--maquetacion 3era parte--> 
+      <table class="tablajugadorestitulares">
+        <caption>TITULARES</caption>
+         <tr>
+          <th>POS</th>
+          <th>JUGADOR</th>
+          <th>CAP</th>
+        </tr>
+      </tr>
+        <tr>
+          <td>Arq</td>
+          <td> </td>
+          <td> </td>
+        </tr>
+        <tr>
+          <td>Def</td>
+          <td> </td>
+          <td> </td>
+        </tr>
+        <tr>
+          <td>Def</td>
+          <td> </td>
+          <td> </td>
+        </tr>
+        <tr>
+          <td>Def</td>
+          <td> </td>
+          <td> </td>
+        </tr>
+        <tr>
+          <td>Def</td>
+          <td> </td>
+          <td> </td>
+        </tr>
+        <tr>
+          <td>Vol</td>
+          <td> </td>
+          <td> </td>
+        </tr>
+        <tr>
+          <td>Vol</td>
+          <td> </td>
+          <td> </td>
+        </tr>
+        <tr>
+          <td>Vol</td>
+          <td> </td>
+          <td> </td>
+        </tr>
+        <tr>
+          <td>Vol</td>
+          <td> </td>
+          <td> </td>
+        </tr>
+        <tr>
+          <td>Del</td>
+          <td> </td>
+          <td> </td>
+        </tr>
+        <tr>
+          <td>Del</td>
+          <td> </td>
+          <td> </td>
+        </tr>
+      </table> 
+        <table class="tablajugadorsuplentes">
+          <caption>SUPLENTES</caption>
+           <tr>
+            <th>POS</th>
+            <th>JUGADOR</th>
+            <th>CAP</th>
+          </tr>
+        </tr>
+          <tr>
+            <td>Arq</td>
+            <td> </td>
+            <td> </td>
+          </tr>
+          <tr>
+            <td>Def</td>
+            <td> </td>
+            <td> </td>
+          </tr>
+          <tr>
+            <td>Vol</td>
+            <td> </td>
+            <td> </td>
+          </tr>
+          <tr>
+            <td>Del</td>
+            <td> </td>
+            <td> </td>
+          </tr>
+        </table>
+      <table class="tabladt">
+        <caption >DIRECTOR TECNICO</caption>
+        <tr><td> Antonella Roccuzzo</td></tr>
+        </table>
+
+        <div class="ImagenDT">
+          <img src="../img/DT_antonela-rocuzzo.png" id="imgdt" alt="foto_de_la_anto" style="width: 250px">
+        </div>
+
+        <div class="selectordeformaciones"> <!--contenedor imagenes de estadios con las formaciones-->
+          <button id="3-4-3" type="submit">3-4-3</button>
+          <button id="4-4-2" type="submit">4-4-2</button>
+          <button id="5-2-3" type="submit">5-2-3</button>
+      </div>
+
+      <div class="ImagenesdeFormacion">
+        <img src=" ../img/formacion_inicial_3-4-3.png" id="imgchangeform" alt="foto_de_formacion_3_4_3" style="width: 250px">
+      </div>
+    </div> <!--fin maquetacion 3era parte-->
+
+</div> <!--fin contenedor cajitas-->
+
+    <!--////////////BOTONES ////////// 
+    <div class=".tresbotones"> 
+        <button id="armarBtnGuardar"   onclick="armaEquipo.grabarBorrador();" type="submit">Guardar</button>
+        <button id="armarBtnConfirmar" onclick="armaEquipo.preconfirmar();" type="submit">Confirmar equipo y continuar</button>
+        <button id="cerrar"            onclick="ArmaEquipo.TablaJugadoresconfirmados()"type="submit">Cerrar</button>
+    </div>
+    -->
+    <script src="../js/cambiar_formacion.js"></script>              
+ </body>

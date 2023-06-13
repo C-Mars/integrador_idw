@@ -1,0 +1,226 @@
+
+/****************FUENTES***************************/
+@font-face{
+    font-family: 'Fira Sans Condensed';
+    src: 
+         url('../fonts/FiraSansCondensed-Regular.ttf') format('truetype');
+    font-weight:normal;
+    font-style:normal;
+}
+@font-face{
+    font-family: 'Fira Sans Condensed';
+    src: 
+		url('../fonts/FiraSansCondensed-Medium.ttf') format('truetype');
+	font-style: bold;
+	font-weight:bold;
+    
+}
+@font-face{
+    font-family: 'Fira Sans Condensed italic';
+    src: 
+		url('../fonts/FiraSansCondensed-Italic.ttf') format('truetype');
+	
+}
+@font-face{
+    font-family: 'Fira Sans Condensed semibol';
+    src: 
+		url('../fonts/FiraSansCondensed-SemiBold.ttf') format('truetype');
+	font-style:bold;
+	font-weight:bold;
+}
+/****************PAGINA***************************/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.eqini_uno {
+    width: 70%;
+	background-color: #025377;
+	padding: 20px;
+	margin: auto;
+	margin-top: 10px;
+	border-radius: 4px;
+	font-family: 'Fira Sans Condensed';
+    color: white;
+    box-shadow: 7px 13px 37px #000; /*sombreado de pagina*/
+    text-align: left;
+}
+
+.contenedor_de_cajitas { /*agregado el 12-6*/
+    margin: 0 auto; 
+    display: flex;
+    justify-content: center;
+}
+
+.eqini_tres {
+    background-color: #025377; /*luego pasar a transparent*/
+    width: 465px; /*490*/
+	height: 650px;
+    float: left;
+	margin-top: 10px;
+    margin-inline: 10px;  /*separacion entre contenedores, horizontal*/
+	border-radius: 4px;
+    position: relative;
+}   
+.eqini_dos {
+    padding: 20px;
+    background-color: #025377;
+    width: 462px; /*435*/
+	height: 650px;
+    float: left;
+	margin-top: 10px;
+	border-radius: 4px;
+}
+.tablajugadores {
+    background: #025377;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 10px;
+    border-collapse: collapse;
+    text-align: center;
+  }
+.tablajugadorestitulares {
+    background: #025377;
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 28px;
+    margin-left: 15px;
+    border-collapse: collapse;
+    text-align: center;
+  }
+.tablajugadorsuplentes {
+    background: #025377;
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 28px;
+    margin-left: 15px;
+    border-collapse: collapse;
+    text-align: center;
+}
+.tabladt caption {
+    height: 25px;
+    background: #025377;
+    color: white;
+    text-align: center;
+    font-family: 'Fira Sans Condensed';
+    border: 2px solid white;
+    margin: 0 auto; 
+}
+
+.tabladt {
+    position: absolute;
+    bottom: 87%;
+    right: 20%;
+}
+
+th {
+    background-color: #025377;
+    height: 25px;
+    color: white;
+    text-align: center;
+    font-family: 'Fira Sans Condensed';
+    border: 1px solid white;
+    margin: 0 auto;
+  }
+tr, td {
+    height: 25px;
+    color: black;
+    text-align: center;
+    font-family: 'Fira Sans Condensed';
+    border: 1px solid white;
+}
+.tablajugadorestitulares caption {
+    height: 25px;
+    background: #025377;
+    color: white;
+    text-align: center;
+    font-family: 'Fira Sans Condensed';
+    border: 2px solid white;
+}
+.tablajugadorsuplentes caption {
+    height: 25px;
+    background: #025377;
+    color: white;
+    text-align: center;
+    font-family: 'Fira Sans Condensed';
+    border: 2px solid white;
+}
+
+tr:nth-child(even) {
+    background-color: #BAD6DA;
+}
+
+tr:nth-child(odd) {
+    background-color: #6ca4c4 ;   
+}
+
+.buscadores_lista_de_fulbo {
+    margin-top: 10px;
+    display: flex; 
+    justify-content: left;
+    text-align: center;
+    margin-right: 15px;
+    /*padding: 10px 100px; */
+}
+
+.contentBuscador {
+    display: flex; 
+    justify-content: center;
+    margin-right: 15px;
+}
+
+
+.listFut_equini h2 {
+    font-family: 'Fira Sans Condensed';
+    font-size: 22px;
+    text-align: center;
+}
+
+.form_jdrs {
+  width: 100%;
+  background: white;
+  padding: 10px; 
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid #025377;
+  font-family: 'Fira Sans Condensed';
+  font-size: 18px;
+}
+
+.selectordeformaciones { /*agregado el 11-jun*/
+    position: absolute;
+    bottom: 52%;    /*alineacion de abajo hacia arriba*/
+    right: 19%;    /*alineacion de derecha a izquierda*/
+}
+
+.ImagenesdeFormacion { /*agregado el 11-jun*/
+    position: absolute;
+    bottom:14%;
+    right: 4%;
+}
+
+.ImagenDT{
+    position: absolute;
+    bottom: 60%;
+    right: 4%;
+}
+
+.tresbotones {
+    width: 32%;
+    background: white;
+    border:none;
+    padding: 10px; 
+    color: black;
+    margin: 16px 0;   
+    font-family: 'Fira Sans Condensed semibol';
+    font-weight: 80;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.tresbotones:hover {
+    color: #2d7399;
+}

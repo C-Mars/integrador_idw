@@ -1,0 +1,84 @@
+
+/****************FUENTES***************************/
+@font-face{
+    font-family: 'Fira Sans Condensed';
+    src: 
+         url('../fonts/FiraSansCondensed-Regular.ttf') format('truetype');
+    font-weight:normal;
+    font-style:normal;
+}
+@font-face{
+    font-family: 'Fira Sans Condensed';
+    src: 
+		url('../fonts/FiraSansCondensed-Medium.ttf') format('truetype');
+	font-style: bold;
+	font-weight:bold;
+    
+}
+@font-face{
+    font-family: 'Fira Sans Condensed italic';
+    src: 
+		url('../fonts/FiraSansCondensed-Italic.ttf') format('truetype');
+	
+}
+@font-face{
+    font-family: 'Fira Sans Condensed semibol';
+    src: 
+		url('../fonts/FiraSansCondensed-SemiBold.ttf') format('truetype');
+	font-style:bold;
+	font-weight:bold;
+}
+/****************PAGINA***************************/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.form-registrojugadores {
+    width: 500px;
+	background-color: #025377;
+	padding: 30px;
+	margin: auto;
+	margin-top: 10px;
+	border-radius: 4px;
+	font-family: 'Fira Sans Condensed';
+    color: white;
+    box-shadow: 7px 13px 37px #000; /*sombreado de pagina*/
+}
+
+.form-registrojugadores h4 {
+    font-family: 'Fira Sans Condensed';
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form_jdrs{
+  width: 100%;
+  background: white;
+  padding: 10px; 
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid #025377;
+  font-family: 'Fira Sans Condensed';
+  font-size: 18px;
+}
+
+.tresbotones{
+    width: 32%;
+    background: white;
+    border:none;
+    padding: 10px; 
+    color: black;
+    margin: 16px 0;   
+    font-family: 'Fira Sans Condensed semibol';
+    font-weight: 80;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.tresbotones:hover{
+    color: #2d7399;
+}
