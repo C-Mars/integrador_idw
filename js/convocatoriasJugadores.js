@@ -129,8 +129,7 @@ window.addEventListener("load", function () {
         // si hay datos de jugadores para la convocatoria
         if(datosLocalStorage !== null){                
           // verifico si el jugador ya esta en la covocatoria 
-          const yaEstaConvocado = datosLocalStorage.find
-            (item => item.idJugador === element.id 
+          const yaEstaConvocado = datosLocalStorage.find(item => item.idJugador === element.id 
               && item.idConvocarotia === idConvocatoria);
           
           // si esta hago check 

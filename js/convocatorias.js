@@ -6,20 +6,20 @@
 document.getElementById('nueva-conv').addEventListener('click', crearConvocatoria);
 
 function crearConvocatoria() {
-  window.location.href = 'crearconvocatoria.html'
-}
+  window.location.href = 'crearconvocatoria.html';
+};
 
 document.getElementById('lista-conv').addEventListener('click', listaConvocatoria);
 
 function listaConvocatoria() {
-  window.location.href = 'listaconvocatorias.html'
-}
+  window.location.href = 'listaconvocatorias.html';
+};
 
 document.getElementById('busqueda-conv').addEventListener('click', busquedaConvocatoria);
 
 function busquedaConvocatoria() {
-  window.location.href = 'busquedaconvocatorias.html'
-}
+  window.location.href = 'busquedaconvocatorias.html';
+};
 
 
 /*************************LISTA DE CONVOCATORIAS ***********************************/
@@ -28,7 +28,7 @@ window.addEventListener("load", function () {
 });
 
 // Buscar informacion en el localStorange
-function buscarInfo() {
+export function buscarInfo() {
   const body = document.getElementById('tbody');
   // console.log(body)
   const convocatorias = JSON.parse(localStorage.getItem('convocatorias'));
@@ -93,6 +93,7 @@ function buscarInfo() {
       })
   }
   else {
+    
     convocatorias.forEach(element => {
       const tr = document.createElement('tr');
 
@@ -138,8 +139,6 @@ function buscarInfo() {
       convocar.appendChild(boton);
       convocar.appendChild(botonConvocados);
 
-
-
       tr.appendChild(id);
       tr.appendChild(fecha);
       tr.appendChild(rival);
@@ -167,7 +166,7 @@ function eliminarConvocatoria(param) {
   
 }
 
-function borrarBodyTabla() {
+export  function borrarBodyTabla() {
   const elemento = document.getElementById('tbody');
   while (elemento.firstChild) {
     elemento.firstChild.remove();

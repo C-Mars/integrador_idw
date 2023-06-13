@@ -2,20 +2,20 @@
 document.getElementById('nueva-conv').addEventListener('click', crearConvocatoria);
 
 function crearConvocatoria() {
-  window.location.href = 'crearconvocatoria.html'
-}
+  window.location.href = 'crearconvocatoria.html';
+};
 
 document.getElementById('lista-conv').addEventListener('click', listaConvocatoria);
 
 function listaConvocatoria() {
-  window.location.href = 'listaconvocatorias.html'
+  window.location.href = 'listaconvocatorias.html';
 }
 
 document.getElementById('busqueda-conv').addEventListener('click', busquedaConvocatoria);
 
 function busquedaConvocatoria() {
-  window.location.href = 'busquedaconvocatorias.html'
-}
+  window.location.href = 'busquedaconvocatorias.html';
+};
 
 // JUGADORES CONVOCADOS**********************************************************************************************
 document.getElementById('convocar-ed').addEventListener('click', convocarJugadores);
