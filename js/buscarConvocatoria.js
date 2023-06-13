@@ -50,7 +50,7 @@ function rangoBusquedaConvocatoria() {
   
   const idRango = JSON.parse(localStorage.getItem('rangoFechas'));
   
-  const listaFecha = Array.from(convocatorias, (convocatoria) => convocatoria.fecha);
+  // const listaFecha = Array.from(convocatorias, (convocatoria) => convocatoria.fecha);
   // console.log(listaFecha)
   
   
@@ -112,32 +112,6 @@ function rangoBusquedaConvocatoria() {
     // localStorage.setItem('convocabus', JSON.stringify(listaBusqueda));
   });
 
-  // idRango.forEach((item) => {
-  //   const lisconb = []
-  //   const convocatoriasBusqueda = convocatorias.filter((conv) => item === conv.fecha);
-  //   lisconb.push(convocatoriasBusqueda)
-  //   console.log(lisconb)
-  //   convocatoriasBusqueda.forEach((p) => {
-  //     const aux = {
-  //       'id' : p.id,
-  //       'fecha' : p.fecha,
-  //       'rival' : p.rival,
-  //       'capitan' :p.capitan
-  //     }
-
-  //     convocatoriasBusqueda.push(aux);
-  //     const aux2 = convocatoriasBusqueda.sort( function(a,b){
-  //       if(a.id < b.id){
-  //         return -1
-  //       }
-  //       return 0;
-  //     })
-  //     localStorage.setItem('convocabus', JSON.stringify(aux2));
-  // //       // resconv = []
-  //     // resconv.push(p)   
-  // });
- 
-  // });
 
   };
 
