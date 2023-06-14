@@ -23,8 +23,7 @@ function busquedaConvocatoria() {
 /**BUSCAR INFO************************************************************* */
 
 
-const buscar = document.getElementById('buscar-conv');
-buscar.addEventListener('click', rangoBusquedaConvocatoria);
+document.getElementById('buscar-rango').addEventListener('click',rangoBusquedaConvocatoria);
 
 
 
@@ -102,3 +101,4 @@ function rangoBusquedaConvocatoria() {
 
   });
 }
+
