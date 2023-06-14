@@ -21,113 +21,84 @@ function busquedaConvocatoria() {
 
 
 /**BUSCAR INFO************************************************************* */
-import { buscarInfo } from "./convocatorias.js";
-import { borrarBodyTabla } from "./convocatorias.js";
-window.addEventListener("load", function () {
-  buscarInfo();
-  borrarBodyTabla();
-});
 
 
-const buscar = document.getElementById('buscar-conv');
-buscar.addEventListener('click', rangoBusquedaConvocatoria);
+document.getElementById('buscar-rango').addEventListener('click',rangoBusquedaConvocatoria);
+
+
 
 function rangoBusquedaConvocatoria() {
-  const inicioFecha = document.getElementById('fechaconvinicio').value;
-  const finFecha = document.getElementById('fechaconvfin').value;
-
-  const rangodefechas = rangoBusqueda(inicioFecha,finFecha);
- 
-  const rangofechascorto = rangodefechas.map(i => i.toLocaleDateString());
-
-  const datosLocalStorage = JSON.parse(localStorage.getItem('rangoFechas'));
-
-  if(datosLocalStorage === null){
-   const rangoFechasLocal = localStorage.setItem("rangoFechas",JSON.stringify(rangofechascorto)); 
-  };
-
   const convocatorias = JSON.parse(localStorage.getItem('convocatorias'));
-  
-  const idRango = JSON.parse(localStorage.getItem('rangoFechas'));
-  
-  // const listaFecha = Array.from(convocatorias, (convocatoria) => convocatoria.fecha);
-  // console.log(listaFecha)
-  
-  
-  // const filtro = convocatorias.map(conv=> conv.fecha)
-  // alert(filtro)
-  /** No funciona */
-//   idRango.forEach((item) => {
-//     const filtro = listaFecha.filter((conv)=> {
-//       return conv === item})
-//     const listaBusqueda = []
-//     filtro.forEach((p) => {
-//         const aux = {
-//           'id' : p.id,
-//           'fecha' : p.fecha,
-//           'rival' : p.rival,
-//           'capitan' :p.capitan
-//         }
-//           listaBusqueda.push(aux);
-//           const aux2 = listaBusqueda.sort( function(a,b){
-//             if(a.id < b.id){
-//               return -1
-//             }
-//             return 0;
-//           })   
-//           localStorage.setItem('convocabus', JSON.stringify(aux2));
-//         })
-      
-      
-//     }) 
-    
-// ;
-  
-  // });
-  // const idConvocatoria = parseInt(localStorage.getItem('convocatoria'));
+
+  const inicioFecha = document.getElementById('fechaconvinicio').value;
+
+  const finFecha = document.getElementById('fechaconvfin').value;
  
 
-  
-  /**FUNCIONA EL FILTRO PERO SUBE AL LOCALSTORAGE SUBE EL ÚLTIMO DATO*/
-  idRango.forEach((item) => {
-      // const listaBusqueda = []
-    
-    convocatorias.forEach((conv) => {
-      // const listaBusqueda = []
-      if(item === conv.fecha){
-        const listaBusqueda = []
-        
-          const aux = {
-            'id' : conv.id,
-            'fecha' :conv.fecha,
-            'rival' :conv.rival,
-            'capitan' :conv.capitan
-          }
-          listaBusqueda.push(aux);
-   
-          localStorage.setItem('convocabus', JSON.stringify(listaBusqueda));     
-      } 
-      // localStorage.setItem('convocabus', JSON.stringify(listaBusqueda)); 
-    }) 
-    // localStorage.setItem('convocabus', JSON.stringify(listaBusqueda));
+  const resultadoconv = convocatorias.filter((conv) => {
+    if (new Date(conv.fecha) >= new Date(inicioFecha) && new Date(conv.fecha) <= new Date(finFecha)) {
+      return conv
+    }
   });
+  
+  
+  
+  const body = document.getElementById('tbody');
+  resultadoconv.forEach(element => {
+    
+    
+    const tr = document.createElement('tr');
 
+    const id = document.createElement('td');
+    const fecha = document.createElement('td');
+    const rival = document.createElement('td');
+    const capitan = document.createElement('td');
+    const convocar = document.createElement('td');
 
-  };
+    id.appendChild(document.createTextNode(element.id));
+    fecha.appendChild(document.createTextNode(element.fecha));
+    rival.appendChild(document.createTextNode(element.rival));
+    capitan.appendChild(document.createTextNode(element.capitan));
 
+    const boton = document.createElement('button');
 
-function rangoBusqueda(inicio,fin){
-  const inicioDate = new Date(inicio);
-  const finDate = new Date(fin);
-  let i = inicioDate ;
-  const rangoFechas = [];
-  while (i <= finDate) {
-    rangoFechas.push(new Date(i));
-    i.setDate(i.getDate() + 1);
-  };
-  return rangoFechas;
-};
+    boton.setAttribute('id', element.id);
+    boton.setAttribute('onclick', 'convocarJugadores(this)');
+    boton.setAttribute('class', 'boton2bc');
+    boton.appendChild(document.createTextNode('Convocar'));
 
+    const editar = document.createElement('button');
+    editar.setAttribute('id', element.id);
+    editar.setAttribute('onclick', 'editarConvocatoria(this)');
+    editar.setAttribute('class', 'boton2b');
+    editar.appendChild(document.createTextNode('Editar'));
 
+    const eliminar = document.createElement('button');
+    eliminar.setAttribute('id', element.id);
+    eliminar.setAttribute('onclick', 'eliminarConvocatoria(this)');
+    eliminar.setAttribute('class', 'boton2b');
+    eliminar.appendChild(document.createTextNode('Eliminar'));
 
+    const botonConvocados = document.createElement('button');
+
+    botonConvocados.setAttribute('id', element.id);
+    botonConvocados.setAttribute('onclick', 'jugadoresConvocados(this)');
+    botonConvocados.setAttribute('class', 'boton2bc');
+    botonConvocados.appendChild(document.createTextNode('Convocados'));
+
+    convocar.appendChild(eliminar);
+    convocar.appendChild(editar);
+    convocar.appendChild(boton);
+    convocar.appendChild(botonConvocados);
+
+    tr.appendChild(id);
+    tr.appendChild(fecha);
+    tr.appendChild(rival);
+    tr.appendChild(capitan);
+    tr.appendChild(convocar);
+
+    body.appendChild(tr);
+
+  });
+}
 

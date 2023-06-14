@@ -57,12 +57,12 @@ window.addEventListener("load", function () {
     const convocatoriasNuevo = convocatorias.filter(function (item) {
       return item.id !== idEditar;
     });
-    const valorFecha =document.getElementById('texfechaconv').value;
-    const valorDate = new Date(valorFecha);
-    const fechaString = valorDate.toLocaleDateString();
+    // const valorFecha =document.getElementById('texfechaconv').value;
+    // const valorDate = new Date(valorFecha);
+    // const fechaString = valorDate.toLocaleDateString();
     const aux = {
       'id': idEditar,
-      'fecha': fechaString,
+      'fecha': document.getElementById('texfechaconv').value,
       'rival': document.getElementById('texeqrival').value,
       'capitan': document.getElementById('texcapitan').value
     }

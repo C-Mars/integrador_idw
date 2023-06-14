@@ -32,8 +32,7 @@ window.addEventListener("load", function () {
   function cancelarConvoctoria() {
     window.location.href = 'listaconvocatorias.html';
   }
-  // aun no esta finalizada... 
-  // no actualiza una convocatoria, agrega no mas...
+  
   function convocarJugadores(){
 
     const idConvocatoria = parseInt(localStorage.getItem('convocatoria'));
