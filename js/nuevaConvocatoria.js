@@ -38,22 +38,20 @@ function busquedaConvocatoria() {
         i = maxId + 1;
       }
       
-      const valorFecha =document.getElementById('texfechaconv').value;
-      const valorDate = new Date(valorFecha);
-      const fechaString = valorDate.toLocaleDateString();
+      // const valorFecha =document.getElementById('texfechaconv').value;
+      // const valorDate = new Date(valorFecha);
+      // const fechaString = valorDate.toLocaleDateString();
       // alert(fechaString)
 
       const convocatoria = {
         'id': i,
-        'fecha': fechaString,
+        'fecha': document.getElementById('texfechaconv').value,
         'rival': document.getElementById('texeqrival').value,
         'capitan': document.getElementById('texcapitan').value
       }
       convocatorias.push(convocatoria);
       localStorage.setItem('convocatorias', JSON.stringify(convocatorias));
   
-      // event.preventDefault();
-      // event.stopPropagation();
       window.location.href = 'convocatorias.html';
     }
   }

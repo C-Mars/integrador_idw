@@ -1,7 +1,30 @@
-{
-    "id": 0,
-    "nombreyapellido": "nombre completo",
-    "email": "email",
-    "asunto": "asunto",
-    "comentario": "comentario"
-}
+[
+    {
+        "id": 0,
+        "nombreyapellido": "Alberto Lopez",
+        "email": "roberto_lop@gmail.com",
+        "asunto": "jugador",
+        "comentario": "no puedo acceder a la plataforma"
+    },
+    {
+        "id": 1,
+        "nombreyapellido": "Maria Chusena",
+        "email": "marchu@gmail.com",
+        "asunto": "sponsor",
+        "comentario": "Quiero promocionar mi marca en un equipo infantil"
+    },
+    {
+        "id": 2,
+        "nombreyapellido": "Marta Magdalena Quipildor",
+        "email": "matrmagr@gmail.com",
+        "asunto": "jugador",
+        "comentario": "no puedo acceder a la plataforma"
+    },
+    {
+        "id": 3,
+        "nombreyapellido": "Carla Farias",
+        "email": "carfari@gmail.com",
+        "asunto": "tecnico",
+        "comentario": "no puedo acceder a la plataforma"
+    }
+]

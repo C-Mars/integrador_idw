@@ -21,8 +21,6 @@ function busquedaConvocatoria() {
 
 
 /**BUSCAR INFO************************************************************* */
-import { buscarInfo } from "./convocatorias.js";
-import { borrarBodyTabla } from "./convocatorias.js";
 
 
 window.addEventListener("load", function () {
@@ -120,17 +118,17 @@ function rangoBusquedaConvocatoria() {
   };
 
 
-function rangoBusqueda(inicio,fin){
-  const inicioDate = new Date(inicio);
-  const finDate = new Date(fin);
-  let i = inicioDate ;
-  const rangoFechas = [];
-  while (i <= finDate) {
-    rangoFechas.push(new Date(i));
-    i.setDate(i.getDate() + 1);
-  };
-  return rangoFechas;
-};
+// function rangoBusqueda(inicio,fin){
+//   const inicioDate = new Date(inicio);
+//   const finDate = new Date(fin);
+//   let i = inicioDate ;
+//   const rangoFechas = [];
+//   while (i <= finDate) {
+//     rangoFechas.push(new Date(i));
+//     i.setDate(i.getDate() + 1);
+//   };
+//   return rangoFechas;
+// };
 
 
 
