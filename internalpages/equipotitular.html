@@ -64,7 +64,7 @@
              
                         <div class="content_listadoequipotitular"><!--buscador por puestos-->    
                             <label>PUESTO</label> 
-                            <select name="idPosicion" onchange="javascript:armaEquipo.buscarJugadores(1 )">
+                            <select name="idPosicion" id="puesto-select" onchange="javascript:armaEquipo.buscarPosiciones_en_EquipoTitular(1)">
                                 <option value="">Todos</option>
                                 <option value="1">Arquero</option>
                                 <option value="2">Defensor</option>
@@ -80,35 +80,7 @@
                         </div>
                         
                       </div>
-
-
-                      <script>
-                        // Obtener la referencia del input de búsqueda
-                        var searchInput = document.getElementById('search-input');
-                      
-                        // Agregar un event listener para capturar el evento de búsqueda
-                        searchInput.addEventListener('keyup', function() {
-                          // Obtener el valor ingresado en el input de búsqueda
-                          var searchText = searchInput.value.toLowerCase();
-                      
-                          // Obtener todas las filas de la tabla de jugadores
-                          var rows = document.querySelectorAll('.tablajugadores tr');
-                      
-                          // Recorrer las filas de la tabla y ocultar las que no coincidan con la búsqueda
-                          for (var i = 1; i < rows.length; i++) {
-                            var playerCell = rows[i].getElementsByTagName('td')[1];
-                            var playerName = playerCell.textContent.toLowerCase();
-                      
-                            if (playerName.includes(searchText)) {
-                              rows[i].style.display = '';
-                            } else {
-                              rows[i].style.display = 'none';
-                            }
-                          }
-                        });
-                      </script>
-
-        </div>
+         </div>
 
     <div class="contenedor_de_cajitas"> <!--////////////CONTENEDOR DE LA DE ABAJO///////////-->
       <div class="eqini_dos" id="contenedor_verde"> <!--maquetacion 2da parte-->
@@ -378,7 +350,7 @@
       <div class="tres_botones_ET"> 
         <button id="armarBtnGuardar"   onclick="armaEquipo.grabar();"                    type="submit">GUARDAR</button>
         <button id="armarBtnConfirmar" onclick="armaEquipo.preconfirmar();"              type="submit">CONFIRMAR EQUIPO Y CONTINUAR</button>
-        <button id="cerrar"            onclick="armaEquipo.TablaJugadoresconfirmados();" type="submit">CERRAR</button>
+        <button id="cerrar"            onclick="armaEquipo.TablaJugadoresconfirmados();" type="submit">CERRAR</button>  <!--te envia a la pagina de inicio-->
       </div>
 
     </div> <!--fin maquetacion 3era parte-->
@@ -395,4 +367,5 @@
 </footer><!-- Fin del pie de Página -->
 
 <script src="../js/cambiar_formacion.js"></script>
-<script src="../js/buscarJugadores_en_EquipoTitular.js"></script>   
+<script src="../js/buscarJugadores_en_EquipoTitular.js"></script> <!-- BUSCADOR DE NOMBRES EN EQUIPOS TITULARES -->
+<script src="../js/buscarPosiciones_en_EquipoTitular.js"></script> <!-- BUSCADOR DE POSICIONES EN EQUIPOS TITULARES -->
