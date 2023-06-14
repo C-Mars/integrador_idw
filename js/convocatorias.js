@@ -28,7 +28,7 @@ window.addEventListener("load", function () {
 });
 
 // Buscar informacion en el localStorange
-export function buscarInfo() {
+function buscarInfo() {
   const body = document.getElementById('tbody');
   // console.log(body)
   const convocatorias = JSON.parse(localStorage.getItem('convocatorias'));
@@ -166,7 +166,7 @@ function eliminarConvocatoria(param) {
   
 }
 
-export  function borrarBodyTabla() {
+ function borrarBodyTabla() {
   const elemento = document.getElementById('tbody');
   while (elemento.firstChild) {
     elemento.firstChild.remove();

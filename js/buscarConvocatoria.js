@@ -23,6 +23,8 @@ function busquedaConvocatoria() {
 /**BUSCAR INFO************************************************************* */
 import { buscarInfo } from "./convocatorias.js";
 import { borrarBodyTabla } from "./convocatorias.js";
+
+
 window.addEventListener("load", function () {
   buscarInfo();
   borrarBodyTabla();
@@ -87,8 +89,10 @@ function rangoBusquedaConvocatoria() {
   // const idConvocatoria = parseInt(localStorage.getItem('convocatoria'));
  
 
+  /**CREA UN NUEVO OBJETO NO FUNCIONA**/
+  /**FUNCIONA EL FILTRO PERO SUBE AL LOCALSTORAGE EL ÚLTIMO DATO*/
   
-  /**FUNCIONA EL FILTRO PERO SUBE AL LOCALSTORAGE SUBE EL ÚLTIMO DATO*/
+  
   idRango.forEach((item) => {
       // const listaBusqueda = []
     
