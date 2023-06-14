@@ -3,8 +3,8 @@
         "id": 0,
         "nombreyapellido": "Alberto Lopez",
         "email": "roberto_lop@gmail.com",
-        "asunto": "jugador",
-        "comentario": "no puedo acceder a la plataforma"
+        "asunto": "jugandor",
+        "comentario": "No puedo acceder a la plataforma"
     },
     {
         "id": 1,
@@ -18,13 +18,13 @@
         "nombreyapellido": "Marta Magdalena Quipildor",
         "email": "matrmagr@gmail.com",
         "asunto": "jugador",
-        "comentario": "no puedo acceder a la plataforma"
+        "comentario": "No puedo acceder a la plataforma"
     },
     {
         "id": 3,
         "nombreyapellido": "Carla Farias",
         "email": "carfari@gmail.com",
         "asunto": "tecnico",
-        "comentario": "no puedo acceder a la plataforma"
+        "comentario": "No puedo acceder a la plataforma"
     }
 ]
