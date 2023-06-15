@@ -50,8 +50,6 @@ header{
 	align-items: center;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	z-index: 1000px;
-	
-	
 }
 @media screen and (min-width: 950px){
 	header {
@@ -99,14 +97,13 @@ nav ul.menu{
     nav ul.menu{
         display: flex;
 		flex-direction: row;
-        /* width: 80%; */
+    
     }
 }
 
 nav ul.menu li{
 	margin: 20px;
 	display: block;
-	/* flex-flow: wrap;  */
 	margin: 0;
 	align-items: center;
 	list-style: none;
@@ -236,7 +233,8 @@ div.index{
 div.main-container{
 	display: flex;
 	flex-flow: wrap;
-	align-items: flex-start;
+	align-items: center;
+	justify-content: center;
 	
 	
 	/* overflow: hidden; */
@@ -248,15 +246,24 @@ article.imagen-principal {
 	align-content: flex-start;
 	width:100%;
 	
+	
+}
+@media screen and (max-width: 1744px) {
+    imagen-principal{
+		align-items: center;
+        width:100%;
+    }
 }
 
 div.imagen-fondo{ 
 	margin: 0px;
 	max-width: 1000px;
 	min-width: 320px;
-	
+	position: relative;
 	background-color: black !important
 }	
+
+
 
 div.imagen-fondo img{
 	width: 100%;
@@ -264,9 +271,9 @@ div.imagen-fondo img{
 }
 .texto-debajo{
 	position: absolute;
-	top: 70%;
-	left: 37%;
-	transform: translate(-50%, -50%);
+	top:68%;
+	left: 30%;
+	transform: translate(-30%, -35%);
 	width: 100%;
 	font-family: 'Fira Sans Condensed', sans-serif;
 	font-size: 12pt;
@@ -284,24 +291,22 @@ p.proximo{
 	
 }
 
-/* aside{
-	display: flex;
-	flex-flow: wrap;
-	align-content: flex-start;
-	align-items: center;
-	width: 100%;
-	/* background-color: #052035; */
-/* } */ 
+
 .proximo{
 	display: flex;
 	flex-flow: column;
 	align-content:center;
 	justify-content: center;
-	max-width: 1000px;
+	/* width: 36%; */
 	min-width: 320px;
 	background-color: #052035;
 }
-
+@media screen and (max-width: 1744px) {
+    .proximo{
+        width: 100%;
+    
+    }
+}
 
 
 .fcc-btn {
