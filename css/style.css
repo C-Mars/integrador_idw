@@ -227,6 +227,7 @@ div.index{
 	align-items: flex-start;
 	justify-content: center;
 	width: 100%;
+	z-index: -1;
 	/* background-color: #052035; */
 
 }
@@ -260,7 +261,8 @@ div.imagen-fondo{
 	max-width: 1000px;
 	min-width: 320px;
 	position: relative;
-	background-color: black !important
+	background-color: black !important;
+	/* z-index: 0; */
 }	
 
 
@@ -271,16 +273,18 @@ div.imagen-fondo img{
 }
 .texto-debajo{
 	position: absolute;
-	top:68%;
-	left: 30%;
-	transform: translate(-30%, -35%);
+	top:81%;
+	left: 4%;
+	/* transform: translate(-30%, -35%); */
 	width: 100%;
 	font-family: 'Fira Sans Condensed', sans-serif;
 	font-size: 12pt;
+	/* color: #6ca4c4; */
 	color: #F2DED0;
 	font-style:oblique;
+	font-size: calc(0.563vw + 0.7em);
 	
-	/* z-index: 100; */
+	z-index: +1;
 }
 
 p.proximo{
@@ -309,10 +313,6 @@ p.proximo{
 }
 
 
-.fcc-btn {
-  background-color: #199319;
-  color: white;
-}
 
 /* section.principal{
 	
