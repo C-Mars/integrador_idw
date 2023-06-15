@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Estilos para la tabla y la barra de búsqueda */
+    .tablajugadores {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .tablajugadores th, .tablajugadores td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    #busqueda {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <!-- Lista desplegable para seleccionar la categoría -->
+    <select id="filtro" onchange="filtrarTabla()">
+      <option value="todos">Todos</option>
+      <option value="arquero">Arquero</option>
+      <option value="defensor">Defensor</option>
+      <option value="volante">Volante</option>
+      <option value="delantero">Delantero</option>
+    </select>
+    <br>
+    <!-- Barra de búsqueda por nombre -->
+    <input type="text" id="busqueda" onkeyup="filtrarTabla()" placeholder="Buscar jugador por nombre...">
+    <!-- Barra de búsqueda por puesto -->
+    <input type="text" id="filtro-puesto" onkeyup="filtrarTabla()" placeholder="Buscar jugador por puesto...">
+    <br>
+    <!-- Tabla de jugadores -->
+    <table class="tablajugadores">
+        <tr>
+          <th>N°</th>
+          <th>JUGADOR</th>
+          <th>DORSAL</th>
+          <th>POS</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Vanina Noemi Correa</td>
+          <td>1</td>
+          <td>Arq</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Adriana Maria Sachs</td>
+          <td>2</td>
+          <td>Def</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Eliana Noemi Stabile</td>
+          <td>3</td>
+          <td>Def</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Fabiana Gisela Vallejos</td>
+          <td>5</td>
+          <td>Med</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Aldana Cometti</td>
+          <td>6</td>
+          <td>Def</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Romina Stefania Nuñez</td>
+          <td>7</td>
+          <td>Med</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Daiana Micaela Falfan</td>
+          <td>8</td>
+          <td>Med</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Paulina Gramaglia</td>
+          <td>9</td>
+          <td>Def</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>Yamila Tamara Rodriguez</td>
+          <td>11</td>
+          <td>Del</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Lara Esponda</td>
+          <td>12</td>
+          <td>Arq</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>Sophia Braun</td>
+          <td>13</td>
+          <td>Def</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>Miriam Anahi Mayorga</td>
+          <td>14</td>
+          <td>Def</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>Florencia Bonsegundo</td>
+          <td>15</td>
+          <td>Del</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>Lorena Benitez</td>
+          <td>16</td>
+          <td>Med</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>Maricel Pereyra</td>
+          <td>17</td>
+          <td>Med</td>
+        </tr>
+        <tr>
+          <td>16</td>
+          <td>Gabriela Patricia Chavez</td>
+          <td>18</td>
+          <td>Def</td>
+        </tr>
+        <tr>
+          <td>17</td>
+          <td>Mariana Larroquette</td>
+          <td>19</td>
+          <td>Del</td>
+        </tr>
+        <tr>
+          <td>18</td>
+          <td>Celeste Dos Santos</td>
+          <td>20</td>
+          <td>Def</td>
+        </tr>
+        <tr>
+          <td>19</td>
+          <td>Erica Noelia Lonigro</td>
+          <td>21</td>
+          <td>Del</td>
+        </tr>
+        <tr>
+          <td>20</td>
+          <td>Estefania Romina Banini</td>
+          <td>22</td>
+          <td>Med</td>
+        </tr>
+        <tr>
+          <td>21</td>
+          <td>Laurina Oliveros</td>
+          <td>23</td>
+          <td>Arq</td>
+        </tr>
+        <tr>
+          <td>22</td>
+          <td>Carolina Troncoso</td>
+          <td>24</td>
+          <td>Del</td>
+        </tr>
+        <tr>
+          <td>23</td>
+          <td>Estefania Palomar</td>
+          <td>25</td>
+          <td>Del</td>
+        </tr>
+      </table>
+    </div> 
+
+  <script>
+    function filtrarTabla() {
+      // Obtener el valor seleccionado de la lista desplegable
+      var filtro = document.getElementById("filtro").value.toLowerCase();
+      // Obtener el valor de búsqueda por nombre
+      var busquedaNombre = document.getElementById("busqueda").value.toLowerCase();
+      // Obtener el valor de búsqueda por puesto
+      var busquedaPuesto = document.getElementById("filtro-puesto").value.toLowerCase();
+      // Obtener todas las filas de la tabla
+      var filas = document.getElementsByClassName("tablajugadores")[0].getElementsByTagName("tr");
+
+      // Recorrer todas las filas, comenzando desde la segunda (índice 1) para evitar el encabezado
+      for (var i = 1; i < filas.length; i++) {
+        var fila = filas[i];
+        // Obtener el valor de la columna "POS" en la fila actual
+        var categoria = fila.getElementsByTagName("td")[3].textContent.toLowerCase();
+        // Obtener el valor de la columna "JUGADOR" en la fila actual
+        var jugador = fila.getElementsByTagName("td")[1].textContent.toLowerCase();
+
+        // Verificar si la fila debe mostrarse según los filtros de categoría, nombre y puesto
+        if ((filtro === "todos" || categoria === filtro) &&
+            (jugador.includes(busquedaNombre) || categoria.includes(busquedaPuesto))) {
+          fila.style.display = "";
+        } else {
+          fila.style.display = "none";
+        }
+      }
+    }
+  </script>
+</body>
+</html>

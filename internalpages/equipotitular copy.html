@@ -82,152 +82,31 @@
 
     <div class="contenedor_de_cajitas"> <!--////////////CONTENEDOR DE LA DE ABAJO///////////-->
       <div class="eqini_dos" id="contenedor_verde"> <!--maquetacion 2da parte-->
-      <table class="tablajugadores">
-        <tr>
-          <th>N°</th>
-          <th>JUGADOR</th>
-          <th>DORSAL</th>
-          <th>POS</th>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Vanina Noemi Correa</td>
-          <td>1</td>
-          <td>Arq</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Adriana Maria Sachs</td>
-          <td>2</td>
-          <td>Def</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>Eliana Noemi Stabile</td>
-          <td>3</td>
-          <td>Def</td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>Fabiana Gisela Vallejos</td>
-          <td>5</td>
-          <td>Med</td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>Aldana Cometti</td>
-          <td>6</td>
-          <td>Def</td>
-        </tr>
-        <tr>
-          <td>6</td>
-          <td>Romina Stefania Nuñez</td>
-          <td>7</td>
-          <td>Med</td>
-        </tr>
-        <tr>
-          <td>7</td>
-          <td>Daiana Micaela Falfan</td>
-          <td>8</td>
-          <td>Med</td>
-        </tr>
-        <tr>
-          <td>8</td>
-          <td>Paulina Gramaglia</td>
-          <td>9</td>
-          <td>Def</td>
-        </tr>
-        <tr>
-          <td>9</td>
-          <td>Yamila Tamara Rodriguez</td>
-          <td>11</td>
-          <td>Del</td>
-        </tr>
-        <tr>
-          <td>10</td>
-          <td>Lara Esponda</td>
-          <td>12</td>
-          <td>Arq</td>
-        </tr>
-        <tr>
-          <td>11</td>
-          <td>Sophia Braun</td>
-          <td>13</td>
-          <td>Def</td>
-        </tr>
-        <tr>
-          <td>12</td>
-          <td>Miriam Anahi Mayorga</td>
-          <td>14</td>
-          <td>Def</td>
-        </tr>
-        <tr>
-          <td>13</td>
-          <td>Florencia Bonsegundo</td>
-          <td>15</td>
-          <td>Del</td>
-        </tr>
-        <tr>
-          <td>14</td>
-          <td>Lorena Benitez</td>
-          <td>16</td>
-          <td>Med</td>
-        </tr>
-        <tr>
-          <td>15</td>
-          <td>Maricel Pereyra</td>
-          <td>17</td>
-          <td>Med</td>
-        </tr>
-        <tr>
-          <td>16</td>
-          <td>Gabriela Patricia Chavez</td>
-          <td>18</td>
-          <td>Def</td>
-        </tr>
-        <tr>
-          <td>17</td>
-          <td>Mariana Larroquette</td>
-          <td>19</td>
-          <td>Del</td>
-        </tr>
-        <tr>
-          <td>18</td>
-          <td>Celeste Dos Santos</td>
-          <td>20</td>
-          <td>Def</td>
-        </tr>
-        <tr>
-          <td>19</td>
-          <td>Erica Noelia Lonigro</td>
-          <td>21</td>
-          <td>Del</td>
-        </tr>
-        <tr>
-          <td>20</td>
-          <td>Estefania Romina Banini</td>
-          <td>22</td>
-          <td>Med</td>
-        </tr>
-        <tr>
-          <td>21</td>
-          <td>Laurina Oliveros</td>
-          <td>23</td>
-          <td>Arq</td>
-        </tr>
-        <tr>
-          <td>22</td>
-          <td>Carolina Troncoso</td>
-          <td>24</td>
-          <td>Del</td>
-        </tr>
-        <tr>
-          <td>23</td>
-          <td>Estefania Palomar</td>
-          <td>25</td>
-          <td>Del</td>
-        </tr>
-      </table>
+      
+      <!-- TABLA ANTERIOR -->
+        <table class="tablajugadores">
+        <form id="myForm">
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" name="name">
+          
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email">
+          
+          <button type="submit">Enviar</button>
+        </form>
+        
+        <table id="myTable">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Aquí se agregarán las filas con los datos ingresados -->
+          </tbody>
+        </table>
+
       </div> 
 
       
@@ -296,6 +175,8 @@
           <td> </td>
         </tr>
       </table> 
+
+
         <table class="tablajugadorsuplentes">
           <caption>SUPLENTES</caption>
            <tr>
@@ -367,3 +248,4 @@
 <script src="../js/cambiar_formacion.js"></script>
 <script src="../js/buscarJugadores_en_EquipoTitular.js"></script> <!-- BUSCADOR DE NOMBRES EN EQUIPOS TITULARES -->
 <script src="../js/buscarPosiciones_en_EquipoTitular.js"></script> <!-- BUSCADOR DE POSICIONES EN EQUIPOS TITULARES -->
+<script src="../js/PRACTICA_TABLA_JUGADORES.js"></script> <!-- TABLA DE JUGADORES - COPY EQUIPO TITULAR -->
