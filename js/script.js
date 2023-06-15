@@ -22,7 +22,7 @@ const enviar = document.getElementById('enviar-cont');
 enviar.addEventListener('click', formularioContacto)
 
 function leerForm() {
-  contacto = JSON.parse(localStorage.getItem('contacto'));
+  const contacto = JSON.parse(localStorage.getItem('contacto'));
   if (contacto === null) {
     fetch('../json/contacto.json')
       .then((res) => {

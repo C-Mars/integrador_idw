@@ -37,25 +37,33 @@ body{
 }
 /***************************Barra de Navegación*******************************/
 header{
+	text-align: center;
 	margin: 0;
 	padding: 0;
-	display: flex;
+	display: block;
 	width: 100%;
 	font-size: 16px;
 	background-color: #052035;
-	justify-content: space-between;
+	justify-content: center;
 	font-family: 'Fira Sans Condensed';
 	font-weight: bolder;
-	height: 64px;
+	align-items: center;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	z-index: 1000px;
 	
 	
 }
+@media screen and (min-width: 950px){
+	header {
+		display: flex;
+		flex-direction:row;
+		justify-content: center;
+		align-items: flex-start;
+	}
+} 
 div.logoNav{
-	margin-left: 125px;
-	display: flex;
-	flex-flow: wrap; 
+	margin-left: 75px;
+	
 	align-content: flex-start;
 	
 	
@@ -67,18 +75,46 @@ div.logoNav img{
 a{
 	text-decoration: none;	
 }
-nav ul.menu{
-	display: flex;
-	flex-flow: wrap; 
+nav {
+	margin: 0;
+	padding: 0;
+	/* display: block; */
+	font-size: 16px;
+	background-color: #052035;
+	font-weight: bolder;
+	justify-content: center;
+	align-items: center;
 	
+}
+
+nav ul.menu{
+	/* display: block; */
+	flex-flow: wrap; 
 	margin: 0;
 	align-items: center;
 	list-style: none;
-	height: 64px;
+	
 }
+@media screen and (min-width: 950px) {
+    nav ul.menu{
+        display: flex;
+		flex-direction: row;
+        /* width: 80%; */
+    }
+}
+
+nav ul.menu li{
+	margin: 20px;
+	display: block;
+	/* flex-flow: wrap;  */
+	margin: 0;
+	align-items: center;
+	list-style: none;
+	padding: 20px;
+}
+
 nav a{
 	color: #BAD6DA;
-	height: 64px;
 	padding: 22.45px 50px;
 	
 	
@@ -95,7 +131,7 @@ nav a:hover{
 }
 /**********************Submenu******************************/
 ul.submenu{
-	margin-top: 15px;;
+	margin-top: 15px;
     position: absolute;
     background: #333333;
     max-width:50%;
@@ -108,13 +144,13 @@ ul.submenu{
 }
 
 ul.submenu li{
-	display: flex;
+	display: block;
 	justify-content: center;
 	align-items: center;
 	
 }
 ul.submenu a{
-    display: flex;
+    display: block;
 	justify-content: center;
 	width: 197px;
 	height: 54px;
@@ -138,9 +174,12 @@ ul.submenu li a:hover{
 }
 
 div.log{
-	margin-right: 125px;
-	margin-top: 8px ;
-	margin-bottom: 8px;
+	justify-content: center;
+	display: block;
+	text-align: center;
+	/* margin-right: 50px; */
+	 /* margin-top: 8px ;  */
+	/* margin-bottom: 8px; */ 
 	padding: 13px 15px;
 	background-color:rgba(2, 116, 150, 55%);
 	color:#BAD6DA;
@@ -152,6 +191,7 @@ div.log:hover{
 	color:#BAD6DA;
 	background-color: #052035;
 }
+
 
 /********************Main*******************************/
 main{
@@ -184,39 +224,59 @@ footer{
 
 /****************************Página Index**********************************************/
 /**Seción principal****/
-div.main-container{
+div.index{
+	display: flex;
+	flex-flow: wrap;
+	align-items: flex-start;
+	justify-content: center;
 	width: 100%;
-	max-width: 100%;
-	margin: 5 auto;
-	overflow: hidden;
-	background-color:#052035
+	/* background-color: #052035; */
+
 }
-article {
-	float: left;
-	width: 65%;
-	margin-left: 5%;
-	background-color: #052035;
+div.main-container{
+	display: flex;
+	flex-flow: wrap;
+	align-items: flex-start;
+	
+	
+	/* overflow: hidden; */
+	/* width: 100% */
 }
-.contenedor{
-	position: relative;
-	display: inline-block;
-	text-align: center;
+article.imagen-principal {
+	display: flex;
+	flex-flow: wrap;
+	align-content: flex-start;
+	width:100%;
+	
+}
+
+div.imagen-fondo{ 
+	margin: 0px;
+	max-width: 1000px;
+	min-width: 320px;
+	
+	background-color: black !important
+}	
+
+div.imagen-fondo img{
+	width: 100%;
+	opacity: .5;
 }
 .texto-debajo{
 	position: absolute;
 	top: 70%;
 	left: 37%;
 	transform: translate(-50%, -50%);
-	
+	width: 100%;
 	font-family: 'Fira Sans Condensed', sans-serif;
 	font-size: 12pt;
 	color: #F2DED0;
 	font-style:oblique;
-	opacity: .6;
 	
+	/* z-index: 100; */
 }
 
-p.Proximo{
+p.proximo{
 	
 	
 	color: white;
@@ -224,19 +284,24 @@ p.Proximo{
 	
 }
 
-aside{
-	float: left;
-	width: 30%;
+/* aside{
+	display: flex;
+	flex-flow: wrap;
+	align-content: flex-start;
+	align-items: center;
+	width: 100%;
+	/* background-color: #052035; */
+/* } */ 
+.proximo{
+	display: flex;
+	flex-flow: column;
+	align-content:center;
+	justify-content: center;
+	max-width: 1000px;
+	min-width: 320px;
 	background-color: #052035;
-
-
 }
-h1.partido{
-  
-  color: red;
-  font-family: "Fira sans Condensed";	
-  
-  }
+
 
 
 .fcc-btn {
@@ -244,19 +309,49 @@ h1.partido{
   color: white;
 }
 
-section.Principal{
+/* section.principal{
 	
 	background-color: #052035;
   
 	
-	
-}
+	 */
+
 div.noticia-t h2{
-	font-size: 50px;
+	font-size: calc(3.125vw + 0.7em)!important;
 	text-align: center;
 	-webkit-text-stroke: 2px #027496 !important;
+	
 }
 
+div.boton-vistas {
+	width: 100%;
+	display: flex;
+	flex-flow: wrap;
+	align-content: flex-start;
+	max-width: 600px;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+
+}
+div.boton-vistas button{
+	width: 155px;
+	height: 70px;
+	background-color: #052035;;
+	border: 2px solid #F6F9FB ;
+	padding: 12px;
+	color: #F6F9FB;
+	margin-left: 10px;
+	font-size: 16px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	
+}
+
+div.boton-vistas button:hover{
+	color:#BAD6DA;
+	background-color: rgb(2, 85, 121);
+	border: 0;
+}
 
 /***************sección Noticias*********************/
 section.noticias{
@@ -269,18 +364,17 @@ div.noticia-t{
 	flex: 100%;
 	letter-spacing: 3.25px;
 	width: 100%;
-	height: 200px;
+	
 }
 div.noticia-t h1{
 	text-align: center;
-	font-size:  calc(4.063em + 1vw);
+	font-size: calc(4.063vw + 0.7em);
 }
 div.contenedor-noticias{
 	display: flex;
 	flex-flow: wrap;
-	align-content: flex-start
+	align-content: flex-start;
 	width: 100%;
-	height: 468;
 	margin-left: 16px;
 	background: transparent;
 	gap: 8px;
@@ -784,17 +878,13 @@ div.convo-t{
 	flex: 100%;
 	letter-spacing: 3.25px;
 	width: 100%;
-	height: 200px;
-	padding: 30px;
-	margin: 0px;
-	
 	
 }
 div.convo-t h1{
 	flex-wrap: wrap;
 	display: block;
 	text-align: center;
-	font-size: 65px !important;
+	font-size: calc(4.5vw + 0.7em) !important;
 }
 div.nav-convocatoria{
 	display: flex;

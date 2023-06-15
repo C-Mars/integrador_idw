@@ -37,15 +37,13 @@ window.addEventListener("load", function () {
     document.getElementById('texcapitan').value = convocatoria.capitan;
   }
   
-  const guardar = document.getElementById('g-ed-conv');
-  guardar.addEventListener('click', guardarConvocatoria);
+  document.getElementById('g-ed-conv').addEventListener('click', guardarConvocatoria);
   
-  const cancelar = document.getElementById('c-ed-conv');
-  cancelar.addEventListener('click', cancelarEdicion);
+  document.getElementById('c-ed-conv').addEventListener('click', cancelarEdicion);
   
   
   function cancelarEdicion() {
-    window.location.href = 'convocatorias.html';
+    window.location.href = 'convocatorias.html'; 
   }
   
   function guardarConvocatoria() {
@@ -57,9 +55,7 @@ window.addEventListener("load", function () {
     const convocatoriasNuevo = convocatorias.filter(function (item) {
       return item.id !== idEditar;
     });
-    // const valorFecha =document.getElementById('texfechaconv').value;
-    // const valorDate = new Date(valorFecha);
-    // const fechaString = valorDate.toLocaleDateString();
+    
     const aux = {
       'id': idEditar,
       'fecha': document.getElementById('texfechaconv').value,
@@ -76,6 +72,5 @@ window.addEventListener("load", function () {
     });
   
     localStorage.setItem('convocatorias', JSON.stringify(aux2));
-   
-     return window.location.href = 'convocatorias.html';
-  }
+    window.location.href = 'convocatorias.html'; 
+  }  
