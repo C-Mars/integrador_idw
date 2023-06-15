@@ -36,11 +36,10 @@
 }
 
 .eqini_uno {
-    width: 70%;
-	background-color: #025377;
+    width: 930px;
+    background-color: #025377;
 	padding: 20px;
-	margin: auto;
-	margin-top: 10px;
+	margin: 10px auto;
 	border-radius: 4px;
 	font-family: 'Fira Sans Condensed';
     color: white;

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>NUEVO JUGADOR</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="stylo_prueba_jugador.css">
+ </head>
+<!-----------------------------------Navegador------------------>
+<body>
+  <header>
+    <div class="logoNav">
+      <a href="../index.html"><img src="../img/Logo_AFA-02.png" alt="Logo de la AFA">
+      </a>
+    </div>
+    <nav>
+      <ul class="menu">
+        <li><a href="#">INSTITUCIONAL</a>
+          <ul class="submenu">
+            <li><a href="./historia.html"><p>Historia</p></a></li>
+            <li><a href="./autoridades.html"><p>Autoridades</p></a></li>
+            <li><a href="https://www.afa.com.ar/upload/demo/6230%20_%20Reglamento%20F%C3%BAtbol%20Femenino%20Primera%20A%202023.pdf" target="_blank"><p>Reglamento</p></a></li>
+          </ul>
+        </li>
+        <li><a href="./jugadores.html">JUGADORES</a></li>
+        <li><a href="./convocatorias.html">CONVOCATORIAS</a></li>
+        <li><a href="./equipotitular.html">EQUIPO TITULAR</a></li>
+        <li><a href="./contacto.html">CONTACTO</a></li>
+      </ul>
+    </nav>
+    <div class="log">
+      <a href="./iniciosesion.html">Iniciar sesión</a>
+    </div>
+  </header>
+  </head>
+ 
+ <!-- NUEVA MODIFICACION-->
+ <body>
+  <div class="contenedor_en_nuevo_jugadores">
+    <div class="contenedor_formulario">
+    <section class="form-registrojugadores" id="registroTable">
+      <h4>FORMULARIO DE REGISTRO DEL JUGADOR</h4>
+      <input class="form_jdrs" type="number" name="DNI" id="DNI" placeholder="Ingrese el DNI del Jugador" required>
+      <input class="form_jdrs" type="text" name="apellido" id="apellido_jugadores" placeholder="Ingrese el apellido del Jugador" required>
+      <input class="form_jdrs" type="text" name="nombres" id="nombres_jugadores" placeholder="Ingrese el nombre del Jugador" required>
+      <label for="posicion_jugadores">Posición:</label>
+      <select class="form_jdrs" name="posicions" id="posicion_jugadores" required>
+        <option value="">Seleccionar</option>
+        <option value="ARQUERO">ARQUERO</option>
+        <option value="DEFENSOR">DEFENSOR</option>
+        <option value="MEDIOCAMPISTA">MEDIOCAMPISTA</option>
+        <option value="DELANTERO">DELANTERO</option>
+     </select>
+      <label for="pie_jugadores">Pie hábil:</label>
+      <select class="form_jdrs" name="pie" id="pie_jugadores" required>
+        <option value="">Seleccionar</option>
+        <option value="PIE DERECHO">PIE DERECHO</option>
+        <option value="PIE IZQUIERDO">PIE IZQUIERDO</option>
+        <option value="AMBOS">AMBOS</option>
+      </select>
+      <input class="form_jdrs" type="text" name="apodo" id="apodo_jugadores" placeholder="Ingrese el apodo del jugador" required>
+      <input class="form_jdrs" type="number" name="dorsal" id="dorsal_jugadores" placeholder="Ingrese el número de dorsal" required>
+    
+     <div class="contenedor_botones">
+        <button class="tresbotones" id="g-nuev-jug" type="submit">GUARDAR</button>
+        <button class="tresbotones" id="g-editar-jug" type="submit">ACTUALIZAR</button>
+        <button class="tresbotones" id="g-cancelar-jug" type="submit">VOLVER</button>
+      </div>  
+    </section>
+  </div>
+  <div class="contenedor_tabla_jugadores">
+  <table id="jugadoresTable">
+    <thead>
+      <tr>
+        <th>DNI</th>
+        <th>APELLIDO</th>
+        <th>NOMBRES</th>
+        <th>POSICIÓN</th>
+        <th>PIE HÁBIL</th>
+        <th>APODO</th>
+        <th>DORSAL</th>
+        <th>MODIFICAR</th>
+      </tr>
+    </thead>
+      <!--<button onclick="editarJugador(0)" class="btn-editar">Editar</button>-->
+      <!--<button onclick="eliminarJugador(0)" class="btn-eliminar">Eliminar</button>-->
+    <tbody>
+      <!-- La tabla se completará dinámicamente -->
+    </tbody>
+  </table>
+  </div>
+</div>
+
+</body>
+
+<!-- Aquí empieza el pie de Página de la web -->
+<footer id="pagina-jugadores_nuevo_formulario-footer">
+  <div id="pie">
+      <p>2023 &copy; Desarrollo Web - UNER</p>
+  </div>
+</footer><!-- Fin del pie de Página -->
+
+<script src="../js/Jugador_nuevo.js"></script> <!-- TABLA DE NUEVOS JUGADORES -->
