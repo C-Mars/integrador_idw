@@ -142,8 +142,11 @@ function eliminarConvocatoria(param) {
 // editar la convocatoria seleccionada utilizando su id. 
 function editarConvocatoria(param){
   let idEditar = parseInt(param.getAttribute("id"));
+// creo una llave o id  editame con el id de convocatoria
   localStorage.setItem('paraeditar',JSON.stringify(idEditar));
+  // redirijo a la página para editarlo
   window.location.href = 'editarconvocatoria.html'
+
 };
 
 function convocarJugadores(param){
@@ -173,21 +176,23 @@ function leerConv() {
 }
 function buscarInfo() {
   const body = document.getElementById('tbody');
-  // console.log(body)
+
   const convocatorias = JSON.parse(localStorage.getItem('convocatorias'));
 
   // sino encuentro nada en el localstorage
-  // busco desde el archivo
+  // busco desde el archivo json 
   if (convocatorias === null) {
     fetch('../json/convocatorias.json')
       .then((res) => {
         return res.json()
       })
+      //devuelve info json
       .then((data) => {
-        // seteo el localstorage
+        // repara el localstorage
         localStorage.setItem('convocatorias', JSON.stringify(data));
 
-        // completo la tabla 
+        // completo la tabla  con los datos obtenidos del json
+
         data.forEach(element => {
           const tr = document.createElement('tr');
 
@@ -201,7 +206,8 @@ function buscarInfo() {
           fecha.appendChild(document.createTextNode(element.fecha));
           rival.appendChild(document.createTextNode(element.rival));
           capitan.appendChild(document.createTextNode(element.capitan));
-
+      // Además agrego los botones editar eliminar y convocar jugadores para una convocatoria. 
+      // que me agregan las acciones de las funciones utilizando id de distintas maneras dependiendo de la funcion y utilizando el atrib onclick (me lleva a ejecutar eda función)
           const boton = document.createElement('button');
           boton.setAttribute('id', element.id);
           boton.setAttribute('onclick', 'convocarJugadores(this)');

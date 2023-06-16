@@ -59,8 +59,8 @@ function buscarInfo() {
           fecha.appendChild(document.createTextNode(element.fecha));
           rival.appendChild(document.createTextNode(element.rival));
           capitan.appendChild(document.createTextNode(element.capitan));
-          // Además agrego los botones editar eliminar y convocar jugadores para una convocatoria
-          const boton = document.createElement('button');
+        // Además agrego los botones editar eliminar y convocar jugadores para una convocatoria. 
+      // que me agregan las acciones de las funciones utilizando id de distintas maneras dependiendo de la funcion y utilizando el atrib onclick (me lleva a ejecutar eda función)          const boton = document.createElement('button');
           boton.setAttribute('id', element.id);
           boton.setAttribute('onclick', 'convocarJugadores(this)');
           boton.setAttribute('class', 'boton2bc');
