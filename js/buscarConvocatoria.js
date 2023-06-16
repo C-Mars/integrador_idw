@@ -124,21 +124,22 @@ function eliminarConvocatoria(param) {
   const nuevo = convocatorias.filter(function (item) {
     return item.id !== idEliminar;
   });
-
+// me devuelve todos menos el que coincide con el id que es el que quiero eliminar
   localStorage.setItem('convocatorias', JSON.stringify(nuevo));
-
+// borra la tabla
   this.borrarBodyTabla();
+  //  actualiza la tabla
   this.buscarInfo();
   
 };
-
+// borra los elementos de la tabla
  function borrarBodyTabla() {
   const elemento = document.getElementById('tbody');
   while (elemento.firstChild) {
     elemento.firstChild.remove();
   }
 };
-
+// editar la convocatoria seleccionada utilizando su id. 
 function editarConvocatoria(param){
   let idEditar = parseInt(param.getAttribute("id"));
   localStorage.setItem('paraeditar',JSON.stringify(idEditar));
