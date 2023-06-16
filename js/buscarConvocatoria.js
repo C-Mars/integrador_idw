@@ -86,13 +86,18 @@ function rangoBusquedaConvocatoria() {
       eliminar.setAttribute('class', 'boton2b');
       eliminar.appendChild(document.createTextNode('Eliminar'));
 
+<<<<<<< HEAD
      
+=======
+      
+
+   
+>>>>>>> master
 
       convocar.appendChild(eliminar);
       convocar.appendChild(editar);
       convocar.appendChild(boton);
-      convocar.appendChild(botonConvocados);
-
+      
       tr.appendChild(id);
       tr.appendChild(fecha);
       tr.appendChild(rival);
@@ -139,10 +144,13 @@ function editarConvocatoria(param){
 function convocarJugadores(param){
   let idConvocatoria = parseInt(param.getAttribute("id"));
   localStorage.setItem('convocatoria',JSON.stringify(idConvocatoria));
-  window.location.href = 'listajugadoresconvocados.html'
+  window.location.href = 'equipotitular.html'
 };
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
 
 function leerConv() {
   const convocatorias = JSON.parse(localStorage.getItem('convocatorias'));
@@ -257,11 +265,20 @@ function buscarInfo() {
       eliminar.setAttribute('class', 'boton2b');
       eliminar.appendChild(document.createTextNode('Eliminar'));
 
+<<<<<<< HEAD
       
       convocar.appendChild(eliminar);
       convocar.appendChild(editar);
       convocar.appendChild(boton);
      
+=======
+     
+
+      convocar.appendChild(eliminar);
+      convocar.appendChild(editar);
+      convocar.appendChild(boton);
+      
+>>>>>>> master
 
       tr.appendChild(id);
       tr.appendChild(fecha);
