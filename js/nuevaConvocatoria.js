@@ -43,10 +43,10 @@ function crearNuevaConvocatoria() {
     }
     convocatorias.push(convocatoria);
     localStorage.setItem('convocatorias', JSON.stringify(convocatorias));
-    window.location.href = 'convocatorias.html'; 
+    
     
   };
-  
+  window.location.href = 'convocatorias.html'; 
 }
 
 
