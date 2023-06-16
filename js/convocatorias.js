@@ -167,7 +167,7 @@ function eliminarConvocatoria(param) {
 }
 function editarConvocatoria(param){
   let idEditar = parseInt(param.getAttribute("id"));
-  localStorage.setItem('editame',JSON.stringify(idEditar));
+  localStorage.setItem('paraeditar',JSON.stringify(idEditar));
   window.location.href = 'editarconvocatoria.html'
 }
 function convocarJugadores(param){

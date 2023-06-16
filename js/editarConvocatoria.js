@@ -27,7 +27,7 @@ window.addEventListener("load", function () {
   });
   
   function leerDatos() {
-    const idEditar = parseInt(localStorage.getItem('editame'));
+    const idEditar = parseInt(localStorage.getItem('paraeditar'));
   
     const convocatorias = JSON.parse(localStorage.getItem('convocatorias'));
   
@@ -49,7 +49,7 @@ window.addEventListener("load", function () {
   function guardarConvocatoria() {
     const convocatorias = JSON.parse(localStorage.getItem('convocatorias'));
   
-    const idEditar = parseInt(localStorage.getItem('editame'));
+    const idEditar = parseInt(localStorage.getItem('paraeditar'));
   
     // me quedo con los items menos el que quiero modificar
     const convocatoriasNuevo = convocatorias.filter(function (item) {
