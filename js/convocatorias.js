@@ -26,24 +26,26 @@ window.addEventListener("load", function () {
   buscarInfo();
 });
 
-// Buscar informacion en el localStorange
+// Busca  di hay informacion alojada en el  localStorange
 function buscarInfo() {
-  const body = document.getElementById('tbody');
-  // console.log(body)
+  //creo cont. body en donde se cargaran los datos recopilados del local o JSON
+  const body = document.getElementById('tbody'); 
+  // creo una const. convocatorias. busca la clave o ide en el local y  me devuelve en formato estring 
   const convocatorias = JSON.parse(localStorage.getItem('convocatorias'));
-
-  // sino encuentro nada en el localstorage
-  // busco desde el archivo
+  //para poder usarlo lo convierto a objeto
+  // sino no encuentra nada en el localstorage
+  // busco desde el archivo en formato json
   if (convocatorias === null) {
     fetch('../json/convocatorias.json')
       .then((res) => {
         return res.json()
       })
+      //devuelve info json
       .then((data) => {
-        // seteo el localstorage
+        // repara el localstorage
         localStorage.setItem('convocatorias', JSON.stringify(data));
 
-        // completo la tabla 
+        // completo la tabla  con los datos obtenidos del json
         data.forEach(element => {
           const tr = document.createElement('tr');
 
@@ -57,7 +59,7 @@ function buscarInfo() {
           fecha.appendChild(document.createTextNode(element.fecha));
           rival.appendChild(document.createTextNode(element.rival));
           capitan.appendChild(document.createTextNode(element.capitan));
-
+          // Además agrego los botones editar eliminar y convocar jugadores para una convocatoria
           const boton = document.createElement('button');
           boton.setAttribute('id', element.id);
           boton.setAttribute('onclick', 'convocarJugadores(this)');
