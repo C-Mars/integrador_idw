@@ -51,7 +51,7 @@ function rangoBusquedaConvocatoria() {
     if (new Date(conv.fecha) >= new Date(inicioFecha) && new Date(conv.fecha) <= new Date(finFecha)) {
       return conv 
     } else{
-      return alert('no hay convocatorias en esas fechas')
+       alert('no hay convocatorias en esas fechas')
     }
   } 
   );
