@@ -57,8 +57,8 @@
       <label for="pie_jugadores">Pie hábil:</label>
       <select class="form_jdrs" name="pie" id="pie_jugadores" required>
         <option value="">Seleccionar</option>
-        <option value="PIE DERECHO">PIE DERECHO</option>
-        <option value="PIE IZQUIERDO">PIE IZQUIERDO</option>
+        <option value="P. DER">PIE DERECHO</option>
+        <option value="P. IZQ">PIE IZQUIERDO</option>
         <option value="AMBOS">AMBOS</option>
       </select>
       <input class="form_jdrs" type="text" name="apodo" id="apodo_jugadores" placeholder="Ingrese el apodo del jugador" required>
@@ -83,15 +83,17 @@
         <th>APODO</th>
         <th>DORSAL</th>
         <th>MODIFICAR</th>
+        <th>ELIMINAR</th>
+        <th>CONVOCAR</th>
       </tr>
     </thead>
-      <!--<button onclick="editarJugador(0)" class="btn-editar">Editar</button>-->
-      <!--<button onclick="eliminarJugador(0)" class="btn-eliminar">Eliminar</button>-->
     <tbody>
       <!-- La tabla se completará dinámicamente -->
     </tbody>
   </table>
+  <button onclick="convocarJugadores()">Convocar</button> <!--nuevo -->
   </div>
+  <div id="cartelcantidad_de_jugadores_convocados" style="display: none;"></div>
 </div>
 
 </body>

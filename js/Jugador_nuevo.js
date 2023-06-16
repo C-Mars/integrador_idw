@@ -66,23 +66,23 @@ var jugadores = [];
     });
 
     // Agregar función de validación de campos
-function validarCampos() {
-  var dni = document.getElementById("DNI").value;
-  var apellido = document.getElementById("apellido_jugadores").value;
-  var nombres = document.getElementById("nombres_jugadores").value;
-  var posicion = document.getElementById("posicion_jugadores").value;
-  var pie = document.getElementById("pie_jugadores").value;
-  var apodo = document.getElementById("apodo_jugadores").value;
-  var dorsal = document.getElementById("dorsal_jugadores").value;
+  function validarCampos() {
+    var dni = document.getElementById("DNI").value;
+    var apellido = document.getElementById("apellido_jugadores").value;
+    var nombres = document.getElementById("nombres_jugadores").value;
+    var posicion = document.getElementById("posicion_jugadores").value;
+    var pie = document.getElementById("pie_jugadores").value;
+    var apodo = document.getElementById("apodo_jugadores").value;
+    var dorsal = document.getElementById("dorsal_jugadores").value;
 
-  // Verificar si algún campo está vacío
-  if (dni === "" || apellido === "" || nombres === "" || posicion === "" || pie === "" || apodo === "" || dorsal === "") {
-    alert("Por favor, complete todos los campos del formulario");
-    return false; // Detener el proceso de guardado
+    // Verificar si algún campo está vacío
+    if (dni === "" || apellido === "" || nombres === "" || posicion === "" || pie === "" || apodo === "" || dorsal === "") {
+      alert("Por favor, complete todos los campos del formulario");
+      return false; // Detener el proceso de guardado
+    }
+
+    return true; // Todos los campos están completos
   }
-
-  return true; // Todos los campos están completos
-}
 
 
     document.getElementById("g-editar-jug").addEventListener("click", function(event) {
@@ -140,6 +140,7 @@ function validarCampos() {
         var cell7 = row.insertCell(6);
         var cell8 = row.insertCell(7);
         var cell9 = row.insertCell(8); // Nueva celda para el botón de eliminar
+        var cell10 = row.insertCell(9); // Nueva celda para el checkbox
         cell1.innerHTML = jugador.dni;
         cell2.innerHTML = jugador.apellido;
         cell3.innerHTML = jugador.nombres;
@@ -149,6 +150,7 @@ function validarCampos() {
         cell7.innerHTML = jugador.dorsal;
         cell8.innerHTML = '<button onclick="editarJugador(' + i + ')">Editar</button>'; // Botón de Editar
         cell9.innerHTML = '<button onclick="eliminarJugador(' + i + ')">Eliminar</button>'; // Botón de eliminar
+        cell10.innerHTML = '<input type="checkbox" name="convocarJugador" value="' + i + '">';
       }
     }
 
@@ -180,3 +182,41 @@ function validarCampos() {
       actualizarTabla(); // Actualizar la tabla
       alert("Jugador eliminado correctamente");
     }
+
+    function convocarJugadores() {
+      var checkboxes = document.getElementsByName("convocarJugador");
+      var jugadoresConvocados = [];
+    
+      for (var i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i].checked) {
+          var jugadorIndex = parseInt(checkboxes[i].value);
+          var jugador = jugadores[jugadorIndex];
+    
+          // Agregar solo la información necesaria a jugadoresConvocados
+          var jugadorConvocado = {
+            dni: jugador.dni,
+            apellido: jugador.apellido,
+            nombres: jugador.nombres,
+            dorsal: jugador.dorsal,
+            posicion: jugador.posicion
+          };
+    
+          jugadoresConvocados.push(jugadorConvocado);
+        }
+      }
+    
+      // Guardar los jugadores convocados en el LocalStorage
+      localStorage.setItem("jugadoresConvocados", JSON.stringify(jugadoresConvocados));
+    
+      // Redireccionar a la página "jugadores convocados"
+      //window.location.href = "jugadores_convocados.html";
+
+      // Abrir una nueva pestaña con jugadores_convocados.html
+      window.open("equipotitular.html"); //antes jugadores_convocados.html
+
+
+      // Mostrar el cartel emergente con la cantidad de jugadores convocados
+      var cartelEmergente = document.getElementById("cartelEmergente");
+      cartelEmergente.innerHTML = "Se han convocado a " + jugadoresConvocados.length + " jugadores.";
+      cartelEmergente.style.display = "block";
+    }   

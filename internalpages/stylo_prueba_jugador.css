@@ -220,3 +220,14 @@ button {
   button.eliminar {
     background-color: #f44336;
   }
+
+.cartelEmergente {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #000000;
+    z-index: 9999;
+  }

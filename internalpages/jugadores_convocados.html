@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Jugadores Convocados</title>
+</head>
+
+<body>
+    <h1>Jugadores Convocados</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>N° de id</th>
+                <th>Nombre y Apellido</th>
+                <th>Dorsal</th>
+                <th>Posición</th>
+            </tr>
+        </thead>
+        <tbody id="jugadoresConvocadosTableBody"></tbody>
+    </table>
+
+    <script>
+        var jugadoresConvocadosData = localStorage.getItem("jugadoresConvocados");
+        if (jugadoresConvocadosData) {
+            var jugadoresConvocados = JSON.parse(jugadoresConvocadosData);
+            var tableBody = document.getElementById("jugadoresConvocadosTableBody");
+
+            for (var i = 0; i < jugadoresConvocados.length; i++) {
+                var jugadorConvocado = jugadoresConvocados[i];
+
+                var row = tableBody.insertRow(-1);
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                var cell3 = row.insertCell(2);
+                var cell4 = row.insertCell(3);
+                cell1.innerHTML = jugadorConvocado.dni;
+                cell2.innerHTML = jugadorConvocado.apellido + ", " + jugadorConvocado.nombres;
+                cell3.innerHTML = jugadorConvocado.dorsal;
+                cell4.innerHTML = jugadorConvocado.posicion;
+            }
+        }
+    </script>
+</body>
+
+</html>
