@@ -1163,7 +1163,7 @@ div.cont-form-conv2 {
 div.boton2bcd {
 	display: flex;
 	justify-content: center;
-	/* flex-flow: row; */
+	flex-flow: row;
 	/* background-color: none; */
 } 
 
@@ -1173,7 +1173,7 @@ div.boton2bcd button {
 }
 
 div.boton2bc button {
-	/* flex-direction: row; */
+	/* flex-flow: row ; */
 	width: 131px;
 	height: 53px;
 	background-color: #025377;
@@ -1182,7 +1182,7 @@ div.boton2bc button {
 	color: #F6F9FB;
 	font-size: 20px;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-	/* margin: 5px 10px; */
+	margin: 5px 10px;
 }
 
 div.boton2bc button:hover {
@@ -1190,4 +1190,13 @@ div.boton2bc button:hover {
 	background-color: rgb(2, 85, 121);
 	border: 0;
 
+}
+section.cont-convocatorias-2{
+	display: flex;
+	justify-content: center;
+	align-items:flex-start;
+	/* flex-direction:row; */
+	padding: 10px;
+	/* flex-flow:row !important; */
+	width: 100%;
 }
