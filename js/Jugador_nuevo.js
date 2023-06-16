@@ -212,7 +212,7 @@ var jugadores = [];
       //window.location.href = "jugadores_convocados.html";
 
       // Abrir una nueva pestaña con jugadores_convocados.html
-      window.open("jugadores_convocados.html");
+      window.open("equipotitular.html"); //antes jugadores_convocados.html
 
 
       // Mostrar el cartel emergente con la cantidad de jugadores convocados

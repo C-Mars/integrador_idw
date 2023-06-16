@@ -1,29 +1,43 @@
-// Obtener la tabla de jugadores
-var tablaJugadores = document.getElementsByClassName('tablajugadores')[0];
+var searchInput = document.getElementById('search-input');
+var positionSelect = document.getElementById('position-select');
 
-// Obtener todas las filas de la tabla, excepto la primera (encabezados)
-var filas = tablaJugadores.getElementsByTagName('tr');
-var numFilas = filas.length;
+searchInput.addEventListener('keyup', searchPlayers);
+positionSelect.addEventListener('change', searchPlayers);
 
-// Definir un objeto para mapear las posiciones con sus abreviaturas
-var posiciones = {
-  'Arq': 'Arquero',
-  'Def': 'Defensor',
-  'Med': 'Volante',
-  'Del': 'Delantero'
-};
+function searchPlayers() {
+  var searchText = searchInput.value.toLowerCase();
+  var selectedPosition = positionSelect.value.toLowerCase();
 
-// Recorrer todas las filas a partir de la segunda
-for (var i = 1; i < numFilas; i++) {
-  // Obtener la celda de la posición de cada fila
-  var celdaPosicion = filas[i].getElementsByTagName('td')[3];
-  
-  // Obtener el contenido de la celda
-  var posicion = celdaPosicion.textContent.trim();
-  
-  // Verificar si la posición existe en el objeto posiciones
-  if (posicion in posiciones) {
-    // Reemplazar el contenido de la celda con la abreviatura correspondiente
-    celdaPosicion.textContent = posicion + ' (' + posiciones[posicion] + ')';
+  var rowsConvocados = document.querySelectorAll('#jugadoresConvocadosTableBody tr');
+  var rowsTitulares = document.querySelectorAll('#jugadoresTitularesTableBody tr');
+
+  for (var i = 0; i < rowsConvocados.length; i++) {
+    var playerCell = rowsConvocados[i].getElementsByTagName('td')[1];
+    var playerName = playerCell.textContent.toLowerCase();
+    var playerPosition = rowsConvocados[i].getElementsByTagName('td')[3].textContent.toLowerCase();
+
+    var matchesSearchText = playerName.includes(searchText);
+    var matchesPosition = selectedPosition === '' || playerPosition === selectedPosition;
+
+    if (matchesSearchText && matchesPosition) {
+      rowsConvocados[i].style.display = '';
+    } else {
+      rowsConvocados[i].style.display = 'none';
+    }
+  }
+
+  for (var j = 0; j < rowsTitulares.length; j++) {
+    var playerCell = rowsTitulares[j].getElementsByTagName('td')[1];
+    var playerName = playerCell.textContent.toLowerCase();
+    var playerPosition = rowsTitulares[j].getElementsByTagName('td')[0].textContent.toLowerCase();
+
+    var matchesSearchText = playerName.includes(searchText);
+    var matchesPosition = selectedPosition === '' || playerPosition === selectedPosition;
+
+    if (matchesSearchText && matchesPosition) {
+      rowsTitulares[j].style.display = '';
+    } else {
+      rowsTitulares[j].style.display = 'none';
+    }
   }
 }
