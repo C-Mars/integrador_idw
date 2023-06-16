@@ -316,12 +316,7 @@ div.proximo{
 	padding: 20px;
 	min-height: 717px;
 }
-/* @media screen and (max-width: 1845px) {
-    .proximo{
-        width: 100%;
-    
-    }
-} */
+
 div.proximo-part{
 	align-content: center;
 	align-items: center;
@@ -418,7 +413,7 @@ div.noti{
 	
 	position: relative;
 	background-color: #027496;
-	/* margin-left: 20px;	 */
+	
 	flex: 1;
 	transition: .3s flex;
 	color: #BAD6DA;
@@ -496,7 +491,17 @@ div.noti:hover > div.vermas a{
 	color:#027496;
 }
 
-
+/* *******************sección API*************************** */
+section.api{
+	padding: 0;
+	margin: 20px;
+	display: flex;
+	flex-wrap: wrap; 
+	align-content: flex-start;
+	justify-content: center;
+	width: 500px;
+	background-color: #027496;
+}
 /*******************************Página de Contacto**********************************************************************/
 main.main-contacto{
 	display: flex;

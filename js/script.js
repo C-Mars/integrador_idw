@@ -17,3 +17,10 @@ function validarUsuario() {
 function crearCuenta() {
   alert('Para crear una cuenta debe tener la autorizacion de AFA. Para más información ingrese a la página de contacto del sitio')
 }
+
+function estadisticas() {
+  alert('Proximamente...')
+}
+function partidos() {
+  window.location.href = '../img/fwwc2023_MatchSchedule_v29_26052023_EN_page-0001.jpg';
+};
