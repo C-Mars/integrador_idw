@@ -754,6 +754,7 @@ section.cont-inisesion {
 	flex-wrap: wrap;
 	margin: 0;
 	padding: 0;
+	
 
 }
 
@@ -797,15 +798,19 @@ div.cont-form {
 	max-width: 700px;
 	align-items: center;
 	text-align: center;
-flex-direction:row;
+	justify-content: center;
+/* flex-direction:row; */
 }
 
 div.cont-form form {
-	/* width: 100%; */
+	width: 100%;
 	display: block;
 	justify-content: center;
 	flex-flow: wrap;
 	align-content: flex-start;
+	align-items: center;
+	text-align: center;
+	
 	/* flex-direction:row; */
 }
 
@@ -813,6 +818,8 @@ div.cont-form fieldset {
 	color: #027496;
 	border: solid 2px #027496;
 	margin: 20px;
+	text-align: center;
+	justify-content: center;
 
 }
 
@@ -821,6 +828,7 @@ div.cont-form legend {
 	font-style: bold;
 	font-size: 35px;
 	padding: 20px;
+	
 }
 
 div.fila-ses {
@@ -1095,7 +1103,7 @@ button.boton2b:hover {
 }
 
 button.boton2bc {
-	flex-direction: row;
+	/* flex-direction: row; */
 	width: 131px;
 	height: 53px;
 	background-color: #025377;
@@ -1109,7 +1117,7 @@ button.boton2bc {
 
 .boton2bc:hover {
 	color: #BAD6DA;
-	background-color: rgb(2, 85, 121);
+	/* background-color: rgb(2, 85, 121); */
 	border: 0;
 
 }
@@ -1152,14 +1160,14 @@ div.cont-form-conv2 {
 	
 }
 
-div.boton2bc {
+div.boton2bcd {
 	display: flex;
 	justify-content: center;
 	/* flex-flow: row; */
 	/* background-color: none; */
 } 
 
-div.boton2bc button {
+div.boton2bcd button {
 	width: 170px !important;
 	margin: 10px !important;
 }
