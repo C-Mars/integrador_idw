@@ -86,12 +86,7 @@ function rangoBusquedaConvocatoria() {
       eliminar.setAttribute('class', 'boton2b');
       eliminar.appendChild(document.createTextNode('Eliminar'));
 
-      const botonConvocados = document.createElement('button');
-
-      botonConvocados.setAttribute('id', element.id);
-      botonConvocados.setAttribute('onclick', 'jugadoresConvocados(this)');
-      botonConvocados.setAttribute('class', 'boton2bc');
-      botonConvocados.appendChild(document.createTextNode('Convocados'));
+     
 
       convocar.appendChild(eliminar);
       convocar.appendChild(editar);
@@ -102,7 +97,7 @@ function rangoBusquedaConvocatoria() {
       tr.appendChild(fecha);
       tr.appendChild(rival);
       tr.appendChild(capitan);
-      tr.appendChild(convocar);
+     
 
       body.appendChild(tr);
 
@@ -266,17 +261,11 @@ function buscarInfo() {
       eliminar.setAttribute('class', 'boton2b');
       eliminar.appendChild(document.createTextNode('Eliminar'));
 
-      const botonConvocados = document.createElement('button');
-              
-      botonConvocados.setAttribute('id', element.id);
-      botonConvocados.setAttribute('onclick', 'jugadoresConvocados(this)');
-      botonConvocados.setAttribute('class', 'boton2bc');
-      botonConvocados.appendChild(document.createTextNode('Convocados'));
-
+      
       convocar.appendChild(eliminar);
       convocar.appendChild(editar);
       convocar.appendChild(boton);
-      convocar.appendChild(botonConvocados);
+     
 
       tr.appendChild(id);
       tr.appendChild(fecha);

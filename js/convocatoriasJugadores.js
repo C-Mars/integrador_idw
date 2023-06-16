@@ -30,7 +30,7 @@ window.addEventListener("load", function () {
   cancelar.addEventListener('click', cancelarConvoctoria);
   
   function cancelarConvoctoria() {
-    window.location.href = 'listaconvocatorias.html';
+    window.location.href = 'convocatorias.html';
   }
   
   function convocarJugadores(){
