@@ -82,7 +82,20 @@
 
     <div class="contenedor_de_cajitas"> <!--////////////CONTENEDOR DE LA DE ABAJO///////////-->
       <div class="eqini_dos" id="contenedor_verde"> <!--maquetacion 2da parte-->
-      <table class="tablajugadores">
+        <table id="jugadoresTrasladadosTable">
+          <thead>
+            <tr>
+              <th>N° de Fila</th>
+              <th>Jugador</th>
+              <th>Dorsal</th>
+              <th>Posición</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+        <!--
+        <table class="tablajugadores">
         <tr>
           <th>N°</th>
           <th>JUGADOR</th>
@@ -227,12 +240,12 @@
           <td>25</td>
           <td>Del</td>
         </tr>
-      </table>
+      </table>-->
       </div> 
 
       
       <div class="eqini_tres" id="contenedor_rosa"> <!--maquetacion 3era parte--> 
-      <table class="tablajugadorestitulares">
+        <table class="tablajugadorestitulares">
         <caption>TITULARES</caption>
          <tr>
           <th>POS</th>
@@ -295,7 +308,7 @@
           <td> </td>
           <td> </td>
         </tr>
-      </table> 
+      </table>
         <table class="tablajugadorsuplentes">
           <caption>SUPLENTES</caption>
            <tr>
@@ -367,3 +380,4 @@
 <script src="../js/cambiar_formacion.js"></script>
 <script src="../js/buscarJugadores_en_EquipoTitular.js"></script> <!-- BUSCADOR DE NOMBRES EN EQUIPOS TITULARES -->
 <script src="../js/buscarPosiciones_en_EquipoTitular.js"></script> <!-- BUSCADOR DE POSICIONES EN EQUIPOS TITULARES -->
+<script src="../js/Trasladar_jugadores_creados_en_Nuevo_Jugador.js"></script> <!-- TRASLADAR JUGADORES DE LA PAG NUEVO JUGADOR A EQUIPO TITULAR -->

@@ -35,6 +35,15 @@
     box-sizing: border-box;
 }
 
+h4 {
+    font-family: 'Fira Sans Condensed';
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 5px; 
+  }
+
+
 .eqini_uno {
     width: 930px;
     background-color: #025377;
@@ -82,13 +91,24 @@
   }
 .tablajugadorestitulares {
     background: #025377;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 28px;
+    margin-left: 15px;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.jugadoresConvocadosTableBody{
+    background: #025377;
     width: 40%;
     margin: 0 auto;
     margin-top: 28px;
     margin-left: 15px;
     border-collapse: collapse;
     text-align: center;
-  }
+}
+
 .tablajugadorsuplentes {
     background: #025377;
     width: 40%;
@@ -106,12 +126,6 @@
     font-family: 'Fira Sans Condensed';
     border: 2px solid white;
     margin: 0 auto; 
-}
-
-.tabladt {
-    position: absolute;
-    bottom: 87%;
-    right: 20%;
 }
 
 th {
@@ -190,7 +204,7 @@ tr:nth-child(odd) {
 
 .selectordeformaciones { 
     position: absolute;
-    bottom: 52%;    /*alineacion de abajo hacia arriba*/
+    bottom: 10.5%;    /*alineacion de abajo hacia arriba*/
     right: 16%;    /*alineacion de derecha a izquierda*/
 }
 
@@ -213,38 +227,49 @@ tr:nth-child(odd) {
 
 .ImagenesdeFormacion {
     position: absolute;
-    bottom:14%;
+    bottom:11%;
     right: 4%;
 }
 
 .ImagenDT{
     position: absolute;
-    bottom: 60%;
-    right: 4%;
+    bottom: 23%;
+    left: 5%;
 }
 
-   .tres_botones_ET {
+.tabladt {
+    position: absolute;
+    bottom: 13%;
+    left: 7%;
+}
+
+.tres_botones_ET {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  .tres_botones_ET button {
-    flex: 0 0 28%; /* Ancho ajustable */
+    align-items: center;
+    width: 100%;
+    transition: color 0.5s; /* Transición de color*/
+}
+
+.tres_botones_ET button {
+    margin: 0 5px; /* Espacio entre botones */
     background: white;
     border: none;
     padding: 10px;
     color: black;
-    margin: 16px 10px; /* Espacio entre botones */
+    margin: 16px 10px; /* Espacio entre botones*/ 
     font-family: 'Fira Sans Condensed semibol';
     font-weight: 80;
     font-size: 15px;
     cursor: pointer;
-    transition: color 0.5s; /* Transición de color */
     border: 2px solid black;
-  }
-  
-  .tres_botones_ET button:hover {
-    color: #2d7399; /* Cambio de color al colocar el mouse sobre el botón */
-  }
-  
+
+}
+
+.tres_botones_ET button:hover {
+    color: #2d7399; /* Cambio de color al colocar el mouse sobre el botón*/
+}
