@@ -545,7 +545,7 @@ section.api {
 main.main-contacto {
 	display: flex;
 	flex-wrap: wrap;
-	align-content: flex-start;
+	/* align-content: flex-start; */
 	justify-content: center;
 	font-family: 'Fira Sans Condensed';
 	margin-left: 100px;
@@ -576,7 +576,8 @@ div.contacto {
 
 div.contacto h1 {
 	text-align: center;
-	font-size: 65px;
+	
+	font-size: calc(4.5vw + 0.7em) !important;
 }
 
 section.contacto-info {
@@ -590,12 +591,15 @@ section.contacto-info {
 
 
 section.contacto-info h2 {
-	font-size: 36px;
+	
 	color: #025377;
 	padding-left: 10px;
+	font-size: calc(1.5vw + 0.6em) !important;
 }
 
 form.cont-form {
+	justify-content: center;
+	align-items: center;
 	display: block;
 	margin: 0px;
 	color: #027496;
@@ -606,7 +610,7 @@ input.control {
 	font-family: 'Fira Sans Condensed';
 	font-weight: normal;
 	font-style: normal;
-	font-size: 32px;
+	font-size: calc(1.5vw + 0.5em) !important;
 	border: 0;
 	width: 98.3%;
 	height: 90px;
@@ -634,7 +638,7 @@ select.asunt-cont {
 	flex: content;
 	font-family: 'Fira Sans Condensed';
 	font-weight: bold;
-	font-size: 32px;
+	font-size: calc(1.5vw + 0.5em) !important;
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	-ms-appearance: none;
@@ -690,7 +694,7 @@ div.comentario {
 
 textarea.comentario-tex {
 	font-family: 'Fira Sans Condensed';
-	font-size: 32px;
+	font-size: calc(1.5vw + 0.5em) !important;
 	display: flex;
 	background-color: #F6F9FB;
 	opacity: 1;
@@ -717,17 +721,18 @@ textarea.comentario-tex {
 div.boton {
 	padding: 50px;
 	margin: 0 35%;
+	align-content: center;
 
 }
 
 form.cont-form button {
-	width: 214px;
-	height: 72px;
+	width: 213px;
+	height: 70px;
 	background-color: #025377;
 	border: 3px solid #F6F9FB;
 	padding: 12px;
 	color: #F6F9FB;
-	font-size: 34px;
+	font-size: 30px;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 }
@@ -741,60 +746,66 @@ form.cont-form button:hover {
 
 /************************Página de Inicio de Sesión**********************************************************************/
 section.cont-inisesion {
-	width: 100%;
+	/* width: 100%; */
 	display: flex;
-	flex-direction: left;
-
+	flex-wrap: wrap;
+	align-content: flex-start;
+	justify-content: center;
+	flex-wrap: wrap;
 	margin: 0;
 	padding: 0;
 
 }
 
 div.img-sesion {
-	flex-direction: left;
-
-	max-width: 100%;
-	margin: 10px;
-	width: 100%;
-
+	display: block;
+	/* flex-flow:wrap; */
+	align-content:center;
+	width: 50%;
+	/* background-color: #027496; */
+	justify-content: center;
 }
-
+@media screen and (max-width: 1400px) {
+	div.img-sesion {
+		align-items: center;
+		display: block;
+		width: 90%;
+		justify-content: center;
+	}
+}
 div.img-sesion img {
 	display: flex;
 	flex-flow: wrap;
 	align-content: flex-start;
-
-	width: 100%;
-	padding: 50px;
-	min-width: 476px;
-
+	width: 80%;
+	align-items: center;
 }
+@media screen and (max-width: 1100px) {
+	div.img-sesion img {
+		align-items: center;
+		display: block;
+		width: 60%;
+		justify-content: center;
+	}}
 
-div.ses-intermedio {
-	display: flex;
-	flex-flow: wrap;
-	width: 10%;
-	margin: 20px;
-
-}
 
 div.cont-form {
-	width: 100%;
-	margin: 80px;
-	display: flex;
+	width: 50%;
+	display: block;
 	flex-flow: wrap;
 	align-content: flex-start;
 	max-width: 700px;
 	align-items: center;
 	text-align: center;
 
-	/* background-color:#027496; */
 }
 
 div.cont-form form {
-	width: 100%;
+	/* width: 100%; */
 	display: block;
+	justify-content: center;
 	flex-flow: wrap;
+	align-content: flex-start;
 }
 
 div.cont-form fieldset {
@@ -866,35 +877,10 @@ div.cont-form button:hover {
 	border: 0;
 
 }
-
 section.res-convocaroria {
 	display: flex;
 	justify-content: center;
 	width: 100%;
-}
-
-div.contenedorTabla {
-	display: flex;
-	text-align: center;
-	justify-content: center;
-	align-items: center;
-
-}
-
-table.tabla-con {
-	justify-content: space-between;
-	/* background-color:#027496; */
-	font-size: 24px;
-
-
-
-}
-
-table.tabla-con th {
-	margin: 5px 10px;
-	padding: 5px 10px;
-	background-color: #04547c;
-	color: #F6F9FB;
 }
 
 
@@ -1070,7 +1056,7 @@ section.cont-nuconv {
 }
 
 div.cont-form-conv {
-
+width: 100%;
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
@@ -1125,4 +1111,30 @@ button.boton2bc:hover {
 
 }
 
-/*Convocar*/
+/***************************Buscar Convocatoria*****************************/
+section.res-convocaroria{ 
+	display: flex; 
+	justify-content: center; 
+	width: 100%; 
+} 
+div.contenedorTabla{ 
+	display: flex; 
+	text-align: center; 
+	justify-content: center; 
+	align-items: center; 
+	 
+} 
+table.tabla-con{ 
+	justify-content: space-between; 
+	/* background-color:#027496; */ 
+	font-size: 24px; 
+	 
+	 
+	 
+} 
+table.tabla-con th{ 
+	margin: 5px 10px; 
+	padding: 5px 10px; 
+	background-color: #04547c; 
+	color: #F6F9FB; 
+} 
