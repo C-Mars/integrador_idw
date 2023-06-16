@@ -797,7 +797,7 @@ div.cont-form {
 	max-width: 700px;
 	align-items: center;
 	text-align: center;
-
+flex-direction:row;
 }
 
 div.cont-form form {
@@ -806,6 +806,7 @@ div.cont-form form {
 	justify-content: center;
 	flex-flow: wrap;
 	align-content: flex-start;
+	/* flex-direction:row; */
 }
 
 div.cont-form fieldset {
@@ -1048,7 +1049,6 @@ section.cont-nuconv {
 	flex-wrap: wrap;
 	padding: 10px;
 
-	flex-wrap: wrap;
 	align-content: center;
 	width: 100%;
 
@@ -1056,10 +1056,12 @@ section.cont-nuconv {
 }
 
 div.cont-form-conv {
-width: 100%;
+	width: 100%;
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
+	flex-direction:row;
+	
 }
 
 div.cont-boton {
@@ -1093,6 +1095,7 @@ button.boton2b:hover {
 }
 
 button.boton2bc {
+	flex-direction: row;
 	width: 131px;
 	height: 53px;
 	background-color: #025377;
@@ -1104,7 +1107,7 @@ button.boton2bc {
 	margin: 5px 10px;
 }
 
-button.boton2bc:hover {
+.boton2bc:hover {
 	color: #BAD6DA;
 	background-color: rgb(2, 85, 121);
 	border: 0;
@@ -1138,3 +1141,45 @@ table.tabla-con th{
 	background-color: #04547c; 
 	color: #F6F9FB; 
 } 
+
+/**/
+div.cont-form-conv2 {
+	/* width: 100%; */
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	flex-direction:row;
+	
+}
+
+div.boton2bc {
+	display: flex;
+	justify-content: center;
+	/* flex-flow: row; */
+	/* background-color: none; */
+} 
+
+div.boton2bc button {
+	width: 170px !important;
+	margin: 10px !important;
+}
+
+div.boton2bc button {
+	/* flex-direction: row; */
+	width: 131px;
+	height: 53px;
+	background-color: #025377;
+	border: 1.5px solid #F6F9FB;
+	padding: 12px;
+	color: #F6F9FB;
+	font-size: 20px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	/* margin: 5px 10px; */
+}
+
+div.boton2bc button:hover {
+	color: #BAD6DA;
+	background-color: rgb(2, 85, 121);
+	border: 0;
+
+}

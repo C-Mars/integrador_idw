@@ -37,10 +37,15 @@ function rangoBusquedaConvocatoria() {
 
   const finFecha = document.getElementById('fechaconvfin').value;
 
+  if(new Date(inicioFecha)>= new Date(finFecha)){
+    return alert('las fechas ingresadas son incorrectas')
+  };
   
   const resultadoconv = convocatorias.filter((conv) => {
     if (new Date(conv.fecha) >= new Date(inicioFecha) && new Date(conv.fecha) <= new Date(finFecha)) {
       return conv 
+    } else{
+      return alert('no hay convocatorias en esas fechas')
     }
   } 
   );
