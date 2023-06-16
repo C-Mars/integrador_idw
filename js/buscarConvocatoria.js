@@ -142,11 +142,7 @@ function convocarJugadores(param){
   window.location.href = 'listajugadoresconvocados.html'
 };
 
-function jugadoresConvocados(param) {
-  const idConvocatoria = parseInt(param.getAttribute("id"));
-  localStorage.setItem('convocatoria',JSON.stringify(idConvocatoria));
-  window.location.href = 'jugadoresConvocados.html'
-};
+
 
 function leerConv() {
   const convocatorias = JSON.parse(localStorage.getItem('convocatorias'));
