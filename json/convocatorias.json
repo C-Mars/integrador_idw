@@ -1,32 +1,32 @@
 [
     {
         "id": 0,
+        "fecha": "2023-06-15",
+        "rival": "Colombia",
+        "capitan": "Lopez"
+    },
+    {
+        "id": 1,
         "fecha": "2023-07-24",
         "rival": "Italia",
         "capitan": "Orellano"
     },
     {
-        "id": 1,
+        "id": 2,
         "fecha": "2023-07-27",
         "rival": "Sudáfrica",
         "capitan": "Stabile"
     },
     {
-        "id": 2,
-        "fecha": "2023-08-02",
-        "rival": "Suecia",
-        "capitan": "Vallejos"
-    },
-    {
-        "id": 4,
+        "id": 3,
         "fecha": "2023-07-28",
         "rival": "Inglaterra",
         "capitan": "Vallejos"
     },
     {
-        "id": 5,
-        "fecha": "2023-06-15",
-        "rival": "Colombia",
-        "capitan": "Lopez"
-    }
+        "id": 4,
+        "fecha": "2023-08-02",
+        "rival": "Suecia",
+        "capitan": "Vallejos"
+    },
 ]
