@@ -173,5 +173,5 @@ function editarConvocatoria(param){
 function convocarJugadores(param){
   let idConvocatoria = parseInt(param.getAttribute("id"));
   localStorage.setItem('convocatoria',JSON.stringify(idConvocatoria));
-  window.location.href = 'equipotitular.html'
+  window.location.href = 'listajugadoresconvocados.html'
 }
