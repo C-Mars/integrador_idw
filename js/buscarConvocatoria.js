@@ -42,7 +42,8 @@ function rangoBusquedaConvocatoria() {
 
   const finFecha = document.getElementById('fechaconvfin').value;
 // me fijo  si las fechas ingresadas son correctas y para poder compararlos creo con esos datos un objeto de tipo DATE que se utiliza con las fechas
-  if(new Date(inicioFecha)>= new Date(finFecha)){
+  
+if(new Date(inicioFecha)>= new Date(finFecha)){
     return alert('las fechas ingresadas son incorrectas')
   };
   // si son correctas busco las convocatorias utilizando el metrodo filter que pueden estar entre ese rango de fechas y vuelvo a usar el mismo metrodo de crear obj tipo DATE.para poder compararlos
@@ -51,7 +52,7 @@ function rangoBusquedaConvocatoria() {
     if (new Date(conv.fecha) >= new Date(inicioFecha) && new Date(conv.fecha) <= new Date(finFecha)) {
       return conv 
     } else{
-       alert('no hay convocatorias en esas fechas')
+       return alert('no hay convocatorias en esas fechas')
     }
   } 
   );
