@@ -39,7 +39,8 @@ function formularioContacto() {
 
     localStorage.setItem('contacto', JSON.stringify(formContactos));
     
-    return alert('Solicitud enviada')
+    
   }
+  return alert('Solicitud enviada')
 }
 
