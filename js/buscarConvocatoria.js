@@ -75,7 +75,7 @@ function rangoBusquedaConvocatoria() {
       capitan.appendChild(document.createTextNode(element.capitan));
       
       // Además agrego los botones editar eliminar y convocar jugadores para una convocatoria. 
-      //
+      // que me agregan las acciones de las funciones utilizando id de distintas maneras dependiendo de la funcion y utilizando el atrib onclick (me lleva a ejecutar eda función)
       const boton = document.createElement('button');
 
       boton.setAttribute('id', element.id);
@@ -114,7 +114,7 @@ function rangoBusquedaConvocatoria() {
     alert('No se encuentra ninguna fecha')
   }
 };
-
+// elimina la convocatoria seleccionada utilizando su id. 
 function eliminarConvocatoria(param) {
   let idEliminar = parseInt(param.getAttribute("id"));
 
@@ -167,5 +167,120 @@ function leerConv() {
 
         localStorage.setItem('convocatorias', JSON.stringify(data));
       })
+  }
+}
+function buscarInfo() {
+  const body = document.getElementById('tbody');
+  // console.log(body)
+  const convocatorias = JSON.parse(localStorage.getItem('convocatorias'));
+
+  // sino encuentro nada en el localstorage
+  // busco desde el archivo
+  if (convocatorias === null) {
+    fetch('../json/convocatorias.json')
+      .then((res) => {
+        return res.json()
+      })
+      .then((data) => {
+        // seteo el localstorage
+        localStorage.setItem('convocatorias', JSON.stringify(data));
+
+        // completo la tabla 
+        data.forEach(element => {
+          const tr = document.createElement('tr');
+
+          const id = document.createElement('td');
+          const fecha = document.createElement('td');
+          const rival = document.createElement('td');
+          const capitan = document.createElement('td');
+          const convocar = document.createElement('td');
+
+          id.appendChild(document.createTextNode(element.id));
+          fecha.appendChild(document.createTextNode(element.fecha));
+          rival.appendChild(document.createTextNode(element.rival));
+          capitan.appendChild(document.createTextNode(element.capitan));
+
+          const boton = document.createElement('button');
+          boton.setAttribute('id', element.id);
+          boton.setAttribute('onclick', 'convocarJugadores(this)');
+          boton.setAttribute('class', 'boton2bc');
+          boton.appendChild(document.createTextNode('Convocar'));
+          
+          const editar = document.createElement('button');
+          editar.setAttribute('id', element.id);
+          editar.setAttribute('onclick', 'editarConvocatoria(this)');
+          editar.setAttribute('class', 'boton2b');
+          editar.appendChild(document.createTextNode('Editar'));
+
+          const eliminar = document.createElement('button');
+          eliminar.setAttribute('id', element.id);
+          eliminar.setAttribute('onclick', 'eliminarConvocatoria(this)');
+          eliminar.setAttribute('class', 'boton2b');
+          eliminar.appendChild(document.createTextNode('Eliminar'));
+
+          convocar.appendChild(eliminar);
+          convocar.appendChild(editar);
+          convocar.appendChild(boton);
+
+
+          tr.appendChild(id);
+          tr.appendChild(fecha);
+          tr.appendChild(rival);
+          tr.appendChild(capitan);
+          tr.appendChild(convocar);
+
+          body.appendChild(tr);
+        });
+      })
+  }
+  else {
+    
+    convocatorias.forEach(element => {
+      const tr = document.createElement('tr');
+
+      const id = document.createElement('td');
+      const fecha = document.createElement('td');
+      const rival = document.createElement('td');
+      const capitan = document.createElement('td');
+      const convocar = document.createElement('td');
+
+      id.appendChild(document.createTextNode(element.id));
+      fecha.appendChild(document.createTextNode(element.fecha));
+      rival.appendChild(document.createTextNode(element.rival));
+      capitan.appendChild(document.createTextNode(element.capitan));
+
+      const boton = document.createElement('button');
+              
+      boton.setAttribute('id', element.id);
+      boton.setAttribute('onclick', 'convocarJugadores(this)');
+      boton.setAttribute('class', 'boton2bc');
+      boton.appendChild(document.createTextNode('Convocar'));
+
+      const editar = document.createElement('button');
+      editar.setAttribute('id', element.id);
+      editar.setAttribute('onclick', 'editarConvocatoria(this)');
+      editar.setAttribute('class', 'boton2b');
+      editar.appendChild(document.createTextNode('Editar'));
+
+      const eliminar = document.createElement('button');
+      eliminar.setAttribute('id', element.id);
+      eliminar.setAttribute('onclick', 'eliminarConvocatoria(this)');
+      eliminar.setAttribute('class', 'boton2b');
+      eliminar.appendChild(document.createTextNode('Eliminar'));
+
+      
+
+      convocar.appendChild(eliminar);
+      convocar.appendChild(editar);
+      convocar.appendChild(boton);
+     
+      tr.appendChild(id);
+      tr.appendChild(fecha);
+      tr.appendChild(rival);
+      tr.appendChild(capitan);
+      tr.appendChild(convocar);
+
+      body.appendChild(tr);
+    });
   }
 }
