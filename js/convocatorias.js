@@ -126,19 +126,11 @@ function buscarInfo() {
       eliminar.setAttribute('class', 'boton2b');
       eliminar.appendChild(document.createTextNode('Eliminar'));
 
-<<<<<<< HEAD
 
       convocar.appendChild(eliminar);
       convocar.appendChild(editar);
       convocar.appendChild(boton);
      
-=======
-      
-      convocar.appendChild(eliminar);
-      convocar.appendChild(editar);
-      convocar.appendChild(boton);
-      
->>>>>>> master
 
       tr.appendChild(id);
       tr.appendChild(fecha);
@@ -183,7 +175,3 @@ function convocarJugadores(param){
   localStorage.setItem('convocatoria',JSON.stringify(idConvocatoria));
   window.location.href = 'equipotitular.html'
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> master
