@@ -1,4 +1,3 @@
-
 /*********************************CONVOCATORIAS**************************************************/
 
 
@@ -27,24 +26,26 @@ window.addEventListener("load", function () {
   buscarInfo();
 });
 
-// Buscar informacion en el localStorange
+// Busca  di hay informacion alojada en el  localStorange
 function buscarInfo() {
-  const body = document.getElementById('tbody');
-  // console.log(body)
+  //creo cont. body en donde se cargaran los datos recopilados del local o JSON
+  const body = document.getElementById('tbody'); 
+  // creo una const. convocatorias. busca la clave o ide en el local y  me devuelve en formato estring 
   const convocatorias = JSON.parse(localStorage.getItem('convocatorias'));
-
-  // sino encuentro nada en el localstorage
-  // busco desde el archivo
+  //para poder usarlo lo convierto a objeto
+  // sino no encuentra nada en el localstorage
+  // busco desde el archivo en formato json
   if (convocatorias === null) {
     fetch('../json/convocatorias.json')
       .then((res) => {
         return res.json()
       })
+      //devuelve info json
       .then((data) => {
-        // seteo el localstorage
+        // repara el localstorage
         localStorage.setItem('convocatorias', JSON.stringify(data));
 
-        // completo la tabla 
+        // completo la tabla  con los datos obtenidos del json
         data.forEach(element => {
           const tr = document.createElement('tr');
 
@@ -58,8 +59,8 @@ function buscarInfo() {
           fecha.appendChild(document.createTextNode(element.fecha));
           rival.appendChild(document.createTextNode(element.rival));
           capitan.appendChild(document.createTextNode(element.capitan));
-
-          const boton = document.createElement('button');
+        // Además agrego los botones editar eliminar y convocar jugadores para una convocatoria. 
+      // que me agregan las acciones de las funciones utilizando id de distintas maneras dependiendo de la funcion y utilizando el atrib onclick (me lleva a ejecutar eda función)          const boton = document.createElement('button');
           boton.setAttribute('id', element.id);
           boton.setAttribute('onclick', 'convocarJugadores(this)');
           boton.setAttribute('class', 'boton2bc');
@@ -127,17 +128,11 @@ function buscarInfo() {
       eliminar.setAttribute('class', 'boton2b');
       eliminar.appendChild(document.createTextNode('Eliminar'));
 
-      const botonConvocados = document.createElement('button');
-              
-      botonConvocados.setAttribute('id', element.id);
-      botonConvocados.setAttribute('onclick', 'jugadoresConvocados(this)');
-      botonConvocados.setAttribute('class', 'boton2bc');
-      botonConvocados.appendChild(document.createTextNode('Convocados'));
 
       convocar.appendChild(eliminar);
       convocar.appendChild(editar);
       convocar.appendChild(boton);
-      convocar.appendChild(botonConvocados);
+     
 
       tr.appendChild(id);
       tr.appendChild(fecha);
@@ -174,17 +169,11 @@ function eliminarConvocatoria(param) {
 }
 function editarConvocatoria(param){
   let idEditar = parseInt(param.getAttribute("id"));
-  localStorage.setItem('editame',JSON.stringify(idEditar));
+  localStorage.setItem('paraeditar',JSON.stringify(idEditar));
   window.location.href = 'editarconvocatoria.html'
 }
 function convocarJugadores(param){
   let idConvocatoria = parseInt(param.getAttribute("id"));
   localStorage.setItem('convocatoria',JSON.stringify(idConvocatoria));
   window.location.href = 'listajugadoresconvocados.html'
-}
-
-function jugadoresConvocados(param) {
-  const idConvocatoria = parseInt(param.getAttribute("id"));
-  localStorage.setItem('convocatoria',JSON.stringify(idConvocatoria));
-  window.location.href = 'jugadoresConvocados.html'
 }
