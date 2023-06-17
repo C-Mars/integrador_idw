@@ -1,3 +1,12 @@
+/* ? ----- Cuenta Regresiva ----- */
+#cuenta {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 100px;
+}
+
+
+
 @font-face {
 	font-family: 'Fira Sans Condensed';
 	src:
