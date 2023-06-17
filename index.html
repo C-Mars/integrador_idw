@@ -1,51 +1,78 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    
+    
+    <title>Campus AFA</title>
+  
+    <!-- Enlaces a los archivos de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    
 
-  <link rel="stylesheet" href="css/style.css">
-
-
-  <title>Campus AFA</title>
-</head>
+  </head>
 
 <body>
-  <!-----------------------------------Navegador---------------------------------------------------->
+  <!-- Navegador -->
   <header>
-    <div class="logoNav">
-      <a href="./index.html"><img src="../img/Logo_AFA-02.png" alt="Logo de la AFA">
-      </a>
-    </div>
-    <nav>
-      <ul class="menu">
-        <li><a href="#">INSTITUCIONAL</a>
-          <ul class="submenu">
-            <li><a href="./internalpages/historia.html">
-                <p>Historia</p>
-              </a></li>
-            <li><a href="./internalpages/autoridades.html">
-                <p>Autoridades</p>
-              </a></li>
-            <li><a
-                href="https://www.afa.com.ar/upload/demo/6230%20_%20Reglamento%20F%C3%BAtbol%20Femenino%20Primera%20A%202023.pdf"
-                target="_blank">
-                <p>Reglamento</p>
-              </a></li>
+ 
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+      <div class="container-fluid">
+      <!-- Logo -->
+        <a class="navbar-brand" href="#"><img src="img/Logo_AFA-02.png" width="100px" height="100px" alt="Logo de la AFA">
+        </a>
+        
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        
+          <ul class="navbar-nav">
+
+
+      <!-- Menú -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                INSTITUCIONAL
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./internalpages/historia.html">Historia</a></li>
+                <li><a class="dropdown-item" href="./internalpages/autoridades.html">Autoridades</a></li>
+                <li><a class="dropdown-item" href="https://www.afa.com.ar/upload/demo/6230%20_%20Reglamento%20F%C3%BAtbol%20Femenino%20Primera%20A%202023.pdf" target="_blank">Reglamento</a></li>
+              </ul>
+            </li>
+        
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./internalpages/jugadores.html">JUGADORES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./internalpages/convocatorias.html">CONVOCATORIAS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./internalpages/">EQUIPO TITULAR</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="./internalpages/contacto.html">CONTACTO</a>
+            </li>
+
+            
+      <!-- Iniciar sesión -->
+      <div class="log">
+        <a class="nav-link" href="./internalpages/iniciosesion.html">Iniciar sesión</a>
+      </div>
           </ul>
-        </li>
-        <li><a href="./internalpages/jugadores.html">JUGADORES</a></li>
-        <li><a href="./internalpages/convocatorias.html">CONVOCATORIAS</a></li>
-        <li><a href="./internalpages/equipotitular.html">EQUIPO TITULAR</a></li>
-        <li><a href="./internalpages/contacto.html">CONTACTO</a></li>
-      </ul>
+        </div>
+      </div>
     </nav>
-    <div class="log">
-      <a href="./internalpages/iniciosesion.html">Iniciar sesión</a>
-    </div>
+ 
   </header>
+
   <main>
     <section class="principal">
       <div class="main-container">
@@ -53,8 +80,7 @@
           <img src="img/arg-per.jpg">
           <div class="texto-debajo">
             <h1>Máxima Cita</h1>
-            <p><strong>La selección Femenina jugará con Perú en su partido despedida antes del
-                mundial.</strong></p>
+            <p><strong>La selección Femenina jugará con Perú en su partido despedida antes del mundial.</strong></p>
           </div>
         </div>
         <div class="proximo">
@@ -72,25 +98,21 @@
 
           <div class="boton-vistas">
             <div class="boton2">
-              <button onclick="partidos()" type="button">PARTIDOS</button>
+              <button onclick="partidos()" type="button" class="btn btn-primary">PARTIDOS</button>
             </div>
             <div class="boton2">
-              <button onclick="estadisticas()" type="button">ESTADÍSTICAS</button>
-
+              <button onclick="estadisticas()" type="button" class="btn btn-primary">ESTADÍSTICAS</button>
             </div>
           </div>
           <div class="proximo-part">
             <h2> VIDEOS</h2>
-            <iframe width="80%" src="https://www.youtube.com/embed/5GEkmBRhzbM" title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen></iframe>
+            <iframe width="80%" src="https://www.youtube.com/embed/5GEkmBRhzbM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
         </div>
       </div>
     </section>
 
-    <!--------------------------------------- Sección Noticias ----------------------------------------------------------->
+    <!-- Sección Noticias -->
     <section class="noticias">
       <div class="noticia-t">
         <h1>NOTICIAS</h1>
@@ -99,75 +121,65 @@
         <div class="noti">
           <img class="img-noti" src="./img/pres_copa.jpg" alt="Foto de la primer Noticia" width="100%">
           <p>MUNDIAL</p>
-
           <h3>La AFA presentó el trofeo del Mundial que recorrerá 32 países</h3>
-
-          <p class="noti-p">El evento, llevado a cabo en el Predio Lionel Messi de Ezeiza, contó con el galardón que
-            pasará por Asia, África, América del Norte y Europa, y que luego llegará a las nueve ciudades
-            anfitrionas de
-            la Copa, que comienza el 20 de julio. Fuente: TELAM SE.</p>
+          <p class="noti-p">El evento, llevado a cabo en el Predio Lionel Messi de Ezeiza, contó con el galardón que pasará por Asia, África, América del Norte y Europa, y que luego llegará a las nueve ciudades anfitrionas de la Copa, que comienza el 20 de julio. Fuente: TELAM SE.</p>
           <div class="vermas">
-            <a
-              href="https://www.telam.com.ar/notas/202304/624240-afa-trofeo-mundial-femenino-32-paises-australia-nueva-zelanda-2023.html">VER
-              MÁS</a>
+            <a href="https://www.telam.com.ar/notas/202304/624240-afa-trofeo-mundial-femenino-32-paises-australia-nueva-zelanda-2023.html" class="btn btn-primary">VER MÁS</a>
           </div>
         </div>
         <div class="noti">
           <img class="img-noti" src="./img/clas_seleccion.jpg" alt="Foto de la segunda Noticia" width="100%">
-
           <p>MUNDIAL</p>
           <h3>El seleccionado femenino apunta al Mundial de Australia y Nueva Zelanda 2023 vía judicial.</h3>
-
-          <p class="noti-p">Ese tercer lugar logrado en la Copa América de Colombia significó un momento histórico
-            para
-            el equipo argentino de fútbol, que tuvo a la delantera Yamila Rodríguez como goleadora del torneo
-            continental. Fuente: TELAM SE</p>
-
+          <p class="noti-p">Ese tercer lugar logrado en la Copa América de Colombia significó un momento histórico para el equipo argentino de fútbol, que tuvo a la delantera Yamila Rodríguez como goleadora del torneo continental. Fuente: TELAM SE</p>
           <div class="vermas">
-            <a href="https://www.telam.com.ar/notas/202212/615603-deportes-futbol-femenino-anuario-2022.html">VER
-              MÁS</a>
+            <a href="https://www.telam.com.ar/notas/202212/615603-deportes-futbol-femenino-anuario-2022.html" class="btn btn-primary">VER MÁS</a>
           </div>
         </div>
         <div class="noti">
           <img class="img-noti" src="./img/camiseta_alternativa.jpg" alt="Foto de la tercera Noticia" width="100%">
-
           <p>MUNDIAL</p>
-
           <h3>El seleccionado argentino presentó la camiseta para el Mundial 2023</h3>
-
-          <p class="noti-p">Por primera vez, el equipo femenino contará con una camiseta de diseño exclusivo,
-            inspirado
-            en los colores que poseen los distintos paisajes naturales que tiene el país en toda su extensión.
-            Fuente:
-            TELAM SE.</p>
+          <p class="noti-p">Por primera vez, el equipo femenino contará con una camiseta de diseño exclusivo, inspirado en los colores que poseen los distintos paisajes naturales que tiene el país en toda su extensión. Fuente: TELAM SE.</p>
           <div class="vermas">
-            <a
-              href="https://www.telam.com.ar/notas/202303/623351-futbol-femenino-camiseta-presentacion-afa-campeonato-mundial.html">VER
-              MÁS</a>
+            <a href="https://www.telam.com.ar/notas/202303/623351-futbol-femenino-camiseta-presentacion-afa-campeonato-mundial.html" class="btn btn-primary">VER MÁS</a>
           </div>
         </div>
-
       </div>
-
     </section>
-    <!-- seccioón APIi---------------------------- -->
+
+    <!-- Sección API -->
     <section class="api">
-      <div class="container-api">
-        <h2> Falta api</h2>
+      <div>
+        <h2>El próximo partido, frente a la selección de Perú se disputará en:</h2>
+        <hr>
+        <div id="cuenta"></div>
       </div>
     </section>
   </main>
 
-
-
-
   <!-- Aquí empieza el pie de Página de la web -->
-  <footer>
-    <div id="pie">
-      <p>2023 &copy; Desarrollo Web - UNER</p>
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container px-5">
+      <p class="m-0 text-center text-white">2023 &copy; Desarrollo Web - UNER</p>
     </div>
-  </footer><!-- Fin del pie de Página -->
+  </footer>
+  <!-- Bootstrap core JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+ 
+  <!-- Core theme JS -->
+  <script src="js/scripts.js"></script>
+  <!-- SB Forms JS -->
+  <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
   <script src="./js/script.js"></script>
-</body>
+  <script src="js/simplyCountdown.min.js"></script>
+	<script src="js/countdown.js"></script>
 
+</body>
 </html>
+
+
+
+
+
