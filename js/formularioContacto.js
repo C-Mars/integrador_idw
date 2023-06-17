@@ -1,3 +1,7 @@
+window.addEventListener("load", function () {
+  leerForm();
+});
+
 /****************************FORMULARIO***********************************/
 const enviar = document.getElementById('enviar-cont').addEventListener('click', formularioContacto);
 
@@ -16,7 +20,7 @@ function leerForm() {
 }
 
 function formularioContacto() {
-  leerForm()
+  
   const jsonFormCont = localStorage.getItem('contacto');
   if (jsonFormCont !== null) {
     const formContactos = JSON.parse(localStorage.getItem('contacto'));
@@ -39,8 +43,7 @@ function formularioContacto() {
 
     localStorage.setItem('contacto', JSON.stringify(formContactos));
     
-    
+    alert('Solicitud enviada')
   }
-  return alert('Solicitud enviada')
 }
 
